@@ -1,5 +1,17 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
 import Root from './src/Root';
 
-AppRegistry.registerComponent('feed', () => Root);
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View
+} from 'react-native';
+
+AppRegistry.registerComponent('Feed', () => Root);
