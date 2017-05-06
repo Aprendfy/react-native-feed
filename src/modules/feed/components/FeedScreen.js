@@ -8,21 +8,18 @@ import * as actions from './../actions/index';
 
 class FeedScreen extends Component {
 
+	constructor(props) {
+    super(props);
+    this.state = {
+      dataSource: new ListView.DataSource({
+        rowHasChanged: (r1, r2) => r1 !== r2
+      })
+    };
+    this.renderRow = this.renderRow.bind(this);
+  }
 	componentWillMount() {
-		const { feedActions, feedState } = this.props;
+		const { feedActions } = this.props;
 		feedActions.fetchFeed();
-		this.createDataSource(feedState);
-	}
-
-	componentWillReceiveProps(nextProps) {
-		this.createDataSource(nextProps);
-	}
-
-	createDataSource({ feedList }) {
-		const ds = new ListView.DataSource({
-			rowHasChanged: (r1, r2) => r1 !== r2
-		});
-		this.dataSource = ds.cloneWithRows(feedList);
 	}
 
 	renderRow(item) {
@@ -30,10 +27,12 @@ class FeedScreen extends Component {
 	}
 
 	render() {
+		const ds = this.state.dataSource;
+		const { feedList } = this.props.feedState;
 		return (
 			<ListView
 				enableEmptySections
-				dataSource={this.dataSource}
+				dataSource={ds.cloneWithRows(feedList)}
 				renderRow={this.renderRow}
 			/>
 		);

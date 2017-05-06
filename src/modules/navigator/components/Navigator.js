@@ -1,6 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import { StatusBar } from 'react-native';
 import { Router } from '../../../router/routes';
+import { NavigationProvider, StackNavigation } from '@expo/ex-navigation';
+
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actions from '../actions/index';
 
 
 class Navigator extends Component {
@@ -27,4 +32,10 @@ class Navigator extends Component {
     }
 }
 
-export default Navigator;
+export default connect(
+  state => ({
+    navState: state.navigator
+  }),
+  dispatch => ({
+    navActions: bindActionCreators(actions, dispatch)
+  }))(Navigator);

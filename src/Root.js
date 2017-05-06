@@ -4,11 +4,11 @@ import configureStore from './store/configureStore';
 import Navigator from './modules/navigator/components/Navigator';
 
 const store = configureStore({});
-
+console.ignoredYellowBox = ['Warning: BackAndroid']
 export default class Root extends Component {
     render() {
         return (
-            <Provider>
+            <Provider store={store}>
                 <Navigator />
             </Provider>
         );
