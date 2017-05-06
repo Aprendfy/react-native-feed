@@ -8,10 +8,7 @@ import React, { Component } from 'react';
 import Root from './src/Root';
 
 import {
-  AppRegistry,
-  StyleSheet,
-  Text,
-  View
+  AppRegistry
 } from 'react-native';
 
 AppRegistry.registerComponent('Feed', () => Root);

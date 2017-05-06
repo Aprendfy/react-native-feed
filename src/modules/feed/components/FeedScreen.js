@@ -9,8 +9,9 @@ import * as actions from './../actions/index';
 class FeedScreen extends Component {
 
 	componentWillMount() {
-		const { feedActions } = this.props;
-		this.createDataSource(this.props);
+		const { feedActions, feedState } = this.props;
+		feedActions.fetchFeed();
+		this.createDataSource(feedState);
 	}
 
 	componentWillReceiveProps(nextProps) {
