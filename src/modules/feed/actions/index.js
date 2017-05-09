@@ -1,4 +1,4 @@
-import { SAVE_FEED, APPEND_TO_FEED } from './types';
+import { SAVE_FEED } from './types';
 
 export function fetchFeed() {
   let items = []
