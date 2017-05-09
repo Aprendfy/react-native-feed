@@ -1,8 +1,20 @@
 import { SAVE_FEED } from './types';
 
 export function fetchFeed() {
-    return saveFeed(['Item 1','Item 2','Item 3','Item 4','Item 5']);
+  let items = []
+  for (let i = 0; i < 20; ++i) {
+    items.push('Item');
+  }
+  return saveFeed(items);
 }
+
+export function fetchMoreFeed(feed) {
+  for (let i = 0; i < 20; ++i) {
+    feed.push('Item');
+  }
+  return saveFeed(feed);
+}
+
 
 export function saveFeed(payload) {
   return {
@@ -10,3 +22,4 @@ export function saveFeed(payload) {
     payload
   };
 }
+
