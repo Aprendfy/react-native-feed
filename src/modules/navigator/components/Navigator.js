@@ -14,14 +14,14 @@ class Navigator extends Component {
         return (
             <NavigationProvider router={Router}>
                 <StatusBar
-                    backgroundColor='#ccc'
+                    backgroundColor='#DD3142'
                     barStyle="light-content"
                 />
                 <StackNavigation
                     id="master"
                     defaultRouteConfig={{
                         navigationBar: {
-                            backgroundColor: '#ccc',
+                            backgroundColor: '#DD3142',
                             tintColor: '#ffffff',
                         }
                     }}
