@@ -5,6 +5,7 @@ import { bindActionCreators } from 'redux';
 import FeedCard from '../../../components/FeedCard';
 
 import * as actions from './../actions/index';
+import * as navActions from '../../navigator/actions/index';
 
 class FeedScreen extends Component {
 
@@ -19,12 +20,13 @@ class FeedScreen extends Component {
 		super(props);
 		this.renderItem = this.renderItem.bind(this);
 		this.renderSeparator = this.renderSeparator.bind(this);
-		
+
 	}
 
 	componentWillMount() {
-		const { feedActions } = this.props;
+		const { feedActions, navActions } = this.props;
 		feedActions.fetchFeed();
+		navActions.setAlert({ title: 'Do I have a title?', message: 'Oh yes, I do! =)', type: 'info', duration: 6000 });
 	}
 
 	renderItem({ item, index }) {
@@ -68,5 +70,6 @@ export default connect(
 	}),
 	dispatch => ({
 		feedActions: bindActionCreators(actions, dispatch),
+		navActions: bindActionCreators(navActions, dispatch)
 	})
 )(FeedScreen);
