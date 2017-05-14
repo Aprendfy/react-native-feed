@@ -24,10 +24,6 @@ class CategoriesScreen extends Component {
 
   }
 
-  componentWillMount() {
-
-  }
-
   goToCat(title, tab) {
     this.props.navigator.push(Router.getRoute('feed', { title, tab }));
   }
@@ -36,13 +32,18 @@ class CategoriesScreen extends Component {
     return (
       <View style={{ flex: 1, flexDirection: 'column' }}>
         <TouchableOpacity onPress={() => this.goToCat('Facebook Ads', 0)}>
-          <View style={{ elevation: 5, alignItems: 'center', height: 100, justifyContent: 'center', backgroundColor: '#3b5998', borderBottomColor: '#FFF', borderBottomWidth: 1 }}>
+          <View style={{ elevation: 5, alignItems: 'center', height: 100, justifyContent: 'center', backgroundColor: '#3b5998' }}>
             <Text style={{ fontSize: 16, color: '#fff' }}>Facebook Ads</Text>
           </View>
         </TouchableOpacity >
         <TouchableOpacity onPress={() => this.goToCat('Google Ads', 1)}>
           <View style={{ elevation: 5, alignItems: 'center', height: 100, justifyContent: 'center', backgroundColor: '#34a853' }}>
             <Text style={{ fontSize: 16, color: '#fff' }}>Google Ads</Text>
+          </View>
+        </TouchableOpacity >
+        <TouchableOpacity onPress={() => this.goToCat('Twitter Ads', 2)}>
+          <View style={{ elevation: 5, alignItems: 'center', height: 100, justifyContent: 'center', backgroundColor: '#1da1f2' }}>
+            <Text style={{ fontSize: 16, color: '#fff' }}>Twitter Ads</Text>
           </View>
         </TouchableOpacity >
         <View />
