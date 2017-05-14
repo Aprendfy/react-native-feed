@@ -14,8 +14,8 @@ class FeedScreen extends Component {
     super(props);
     this.updateTitle = this.updateTitle.bind(this);
     this.state = {
-      title:  props.route.params.title,
-      tab:  props.route.params.tab
+      title: props.route.params.title,
+      tab: props.route.params.tab
     };
   }
 
@@ -57,11 +57,14 @@ class FeedScreen extends Component {
     const { tabLabel } = item.ref.props;
     const { navigator } = this.props;
     await this.setState({ title: tabLabel });
-    setTimeout(() => {
-      navigator.updateCurrentRouteParams({
-        context: this
-      });
-    }, 600);
+    navigator.updateCurrentRouteParams({
+      context: this
+    });
+    // setTimeout(() => {
+    //   navigator.updateCurrentRouteParams({
+    //     context: this
+    //   });
+    // }, 600);
   }
 
   render() {
@@ -72,16 +75,19 @@ class FeedScreen extends Component {
         tabBarTextStyle={{ fontWeight: '600' }}
         onChangeTab={item => this.updateTitle(item)}
         initialPage={this.state.tab}
-        
+
       >
-        <View style={{ flex: 1 }} tabLabel="Facebook Ads" onPress={() => console.log('User!')}>
-          <FeedList name="Esquerdo" />
+        <View style={{ flex: 1 }} tabLabel="Facebook Ads">
+          <FeedList index={0} name="Primeira" />
         </View>
-        <View style={{ flex: 1 }} tabLabel="Google Ads" onPress={() => console.log('Page!')}>
-          <FeedList name="Direito" />
+        <View style={{ flex: 1 }} tabLabel="Google Ads">
+          <FeedList index={1} name="Segunda" />
+        </View>
+        <View style={{ flex: 1 }} tabLabel="Twitter Ads">
+          <FeedList index={2} name="Terceira" />
         </View>
       </ScrollableTabView>
-    )
+    );
   }
 }
 
