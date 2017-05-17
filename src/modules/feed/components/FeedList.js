@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Text, View, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import * as actions from './../actions/index';
 
@@ -15,7 +16,7 @@ class FeedList extends Component {
   }
 
   renderItem({ item, index }) {
-    return <Text>{this.props.name} {index}</Text>;
+    return <Text>{this.props.name} {index}<Icon name="done" size={24} /></Text>;
   }
 
   renderSeparator = () => {
