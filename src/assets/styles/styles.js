@@ -1,7 +1,7 @@
 import { StyleSheet, Dimensions, Platform } from 'react-native';
 
 export const colors = {
-  primaryColor: '#DD3142',
+  primaryColor: '#29384D',
   blackPrimary: '#212121',
   blackPrimaryAlt: '#000000DD',
   blackSecondary: '#757575',
@@ -17,11 +17,20 @@ export const colors = {
   alertLight: '#ffebee',
   info: '#323232',
   warning: '#FFC107',
+
+  //categories
+  categorieFacebook: '#3B5999',
+  categorieGooglePlus: '#DF494A',
+  categorieInstagram: '#E2793F',
+  categorieLinkedin: '#4F77CC',
+  categoriePinterest: '#E84C3D',
+  categorieTwitter: '#3598DB',
+  navBarCategories: '#29384D'
 };
 
 export const stdStyle = StyleSheet.create({
   navBar: {
-    backgroundColor: colors.primary,
+    backgroundColor: colors.primaryColor,
     flexDirection: 'row',
     alignItems: 'center',
     elevation: 4,

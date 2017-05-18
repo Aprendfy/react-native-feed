@@ -1,0 +1,1 @@
+export const SAVE_CATEGORIES = 'SAVE_CATEGORIES';
