@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Router } from '../../../router/routes';
 import * as actions from '../actions/index';
-import * as styles from '../../../assets/styles/style';
+import * as styles from '../../../assets/styles/styles';
 
 class Navigator extends Component {
 
@@ -57,14 +57,14 @@ class Navigator extends Component {
     return (
       <NavigationProvider router={Router}>
         <StatusBar
-          backgroundColor='#DD3142'
+          backgroundColor={styles.colors.primaryColor}
           barStyle="light-content"
         />
         <StackNavigation
           id="master"
           defaultRouteConfig={{
             navigationBar: {
-              backgroundColor: '#DD3142',
+              backgroundColor: styles.colors.primaryColor,
               tintColor: '#ffffff',
             }
           }}
