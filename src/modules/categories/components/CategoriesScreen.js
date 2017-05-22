@@ -6,7 +6,7 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { Router } from '../../../router/routes';
-import IonIcons from 'react-native-vector-icons/Ionicons'
+import IonIcons from 'react-native-vector-icons/Ionicons';
 import ItemList from '../../../components/categories/ItemList';
 import { categoriesScreenStyles as styles } from '../../../assets/styles/categories/styles';
 import { colors } from '../../../assets/styles/styles';

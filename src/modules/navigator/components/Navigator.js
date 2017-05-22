@@ -68,7 +68,7 @@ class Navigator extends Component {
               tintColor: '#ffffff',
             }
           }}
-          initialRoute={Router.getRoute('categories')}
+          initialRoute={Router.getRoute('feed')}
         />
         {this.renderAlert()}
         <MessageBar ref="alert" />
