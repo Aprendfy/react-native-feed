@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import FeedList from './FeedList.js';
-import CardHeader from '../../../components/feed/CardHeader';
 import { colors } from '../../../assets/styles/styles'
 
 
@@ -71,7 +70,7 @@ class FeedScreen extends Component {
 
   render() {
     return (
-      /*<ScrollableTabView
+      <ScrollableTabView
         renderTabBar={() => <View />}
         tabBarBackgroundColor='red'
         tabBarTextStyle={{ fontWeight: '600' }}
@@ -89,25 +88,6 @@ class FeedScreen extends Component {
           <FeedList index={2} name="Terceira" />
         </View>
       </ScrollableTabView>
-    */
-      <View style={{ flex: 1 }}>
-        <View style={{ flex: 2 }}>
-          <CardHeader
-            title="3 Dicas de Publicações no Perfil para Fotógrafos"
-            tag="Facebook"
-            time="5 minutos"
-            level="Iniciante"
-            color={colors.categorieFacebook}
-            image={{ uri: 'http://i.huffpost.com/gen/3971736/images/o-HAPPY-PEOPLE-facebook.jpg' }}
-          />
-        </View>
-        <View style={{ flex: 3 }}>
-          <Text style={{ color: colors.blackPrimary, fontSize: 14, padding: 5 }}>
-            Ainda assim, existem dúvidas a respeito de como a complexidade dos estudos efetuados exige a precisão e a definição dos índices pretendidos. Caros amigos, a execução dos pontos do programa apresenta tendências no sentido de aprovar a manutenção de alternativas às soluções ortodoxas. Nunca é demais lembrar o peso e o significado destes problemas, uma vez que a contínua expansão de nossa atividade não pode mais se dissociar do investimento em reciclagem técnica.
-            No entanto, não podemos esquecer que a revolução dos costumes auxilia a preparação e a composição das posturas dos órgãos dirigentes com relação às suas atribuições. Do mesmo modo, o entendimento das metas propostas causa impacto indireto na reavaliação das novas proposições. A prática cotidiana prova que a estrutura atual da organização desafia a capacidade de equalização das direções preferenciais no sentido do progresso. Todavia, a necessidade de renovação processual garante a contribuição de um grupo importante na determinação dos métodos utilizados na avaliação de resultados.
-          </Text>
-        </View>
-      </View>
     );
   }
 }
@@ -117,7 +97,7 @@ FeedScreen.PropTypes = {
 };
 FeedScreen.defaultProps = {
   navigator: {}
-}
+};
 
 export default connect(
   state => ({

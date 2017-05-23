@@ -1,18 +1,21 @@
 import { SAVE_FEED } from './types';
+import { fakeData } from '../../../config/mockData';
 
 export function fetchFeed() {
-  let items = []
-  for (let i = 0; i < 20; ++i) {
-    items.push('Item');
-  }
-  return saveFeed(items);
+  return async (dispatch) => {
+    const items = await fakeData();
+    dispatch(saveFeed(items));
+  };
 }
 
 export function fetchMoreFeed(feed) {
-  for (let i = 0; i < 20; ++i) {
-    feed.push('Item');
-  }
-  return saveFeed(feed);
+  return async (dispatch) => {
+    const items = await fakeData();
+    await items.forEach((item) => {
+      feed.push(item);
+    });
+    dispatch(saveFeed(feed));
+  };
 }
 
 
