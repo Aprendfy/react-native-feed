@@ -1,5 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { Text, View } from 'react-native';
+
+import { AdMobBanner } from 'react-native-admob';
+
 import { colors } from '../../assets/styles/styles';
 import CardHeader from './CardHeader';
 
@@ -26,6 +29,14 @@ class FeedCard extends Component {
           <Text style={{ color: colors.blackPrimary, fontSize: 14, padding: 5 }}>
             {body}
           </Text>
+        </View>
+        <View style={{ position: 'absolute', left: 0, right: 0, bottom: 0 }}>
+          <AdMobBanner
+            bannerSize="smartBannerPortrait"
+            adUnitID="ca-app-pub-8356555649836141/9541656259"
+            testDeviceID="EMULATOR"
+            didFailToReceiveAdWithError={this.bannerError}
+          />
         </View>
       </View>
     );

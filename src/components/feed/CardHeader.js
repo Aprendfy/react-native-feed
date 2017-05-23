@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Text, View, Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
@@ -39,14 +39,29 @@ class CardHeader extends Component {
               <Text style={{ marginHorizontal: 5, color: colors.whitePrimary, fontSize: 12 }}>{level}</Text>
             </View>
           </View>
-
         </Image>
-
       </View>
-
     );
   }
 
 }
+
+CardHeader.propTypes = {
+  title: PropTypes.string,
+  tag: PropTypes.string,
+  time: PropTypes.string,
+  level: PropTypes.string,
+  color: PropTypes.string,
+  image: PropTypes.string
+};
+
+CardHeader.defaultProps = {
+  title: '',
+  tag: '',
+  time: '',
+  level: '',
+  color: '',
+  image: ''
+};
 
 export default CardHeader;

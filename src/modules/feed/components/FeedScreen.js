@@ -4,7 +4,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import FeedList from './FeedList.js';
-import { colors } from '../../../assets/styles/styles'
+
+import { colors } from '../../../assets/styles/styles';
 
 
 import * as actions from './../actions/index';
@@ -72,7 +73,7 @@ class FeedScreen extends Component {
     return (
       <ScrollableTabView
         renderTabBar={() => <View />}
-        tabBarBackgroundColor='red'
+        tabBarBackgroundColor="red"
         tabBarTextStyle={{ fontWeight: '600' }}
         onChangeTab={item => this.updateTitle(item)}
         initialPage={this.state.tab}
