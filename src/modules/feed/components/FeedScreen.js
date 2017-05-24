@@ -79,14 +79,14 @@ class FeedScreen extends Component {
         initialPage={this.state.tab}
 
       >
-        <View style={{ flex: 1 }} tabLabel="Facebook Ads">
-          <FeedList index={0} name="Primeira" />
+        <View style={{ flex: 1 }} tabLabel="Facebook">
+          <FeedList index={0} name="Primeira" color={colors.categorieFacebook} />
         </View>
-        <View style={{ flex: 1 }} tabLabel="Google Ads">
-          <FeedList index={1} name="Segunda" />
+        <View style={{ flex: 1 }} tabLabel="Google+">
+          <FeedList index={1} name="Segunda"  color={colors.categorieGooglePlus} />
         </View>
-        <View style={{ flex: 1 }} tabLabel="Twitter Ads">
-          <FeedList index={2} name="Terceira" />
+        <View style={{ flex: 1 }} tabLabel="Twitter">
+          <FeedList index={2} name="Terceira"  color={colors.categorieTwitter} />
         </View>
       </ScrollableTabView>
     );

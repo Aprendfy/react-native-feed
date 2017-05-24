@@ -26,6 +26,7 @@ class FeedList extends Component {
         level={item.level}
         image={item.image}
         body={item.body}
+        color={this.props.color}
       />
     );
   }
@@ -69,7 +70,8 @@ class FeedList extends Component {
 
 FeedList.propTypes = {
   feedActions: PropTypes.object,
-  feedState: PropTypes.object
+  feedState: PropTypes.object,
+  color: PropTypes.string.isRequired
 };
 
 FeedList.defaultProps = {

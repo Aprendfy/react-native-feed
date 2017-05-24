@@ -3,40 +3,37 @@ import { Text, View, Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import { colors } from '../../assets/styles/styles';
+import { cardHeaderStyles as styles } from '../../assets/styles/feed/styles';
 
 class CardHeader extends Component {
-
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const { title, tag, time, level, color, image } = this.props;
     return (
-      <View style={{ flex: 1 }}>
+      <View style={styles.mainContainer}>
         <Image
-          style={{ flex: 1 }}
+          style={styles.imageCover}
           resizeMethod="scale"
           resizeMode="cover"
           source={image}
         >
-          <LinearGradient colors={['transparent', color]} style={{ flex: 1, paddingHorizontal: 10 }}>
-            <View style={{ flex: 1, justifyContent: 'flex-end' }}>
-              <Text style={{ color: 'white', fontSize: 27, fontWeight: '500' }}>{title}</Text>
+          <LinearGradient colors={['transparent', color]} style={styles.firstContainer}>
+            <View style={styles.titleWrapper}>
+              <Text style={styles.title}>{title}</Text>
             </View>
           </LinearGradient>
-          <View style={{ flexDirection: 'row', justifyContent: 'space-around', backgroundColor: color, padding: 10 }}>
-            <View style={{ flex: 1, flexDirection: 'row' }}>
+          <View style={[styles.secondContainer, { backgroundColor: color }]}>
+            <View style={styles.itemDetailWrapper}>
               <IonIcons name="ios-pricetag-outline" size={14} color={colors.whitePrimary} />
-              <Text style={{ marginHorizontal: 5, color: colors.whitePrimary, fontSize: 12 }}>{tag}</Text>
+              <Text style={styles.detailText}>{tag}</Text>
             </View>
-            <View style={{ flex: 1, flexDirection: 'row' }}>
+            <View style={styles.itemDetailWrapper}>
               <IonIcons name="ios-time-outline" size={14} color={colors.whitePrimary} />
-              <Text style={{ marginHorizontal: 5, color: colors.whitePrimary, fontSize: 12 }}>{time}</Text>
+              <Text style={styles.detailText}>{time}</Text>
             </View>
-            <View style={{ flex: 1, flexDirection: 'row' }}>
+            <View style={styles.itemDetailWrapper}>
               <IonIcons name="ios-school" size={14} color={colors.whitePrimary} />
-              <Text style={{ marginHorizontal: 5, color: colors.whitePrimary, fontSize: 12 }}>{level}</Text>
+              <Text style={styles.detailText}>{level}</Text>
             </View>
           </View>
         </Image>
@@ -52,7 +49,7 @@ CardHeader.propTypes = {
   time: PropTypes.string,
   level: PropTypes.string,
   color: PropTypes.string,
-  image: PropTypes.string
+  image: PropTypes.objectOf(PropTypes.any)
 };
 
 CardHeader.defaultProps = {

@@ -21,7 +21,7 @@ class FeedCard extends Component {
             tag={category}
             time={readingTime}
             level={level}
-            color={colors.categorieFacebook}
+            color={color}
             image={{ uri: image }}
           />
         </View>
