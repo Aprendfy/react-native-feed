@@ -37,3 +37,31 @@ export const cardHeaderStyles = StyleSheet.create({
     fontSize: 12
   }
 });
+
+export const feedCardStyle = StyleSheet.create({
+  mainContainer: {
+    flex: 1
+  },
+  headerContainer: {
+    flex: 2
+  },
+  bodyContainer: {
+    flex: 3
+  },
+  footerContainer: {
+    flex: 1,
+    backgroundColor: colors.lightBackground,
+    justifyContent: 'flex-end'
+  }
+});
+
+export const cardBodyStyle = StyleSheet.create({
+  text: {
+    color: colors.blackPrimary,
+    fontSize: 14,
+  },
+  textWrapper: {
+    padding: 10,
+    backgroundColor: colors.lightBackground
+  }
+});
