@@ -44,8 +44,7 @@ class FeedList extends Component {
           height: 1,
           flex: 1,
           backgroundColor: '#CED0CE',
-          marginTop: 10,
-          marginBottom: 10
+          marginTop: 10
         }}
       />
     );
@@ -54,7 +53,7 @@ class FeedList extends Component {
   render() {
     const { feedState, feedActions } = this.props;
     return (
-      <View style={{ paddingHorizontal: 5, paddingVertical: 10 }}>
+      <View>
         <FlatList
           renderItem={this.renderItem}
           data={feedState.feedList}

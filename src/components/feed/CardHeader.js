@@ -8,7 +8,7 @@ import { cardHeaderStyles as styles } from '../../assets/styles/feed/styles';
 class CardHeader extends Component {
 
   render() {
-    const { title, tag, time, level, color, image } = this.props;
+    const { title, tag, readingTime, level, color, image } = this.props;
     return (
       <View style={styles.mainContainer}>
         <Image
@@ -29,7 +29,7 @@ class CardHeader extends Component {
             </View>
             <View style={styles.itemDetailWrapper}>
               <IonIcons name="ios-time-outline" size={14} color={colors.whitePrimary} />
-              <Text style={styles.detailText}>{time}</Text>
+              <Text style={styles.detailText}>{readingTime}</Text>
             </View>
             <View style={styles.itemDetailWrapper}>
               <IonIcons name="ios-school" size={14} color={colors.whitePrimary} />
@@ -46,7 +46,7 @@ class CardHeader extends Component {
 CardHeader.propTypes = {
   title: PropTypes.string,
   tag: PropTypes.string,
-  time: PropTypes.string,
+  readingTime: PropTypes.string,
   level: PropTypes.string,
   color: PropTypes.string,
   image: PropTypes.objectOf(PropTypes.any)
@@ -55,7 +55,7 @@ CardHeader.propTypes = {
 CardHeader.defaultProps = {
   title: '',
   tag: '',
-  time: '',
+  readingTime: '',
   level: '',
   color: '',
   image: ''
