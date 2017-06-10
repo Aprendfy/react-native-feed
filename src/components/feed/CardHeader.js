@@ -6,7 +6,6 @@ import { colors } from '../../assets/styles/styles';
 import { cardHeaderStyles as styles } from '../../assets/styles/feed/styles';
 
 class CardHeader extends Component {
-
   render() {
     const { title, tag, readingTime, level, color, image } = this.props;
     return (

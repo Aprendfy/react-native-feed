@@ -7,7 +7,7 @@ import Navigator from './modules/navigator/components/Navigator';
 
 
 AdMobInterstitial.setTestDeviceID('EMULATOR');
-AdMobInterstitial.setAdUnitID('ca-app-pub-8356555649836141/1032680654');
+AdMobInterstitial.setAdUnitID('ca-app-pub-5511910440808215/8860031880');
 
 const store = configureStore({});
 console.ignoredYellowBox = ['Warning: BackAndroid'];
@@ -26,7 +26,7 @@ export default class Root extends Component {
     AdMobInterstitial.addEventListener('interstitialDidOpen', () => console.log('interstitialDidOpen event'));
     AdMobInterstitial.addEventListener('interstitialWillLeaveApplication', () => console.log('interstitalWillLeaveApplication event'));
 
-    AdMobInterstitial.requestAd(error => error && console.log(error));
+    AdMobInterstitial.requestAd(error => error && console.log(`${error} - admob`));
   }
 
   render() {
