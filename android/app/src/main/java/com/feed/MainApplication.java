@@ -2,6 +2,8 @@ package com.feed;
 
 import android.app.Application;
 
+import com.cboy.rn.splashscreen.SplashScreenReactPackage;
+
 import com.facebook.react.ReactApplication;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.BV.LinearGradient.LinearGradientPackage;
@@ -29,7 +31,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
           new VectorIconsPackage(),
           new LinearGradientPackage(),
-          new RNAdMobPackage()
+          new RNAdMobPackage(),
+          new SplashScreenReactPackage()
       );
     }
   };
