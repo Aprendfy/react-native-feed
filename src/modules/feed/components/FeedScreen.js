@@ -23,7 +23,7 @@ class FeedScreen extends Component {
 
   static route = {
     navigationBar: {
-      visible: false,
+      visible: true,
       renderTitle: ({ params }) => {
         const { context = {} } = params;
         const { state = {} } = context;
@@ -45,6 +45,7 @@ class FeedScreen extends Component {
   componentWillMount() {
     const { feedActions, navActions } = this.props;
     feedActions.fetchFeed();
+    console.log('teste de log');
     //navActions.setAlert({ title: 'Do I have a title?', message: 'Oh yes, I do! =)', type: 'info', duration: 6000 });
   }
   componentDidMount() {

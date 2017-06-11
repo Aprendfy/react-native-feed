@@ -5,7 +5,7 @@ const CardFooter = () => {
   return (
     <AdMobBanner
       bannerSize="smartBannerPortrait"
-      adUnitID="ca-app-pub-8356555649836141/9541656259"
+      adUnitID="ca-app-pub-5511910440808215/8860031880"
       testDeviceID="EMULATOR"
       didFailToReceiveAdWithError={this.bannerError}
     />
