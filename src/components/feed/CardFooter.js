@@ -1,15 +1,15 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { AdMobBanner } from 'react-native-admob';
 
 const CardFooter = () => {
   return (
     <AdMobBanner
       bannerSize="smartBannerPortrait"
-      adUnitID="ca-app-pub-5511910440808215/8860031880"
+      adUnitID="ca-app-pub-5511910440808215/9505833480"
       testDeviceID="EMULATOR"
-      didFailToReceiveAdWithError={this.bannerError}
+      didFailToReceiveAdWithError={error => console.log(error, 'error de banner')}
     />
   );
-}
+};
 
 export default CardFooter;
