@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import { Text, View } from 'react-native';
 
-import { colors } from '../../assets/styles/styles';
 import CardHeader from './CardHeader';
 import CardBody from './CardBody';
 import CardFooter from './CardFooter';
@@ -14,7 +13,7 @@ class FeedCard extends Component {
   }
 
   render() {
-    const { title, category, readingTime, level, color, image, body, dateCreated } = this.props;
+    const { title, category, readingTime, level, color, image, body } = this.props;
     return (
       <View style={styles.mainContainer}>
         <View style={styles.headerContainer}>

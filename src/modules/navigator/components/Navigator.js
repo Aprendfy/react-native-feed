@@ -33,16 +33,17 @@ class Navigator extends Component {
 
   showAlert() {
     const { navState } = this.props;
+    const { colors } = styles;
     MessageBarManager.showAlert({
       title: navState.alertBody.title,
       message: navState.alertBody.message,
       alertType: navState.alertBody.type,
       duration: navState.alertBody.duration,
-      stylesheetError: { backgroundColor: styles.colors.alertPrimary, strokeColor: styles.colors.alertPrimary },
-      stylesheetWarning: { backgroundColor: styles.colors.warning, strokeColor: styles.colors.warning },
-      stylesheetInfo: { backgroundColor: styles.colors.info, strokeColor: styles.colors.info },
+      stylesheetError: { backgroundColor: colors.alertPrimary, strokeColor: colors.alertPrimary },
+      stylesheetWarning: { backgroundColor: colors.warning, strokeColor: colors.warning },
+      stylesheetInfo: { backgroundColor: colors.info, strokeColor: colors.info },
       viewTopInset: (Platform.OS === 'ios') ? 20 : 0,
-      messageStyle: { color: (navState.alertBody.type === 'warning') ? styles.colors.blackPrimaryAlt : styles.colors.whitePrimary, fontSize: 16 }
+      messageStyle: { color: (navState.alertBody.type === 'warning') ? colors.blackPrimaryAlt : colors.whitePrimary, fontSize: 16 }
     });
   }
 
@@ -54,18 +55,19 @@ class Navigator extends Component {
   }
 
   render() {
+    const { colors } = styles;
     return (
       <NavigationProvider router={Router}>
         <StatusBar
-          backgroundColor={styles.colors.primaryColor}
+          backgroundColor={colors.primaryColor}
           barStyle="light-content"
         />
         <StackNavigation
           id="master"
           defaultRouteConfig={{
             navigationBar: {
-              backgroundColor: styles.colors.primaryColor,
-              tintColor: '#ffffff',
+              backgroundColor: colors.primaryColor,
+              tintColor: colors.whitePrimary,
             }
           }}
           initialRoute={Router.getRoute('categories')}

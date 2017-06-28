@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity } from 'react-native';
 import { itemListStyles } from '../../assets/styles/categories/styles';
 
 const ItemList = ( { color, title, id, onPress} ) => {
