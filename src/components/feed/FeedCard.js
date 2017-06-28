@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
-import { colors } from '../../assets/styles/styles';
 import CardHeader from './CardHeader';
 import CardBody from './CardBody';
 import CardFooter from './CardFooter';
@@ -9,12 +8,8 @@ import CardFooter from './CardFooter';
 import { feedCardStyle as styles } from '../../assets/styles/feed/styles';
 
 class FeedCard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    const { title, category, readingTime, level, color, image, body, dateCreated } = this.props;
+    const { title, category, readingTime, level, color, image, body } = this.props;
     return (
       <View style={styles.mainContainer}>
         <View style={styles.headerContainer}>
@@ -46,7 +41,6 @@ FeedCard.propTypes = {
   color: PropTypes.string,
   image: PropTypes.string,
   body: PropTypes.string,
-  dateCreated: PropTypes.string,
 };
 
 FeedCard.defaultProps = {
@@ -57,8 +51,6 @@ FeedCard.defaultProps = {
   color: '',
   image: '',
   body: '',
-  dateCreated: '',
-
 };
 
 export default FeedCard;

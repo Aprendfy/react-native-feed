@@ -3,10 +3,9 @@ import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import FeedList from './FeedList.js';
+import FeedList from './FeedList';
 
 import { colors } from '../../../assets/styles/styles';
-
 
 import * as actions from './../actions/index';
 import * as navActions from '../../navigator/actions/index';
@@ -43,10 +42,10 @@ class FeedScreen extends Component {
   }
 
   componentWillMount() {
-    const { feedActions, navActions } = this.props;
+    const { feedActions } = this.props;
     feedActions.fetchFeed();
     console.log('teste de log');
-    //navActions.setAlert({ title: 'Do I have a title?', message: 'Oh yes, I do! =)', type: 'info', duration: 6000 });
+    // navActions.setAlert({ title: 'Do I have a title?', message: 'Oh yes, I do! =)', type: 'info', duration: 6000 });
   }
   componentDidMount() {
     const { navigator } = this.props;
@@ -84,10 +83,10 @@ class FeedScreen extends Component {
           <FeedList index={0} name="Primeira" color={colors.categorieFacebook} />
         </View>
         <View style={{ flex: 1 }} tabLabel="Google+">
-          <FeedList index={1} name="Segunda"  color={colors.categorieGooglePlus} />
+          <FeedList index={1} name="Segunda" color={colors.categorieGooglePlus} />
         </View>
         <View style={{ flex: 1 }} tabLabel="Twitter">
-          <FeedList index={2} name="Terceira"  color={colors.categorieTwitter} />
+          <FeedList index={2} name="Terceira" color={colors.categorieTwitter} />
         </View>
       </ScrollableTabView>
     );

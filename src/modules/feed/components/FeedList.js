@@ -1,11 +1,9 @@
 import React, { Component, PropTypes } from 'react';
-import { Text, View, FlatList } from 'react-native';
+import { View, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import FeedCard from '../../../components/feed/FeedCard';
-
 
 import * as actions from './../actions/index';
 
@@ -17,7 +15,7 @@ class FeedList extends Component {
     this.renderSeparator = this.renderSeparator.bind(this);
   }
 
-  renderItem({ item, index }) {
+  renderItem({ item }) {
     return (
       <FeedCard
         title={item.title}

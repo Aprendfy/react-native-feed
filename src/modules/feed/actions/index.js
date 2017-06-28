@@ -18,11 +18,9 @@ export function fetchMoreFeed(feed) {
   };
 }
 
-
 export function saveFeed(payload) {
   return {
     type: SAVE_FEED,
     payload
   };
 }
-

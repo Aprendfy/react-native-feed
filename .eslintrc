@@ -4,7 +4,8 @@
   "env": {
     "node": true,
     "es6": true,
-    "commonjs": true
+    "commonjs": true,
+    "jest": true
   },
   "plugins": [
     "react"
@@ -26,6 +27,11 @@
     "no-alert": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "react/forbid-prop-types": [0, { }],
-    "linebreak-style": ["error", "unix"]
+    "linebreak-style": ["error", "unix"],
+    "react/prop-types": 1,
+    "react/no-string-refs": 1,
+    "import/prefer-default-export": 0,
+    "import/extensions": 1,
+    "react/prefer-stateless-function": 1
   }
 }
