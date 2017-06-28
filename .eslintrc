@@ -33,5 +33,16 @@
     "import/prefer-default-export": 0,
     "import/extensions": 1,
     "react/prefer-stateless-function": 1
-  }
+  },
+  "settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [
+					".js",
+					".android.js",
+					".ios.js"
+				]
+			}
+		}
+	}
 }
