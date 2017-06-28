@@ -1,12 +1,10 @@
 language: javascript
-cache:
-  directories:
-  - node_modules
 before_install:
 - nvm install && nvm use && nvm version
-- npm install yarn
+- node -v
+- npm -v
 install:
-- yarn install
+- npm install
 script:
 - npm run lint
 - npm run test
