@@ -35,14 +35,14 @@
     "react/prefer-stateless-function": 1
   },
   "settings": {
-		"import/resolver": {
-			"node": {
-				"extensions": [
-					".js",
-					".android.js",
-					".ios.js"
-				]
-			}
-		}
-	}
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".android.js",
+          ".ios.js"
+        ]
+      }
+    }
+  }
 }
