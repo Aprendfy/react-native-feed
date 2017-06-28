@@ -1,0 +1,10 @@
+language: javascript
+before_install:
+  - nvm install && nvm use && nvm version
+  - node -v
+  - npm -v
+install:
+  - npm install
+script:
+  - npm run lint
+  - npm run test
