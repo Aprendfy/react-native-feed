@@ -127,7 +127,6 @@ android {
 }
 
 dependencies {
-    compile project(':react-native-admob')
     compile project(':react-native-splash-screen')
     compile project(':react-native-vector-icons')
     compile project(':react-native-linear-gradient')
