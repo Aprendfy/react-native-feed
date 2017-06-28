@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
 
 import CardHeader from './CardHeader';
 import CardBody from './CardBody';
@@ -8,10 +8,6 @@ import CardFooter from './CardFooter';
 import { feedCardStyle as styles } from '../../assets/styles/feed/styles';
 
 class FeedCard extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     const { title, category, readingTime, level, color, image, body } = this.props;
     return (
@@ -45,7 +41,6 @@ FeedCard.propTypes = {
   color: PropTypes.string,
   image: PropTypes.string,
   body: PropTypes.string,
-  dateCreated: PropTypes.string,
 };
 
 FeedCard.defaultProps = {
@@ -56,8 +51,6 @@ FeedCard.defaultProps = {
   color: '',
   image: '',
   body: '',
-  dateCreated: '',
-
 };
 
 export default FeedCard;

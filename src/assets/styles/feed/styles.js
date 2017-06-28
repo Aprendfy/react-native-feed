@@ -1,4 +1,4 @@
-import { StyleSheet, Platform } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { colors, hm } from '../styles';
 
 export const cardHeaderStyles = StyleSheet.create({

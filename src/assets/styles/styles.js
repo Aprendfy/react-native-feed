@@ -18,7 +18,7 @@ export const colors = {
   info: '#323232',
   warning: '#FFC107',
 
-  //categories
+  // categories
   categorieFacebook: '#3B5999',
   categorieGooglePlus: '#DF494A',
   categorieInstagram: '#E2793F',

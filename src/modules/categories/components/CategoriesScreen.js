@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import {
-  FlatList,
-  View
-} from 'react-native';
+import { FlatList, View } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Router } from '../../../router/routes';
+
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import ItemList from '../../../components/categories/ItemList';
+import { Router } from '../../../router/routes';
 import { categoriesScreenStyles as styles } from '../../../assets/styles/categories/styles';
 import { colors } from '../../../assets/styles/styles';
 
@@ -38,7 +36,7 @@ class CategoriesScreen extends Component {
   }
 
   componentWillMount() {
-    const { categoriesState, categoriesActions } = this.props;
+    const { categoriesActions } = this.props;
     categoriesActions.fetchCategories();
   }
 
@@ -51,7 +49,7 @@ class CategoriesScreen extends Component {
   }
 
   render() {
-    const { categoriesState, categoriesActions } = this.props;
+    const { categoriesState } = this.props;
     return (
       <View>
         <FlatList
