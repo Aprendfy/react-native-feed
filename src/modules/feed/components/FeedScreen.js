@@ -10,7 +10,7 @@ import { colors } from '../../../assets/styles/styles';
 import * as actions from './../actions/index';
 import * as navActions from '../../navigator/actions/index';
 
-class FeedScreen extends Component {
+export class FeedScreen extends Component {
   constructor(props) {
     super(props);
     this.updateTitle = this.updateTitle.bind(this);
@@ -44,7 +44,6 @@ class FeedScreen extends Component {
   componentWillMount() {
     const { feedActions } = this.props;
     feedActions.fetchFeed();
-    console.log('teste de log');
     // navActions.setAlert({ title: 'Do I have a title?', message: 'Oh yes, I do! =)', type: 'info', duration: 6000 });
   }
   componentDidMount() {
