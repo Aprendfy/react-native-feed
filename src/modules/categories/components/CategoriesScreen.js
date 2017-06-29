@@ -11,7 +11,7 @@ import { colors } from '../../../assets/styles/styles';
 
 import * as actions from './../actions/index';
 
-class CategoriesScreen extends Component {
+export class CategoriesScreen extends Component {
   constructor(props) {
     super(props);
     this.onPressCategorie = this.onPressCategorie.bind(this);
