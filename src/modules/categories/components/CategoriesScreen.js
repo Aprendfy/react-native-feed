@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 import { FlatList, View } from 'react-native';
 import { connect } from 'react-redux';
 
@@ -8,9 +8,7 @@ import ItemList from '../../../components/categories/ItemList';
 import { Router } from '../../../router/routes';
 import { categoriesScreenStyles as styles } from '../../../assets/styles/categories/styles';
 import { colors } from '../../../assets/styles/styles';
-import { fetchCategories } from '../actions'
-
-import * as actions from './../actions/index';
+import { fetchCategories } from '../actions';
 
 export class CategoriesScreen extends Component {
   constructor(props) {
@@ -62,20 +60,20 @@ export class CategoriesScreen extends Component {
 
 CategoriesScreen.propTypes = {
   categories: PropTypes.array.isRequired,
-  refreshCategories: PropTypes.func.isRequired
-}
+  refreshCategories: PropTypes.func.isRequired,
+};
 
 const mapStateToProps = (state) => {
-  const { categories } = state.categories
+  const { categories } = state.categories;
   return {
     categories
-  }
-}
+  };
+};
 
 const mapDispatchToProps = (dispatch) => {
   return {
     refreshCategories: () => dispatch(fetchCategories())
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(CategoriesScreen);

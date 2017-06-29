@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "lint": "eslint ./",
+    "lint": "eslint ./src/ ./__tests__/",
     "update-coverage": "codecov -t $CODECOV_TOKEN && cat ./coverage/lcov.info | codacy-coverage -v -t $CODACY_TOKEN",
     "test-watch": "jest --watch",
     "test-ci": "jest --forceExit --coverage",
