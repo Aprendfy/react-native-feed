@@ -7,4 +7,5 @@ install:
   - npm install
 script:
   - npm run lint
-  - npm run test
+  - npm run test-ci
+  - npm run update-coverage
