@@ -5,9 +5,10 @@ import { CategoriesScreen } from '../../../../src/modules/categories/components/
 
 const props = {
   refreshCategories: jest.fn(),
-  categoriesState: {
-    categories: {}
-  }
+  categories: [
+    { title: 'Facebook', color: 'Azul' },
+    { title: 'Google+', color: 'Vermeio' }
+  ]
 };
 
 describe('<CategoriesScreen />', () => {

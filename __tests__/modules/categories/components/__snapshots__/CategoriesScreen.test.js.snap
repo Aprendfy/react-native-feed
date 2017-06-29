@@ -10,7 +10,18 @@ ShallowWrapper {
   "length": 1,
   "node": <View>
     <FlatList
-        data={undefined}
+        data={
+            Array [
+                Object {
+                  "color": "Azul",
+                  "title": "Facebook",
+                },
+                Object {
+                  "color": "Vermeio",
+                  "title": "Google+",
+                },
+              ]
+        }
         disableVirtualization={false}
         getItem={undefined}
         getItemCount={undefined}
@@ -31,7 +42,18 @@ ShallowWrapper {
   "nodes": Array [
     <View>
       <FlatList
-            data={undefined}
+            data={
+                  Array [
+                        Object {
+                          "color": "Azul",
+                          "title": "Facebook",
+                        },
+                        Object {
+                          "color": "Vermeio",
+                          "title": "Google+",
+                        },
+                      ]
+            }
             disableVirtualization={false}
             getItem={undefined}
             getItemCount={undefined}
@@ -57,10 +79,17 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <CategoriesScreen
-        categoriesState={
-                Object {
-                        "categories": Object {},
-                      }
+        categories={
+                Array [
+                        Object {
+                          "color": "Azul",
+                          "title": "Facebook",
+                        },
+                        Object {
+                          "color": "Vermeio",
+                          "title": "Google+",
+                        },
+                      ]
         }
         refreshCategories={[Function]}
 />,
@@ -72,9 +101,16 @@ ShallowWrapper {
         "context": Object {},
         "onPressCategorie": [Function],
         "props": Object {
-          "categoriesState": Object {
-            "categories": Object {},
-          },
+          "categories": Array [
+            Object {
+              "color": "Azul",
+              "title": "Facebook",
+            },
+            Object {
+              "color": "Vermeio",
+              "title": "Google+",
+            },
+          ],
           "refreshCategories": [Function],
         },
         "refs": Object {},
@@ -100,7 +136,18 @@ ShallowWrapper {
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <View>
           <FlatList
-                    data={undefined}
+                    data={
+                              Array [
+                                        Object {
+                                          "color": "Azul",
+                                          "title": "Facebook",
+                                        },
+                                        Object {
+                                          "color": "Vermeio",
+                                          "title": "Google+",
+                                        },
+                                      ]
+                    }
                     disableVirtualization={false}
                     getItem={undefined}
                     getItemCount={undefined}
@@ -121,7 +168,18 @@ ShallowWrapper {
         "_debugID": 2,
         "_renderedOutput": <View>
           <FlatList
-                    data={undefined}
+                    data={
+                              Array [
+                                        Object {
+                                          "color": "Azul",
+                                          "title": "Facebook",
+                                        },
+                                        Object {
+                                          "color": "Vermeio",
+                                          "title": "Google+",
+                                        },
+                                      ]
+                    }
                     disableVirtualization={false}
                     getItem={undefined}
                     getItemCount={undefined}
@@ -151,10 +209,17 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <CategoriesScreen
-    categoriesState={
-        Object {
-            "categories": Object {},
-          }
+    categories={
+        Array [
+            Object {
+              "color": "Azul",
+              "title": "Facebook",
+            },
+            Object {
+              "color": "Vermeio",
+              "title": "Google+",
+            },
+          ]
     }
     refreshCategories={[Function]}
 />,
