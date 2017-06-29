@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import FeedList from './FeedList';
+import ListFeedCard from './FeedList';
 
 import { colors } from '../../../assets/styles/styles';
 
@@ -79,13 +79,13 @@ export class FeedScreen extends Component {
 
       >
         <View style={{ flex: 1 }} tabLabel="Facebook">
-          <FeedList index={0} name="Primeira" color={colors.categorieFacebook} />
+          <ListFeedCard index={0} name="Primeira" color={colors.categorieFacebook} />
         </View>
         <View style={{ flex: 1 }} tabLabel="Google+">
-          <FeedList index={1} name="Segunda" color={colors.categorieGooglePlus} />
+          <ListFeedCard index={1} name="Segunda" color={colors.categorieGooglePlus} />
         </View>
         <View style={{ flex: 1 }} tabLabel="Twitter">
-          <FeedList index={2} name="Terceira" color={colors.categorieTwitter} />
+          <ListFeedCard index={2} name="Terceira" color={colors.categorieTwitter} />
         </View>
       </ScrollableTabView>
     );

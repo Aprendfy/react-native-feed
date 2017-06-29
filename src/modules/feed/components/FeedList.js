@@ -29,7 +29,7 @@ export class FeedList extends Component {
     console.log(this.props.feedState);
   }
 
-  renderSeparator() {
+  renderSeparator = () => {
     return (
       <View
         style={{
