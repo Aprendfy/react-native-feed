@@ -10,7 +10,7 @@ import { colors } from '../../../assets/styles/styles';
 import * as actions from './../actions/index';
 import * as navActions from '../../navigator/actions/index';
 
-class FeedScreen extends Component {
+export class FeedScreen extends Component {
   constructor(props) {
     super(props);
     this.updateTitle = this.updateTitle.bind(this);

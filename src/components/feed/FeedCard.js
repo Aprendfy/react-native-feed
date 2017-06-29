@@ -7,7 +7,7 @@ import CardFooter from './CardFooter';
 
 import { feedCardStyle as styles } from '../../assets/styles/feed/styles';
 
-class FeedCard extends Component {
+export class FeedCard extends Component {
   render() {
     const { title, category, readingTime, level, color, image, body } = this.props;
     return (

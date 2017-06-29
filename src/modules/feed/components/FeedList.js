@@ -3,7 +3,7 @@ import { View, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import FeedCard from '../../../components/feed/FeedCard';
+import Card from '../../../components/feed/FeedCard';
 
 import * as actions from './../actions/index';
 
@@ -17,7 +17,7 @@ class FeedList extends Component {
 
   renderItem({ item }) {
     return (
-      <FeedCard
+      <Card
         title={item.title}
         category={item.category}
         readingTime={item.readingTime}
