@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { FlatList, View } from 'react-native';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import ItemList from '../../../components/categories/ItemList';
 import { Router } from '../../../router/routes';
 import { categoriesScreenStyles as styles } from '../../../assets/styles/categories/styles';
 import { colors } from '../../../assets/styles/styles';
+import { fetchCategories } from '../actions'
 
 import * as actions from './../actions/index';
 
@@ -32,12 +32,10 @@ export class CategoriesScreen extends Component {
         );
       }
     }
-
   }
 
   componentWillMount() {
-    const { categoriesActions } = this.props;
-    categoriesActions.fetchCategories();
+    this.props.refreshCategories();
   }
 
   renderItem({ item, index }) {
@@ -49,12 +47,11 @@ export class CategoriesScreen extends Component {
   }
 
   render() {
-    const { categoriesState } = this.props;
     return (
       <View>
         <FlatList
           renderItem={this.renderItem}
-          data={categoriesState.categories}
+          data={this.props.categories}
           keyExtractor={(item, index) => index}
         />
       </View>
@@ -62,11 +59,17 @@ export class CategoriesScreen extends Component {
   }
 }
 
-export default connect(
-  state => ({
-    categoriesState: state.categories
-  }),
-  dispatch => ({
-    categoriesActions: bindActionCreators(actions, dispatch),
-  })
-)(CategoriesScreen);
+const mapStateToProps = (state) => {
+  const { categories } = state.categories
+  return {
+    categories
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    refreshCategories: () => dispatch(fetchCategories())
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CategoriesScreen);
