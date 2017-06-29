@@ -5,7 +5,9 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint ./",
+    "update-coverage": "codecov -t $CODECOV_TOKEN",
     "test-watch": "jest --watch",
+    "test-ci": "jest --forceExit --coverage",
     "test": "jest"
   },
   "dependencies": {
@@ -28,6 +30,7 @@
     "babel-eslint": "^7.1.1",
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
+    "codecov": "^2.2.0",
     "enzyme": "^2.9.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",

@@ -4,9 +4,7 @@ import { shallow } from 'enzyme';
 import { CategoriesScreen } from '../../../../src/modules/categories/components/CategoriesScreen';
 
 const props = {
-  categoriesActions: {
-    fetchCategories: () => {}
-  },
+  refreshCategories: jest.fn(),
   categoriesState: {
     categories: {}
   }
