@@ -1,10 +1,10 @@
 import { createRouter } from '@expo/ex-navigation';
-import FeedScreen from '../modules/feed/components/FeedScreen';
-import CategoriesScreen from '../modules/categories/components/CategoriesScreen';
+import Feed from '../modules/feed/components/FeedScreen';
+import Categories from '../modules/categories/components/CategoriesScreen';
 
 export const Router = createRouter(() => ({
-  feed: () => FeedScreen,
-  categories: () => CategoriesScreen
+  feed: () => Feed,
+  categories: () => Categories
 }), { ignoreSerializableWarnings: true });
 
 export default Router;

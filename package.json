@@ -5,11 +5,15 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint ./",
+    "update-coverage": "codecov -t $CODECOV_TOKEN",
+    "test-watch": "jest --watch",
+    "test-ci": "jest --forceExit --coverage",
     "test": "jest"
   },
   "dependencies": {
     "@expo/ex-navigation": "^2.11.1",
     "babel-preset-react-native-stage-0": "^1.0.1",
+    "prop-types": "^15.5.10",
     "react": "16.0.0-alpha.6",
     "react-native": "0.44.0",
     "react-native-admob": "^1.3.0",
@@ -27,14 +31,23 @@
     "babel-eslint": "^7.1.1",
     "babel-jest": "19.0.0",
     "babel-preset-react-native": "1.9.1",
+    "codecov": "^2.2.0",
+    "enzyme": "^2.9.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.9.0",
-    "jest": "19.0.2"
+    "jest": "^20.0.4",
+    "jest-enzyme": "^3.4.0",
+    "jest-expo": "^18.0.0",
+    "react-addons-test-utils": "^15.6.0",
+    "react-dom": "^15.6.1"
   },
   "jest": {
-    "preset": "react-native"
+    "preset": "jest-expo",
+    "testMatch": [
+      "**/__tests__/**/**/**/*.test.js?(x)"
+    ]
   }
 }
