@@ -1,7 +1,7 @@
 import React from 'react';
 import { AdMobBanner } from 'react-native-admob';
 
-const CardFooter = () => {
+export const CardFooter = () => {
   return (
     <AdMobBanner
       bannerSize="smartBannerPortrait"
@@ -11,5 +11,3 @@ const CardFooter = () => {
     />
   );
 };
-
-export default CardFooter;

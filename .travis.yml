@@ -1,15 +1,16 @@
 language: javascript
+cache: yarn
 branches:
   only:
     - master
 before_install:
-  - nvm install && nvm use && nvm version
+  - nvm install && nvm use
   - node -v
   - npm -v
 install:
   - npm install
 script:
   - npm run lint
-  - npm run test-ci
+  - npm test
 after_script:
   - npm run update-coverage

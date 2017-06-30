@@ -4,10 +4,11 @@ import { shallow } from 'enzyme';
 import { FeedList } from '../../../../src/modules/feed/components/FeedList';
 
 const props = {
+  color: 'red',
   route: {
     params: {
       tab: 'tab',
-      title: 'title'
+      title: 'title',
     }
   }
 };

@@ -1,9 +1,10 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import CardHeader from './CardHeader';
-import CardBody from './CardBody';
-import CardFooter from './CardFooter';
+import { CardHeader } from './CardHeader';
+import { CardBody } from './CardBody';
+import { CardFooter } from './CardFooter';
 
 import { feedCardStyle as styles } from '../../assets/styles/feed/styles';
 
@@ -52,5 +53,3 @@ FeedCard.defaultProps = {
   image: '',
   body: '',
 };
-
-export default FeedCard;

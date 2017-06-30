@@ -1,9 +1,10 @@
-import React, { PropTypes } from 'react';
-import { Text, View } from 'react-native';
+import React from 'react';
+import PropTypes from 'prop-types';
 
+import { Text, View } from 'react-native';
 import { cardBodyStyle as styles } from '../../assets/styles/feed/styles';
 
-const CardBody = ({ text }) => {
+export const CardBody = ({ text }) => {
   return (
     <View style={styles.textWrapper}>
       <Text style={styles.text}>
@@ -16,5 +17,3 @@ const CardBody = ({ text }) => {
 CardBody.propTypes = {
   text: PropTypes.string.isRequired,
 };
-
-export default CardBody;

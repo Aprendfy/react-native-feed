@@ -10,7 +10,7 @@ ShallowWrapper {
   "length": 1,
   "node": <ScrollableTabView
     contentProps={Object {}}
-    initialPage="tab"
+    initialPage={2}
     locked={false}
     onChangeTab={[Function]}
     onScroll={[Function]}
@@ -72,7 +72,7 @@ ShallowWrapper {
   "nodes": Array [
     <ScrollableTabView
       contentProps={Object {}}
-      initialPage="tab"
+      initialPage={2}
       locked={false}
       onChangeTab={[Function]}
       onScroll={[Function]}
@@ -148,7 +148,7 @@ ShallowWrapper {
         route={
                 Object {
                         "params": Object {
-                          "tab": "tab",
+                          "tab": 2,
                           "title": "title",
                         },
                       }
@@ -167,14 +167,14 @@ ShallowWrapper {
           "navigator": Object {},
           "route": Object {
             "params": Object {
-              "tab": "tab",
+              "tab": 2,
               "title": "title",
             },
           },
         },
         "refs": Object {},
         "state": Object {
-          "tab": "tab",
+          "tab": 2,
           "title": "title",
         },
         "updateTitle": [Function],
@@ -198,7 +198,7 @@ ShallowWrapper {
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <ScrollableTabView
           contentProps={Object {}}
-          initialPage="tab"
+          initialPage={2}
           locked={false}
           onChangeTab={[Function]}
           onScroll={[Function]}
@@ -260,7 +260,7 @@ ShallowWrapper {
         "_debugID": 2,
         "_renderedOutput": <ScrollableTabView
           contentProps={Object {}}
-          initialPage="tab"
+          initialPage={2}
           locked={false}
           onChangeTab={[Function]}
           onScroll={[Function]}
@@ -340,7 +340,7 @@ ShallowWrapper {
     route={
         Object {
             "params": Object {
-              "tab": "tab",
+              "tab": 2,
               "title": "title",
             },
           }
