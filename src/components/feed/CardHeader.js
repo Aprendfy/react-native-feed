@@ -1,11 +1,12 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Text, View, Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import { colors } from '../../assets/styles/styles';
 import { cardHeaderStyles as styles } from '../../assets/styles/feed/styles';
 
-class CardHeader extends Component {
+export class CardHeader extends Component {
   render() {
     const { title, tag, readingTime, level, color, image } = this.props;
     return (
@@ -59,5 +60,3 @@ CardHeader.defaultProps = {
   color: '',
   image: ''
 };
-
-export default CardHeader;

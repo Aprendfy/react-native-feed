@@ -5,6 +5,7 @@
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
     "lint": "eslint ./src/ ./__tests__/",
+    "lint-fix": "eslint --fix ./src/ ./__tests__/",
     "update-coverage": "codecov -t $CODECOV_TOKEN && cat ./coverage/lcov.info | codacy-coverage -v -t $CODACY_TOKEN",
     "test-watch": "jest --watch",
     "test-ci": "jest --forceExit --coverage",
@@ -42,11 +43,13 @@
     "jest": "^20.0.4",
     "jest-enzyme": "^3.4.0",
     "jest-expo": "^18.0.0",
+    "prettier-eslint": "^6.4.1",
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1"
   },
   "jest": {
     "preset": "jest-expo",
+    "setupFiles": ["./__tests__/setup.js"],
     "testMatch": [
       "**/__tests__/**/**/**/*.test.js?(x)"
     ]

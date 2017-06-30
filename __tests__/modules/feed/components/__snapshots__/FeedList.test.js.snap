@@ -61,6 +61,7 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <FeedList
+        color="red"
         feedActions={Object {}}
         feedState={Object {}}
         route={
@@ -79,6 +80,7 @@ ShallowWrapper {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
+          "color": "red",
           "feedActions": Object {},
           "feedState": Object {},
           "route": Object {
@@ -166,6 +168,7 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <FeedList
+    color="red"
     feedActions={Object {}}
     feedState={Object {}}
     route={

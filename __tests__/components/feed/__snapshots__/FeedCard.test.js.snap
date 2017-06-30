@@ -1,0 +1,288 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedCard /> Should have a snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View
+    style={
+        Object {
+            "flex": 1,
+          }
+    }
+>
+    <View
+        style={
+            Object {
+                "flex": 2,
+              }
+        }
+    >
+        <CardHeader
+            color="red"
+            image={
+                Object {
+                    "uri": "image",
+                  }
+            }
+            level="level"
+            readingTime="readingtime"
+            tag="category"
+            title="title"
+        />
+    </View>
+    <View
+        style={
+            Object {
+                "flex": 3,
+              }
+        }
+    >
+        <CardBody
+            text="BODY"
+        />
+    </View>
+    <View
+        style={
+            Object {
+                "backgroundColor": "#f5f5f5",
+                "flex": 1,
+                "justifyContent": "flex-end",
+              }
+        }
+    >
+        <CardFooter />
+    </View>
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Object {
+                  "flex": 1,
+                }
+      }
+>
+      <View
+            style={
+                  Object {
+                        "flex": 2,
+                      }
+            }
+      >
+            <CardHeader
+                  color="red"
+                  image={
+                        Object {
+                              "uri": "image",
+                            }
+                  }
+                  level="level"
+                  readingTime="readingtime"
+                  tag="category"
+                  title="title"
+            />
+      </View>
+      <View
+            style={
+                  Object {
+                        "flex": 3,
+                      }
+            }
+      >
+            <CardBody
+                  text="BODY"
+            />
+      </View>
+      <View
+            style={
+                  Object {
+                        "backgroundColor": "#f5f5f5",
+                        "flex": 1,
+                        "justifyContent": "flex-end",
+                      }
+            }
+      >
+            <CardFooter />
+      </View>
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <FeedCard
+        body="BODY"
+        category="category"
+        color="red"
+        image="image"
+        level="level"
+        readingTime="readingtime"
+        tag="tag"
+        title="title"
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": FeedCard {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "body": "BODY",
+          "category": "category",
+          "color": "red",
+          "image": "image",
+          "level": "level",
+          "readingTime": "readingtime",
+          "tag": "tag",
+          "title": "title",
+        },
+        "refs": Object {},
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View
+          style={
+                    Object {
+                              "flex": 1,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "flex": 2,
+                                      }
+                    }
+          >
+                    <CardHeader
+                              color="red"
+                              image={
+                                        Object {
+                                                  "uri": "image",
+                                                }
+                              }
+                              level="level"
+                              readingTime="readingtime"
+                              tag="category"
+                              title="title"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "flex": 3,
+                                      }
+                    }
+          >
+                    <CardBody
+                              text="BODY"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "backgroundColor": "#f5f5f5",
+                                        "flex": 1,
+                                        "justifyContent": "flex-end",
+                                      }
+                    }
+          >
+                    <CardFooter />
+          </View>
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View
+          style={
+                    Object {
+                              "flex": 1,
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "flex": 2,
+                                      }
+                    }
+          >
+                    <CardHeader
+                              color="red"
+                              image={
+                                        Object {
+                                                  "uri": "image",
+                                                }
+                              }
+                              level="level"
+                              readingTime="readingtime"
+                              tag="category"
+                              title="title"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "flex": 3,
+                                      }
+                    }
+          >
+                    <CardBody
+                              text="BODY"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "backgroundColor": "#f5f5f5",
+                                        "flex": 1,
+                                        "justifyContent": "flex-end",
+                                      }
+                    }
+          >
+                    <CardFooter />
+          </View>
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <FeedCard
+    body="BODY"
+    category="category"
+    color="red"
+    image="image"
+    level="level"
+    readingTime="readingtime"
+    tag="tag"
+    title="title"
+/>,
+}
+`;

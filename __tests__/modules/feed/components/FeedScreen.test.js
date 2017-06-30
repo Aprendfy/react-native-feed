@@ -9,7 +9,7 @@ const props = {
   },
   route: {
     params: {
-      tab: 'tab',
+      tab: 2,
       title: 'title'
     }
   }

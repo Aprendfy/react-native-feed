@@ -4,7 +4,7 @@ import { FlatList, View } from 'react-native';
 import { connect } from 'react-redux';
 
 import IonIcons from 'react-native-vector-icons/Ionicons';
-import ItemList from '../../../components/categories/ItemList';
+import { ItemList } from '../../../components/categories/ItemList';
 import { Router } from '../../../router/routes';
 import { categoriesScreenStyles as styles } from '../../../assets/styles/categories/styles';
 import { colors } from '../../../assets/styles/styles';

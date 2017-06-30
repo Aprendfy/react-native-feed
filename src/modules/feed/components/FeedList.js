@@ -4,7 +4,7 @@ import { View, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import Card from '../../../components/feed/FeedCard';
+import { Card } from '../../../components/feed/FeedCard';
 
 import * as actions from './../actions/index';
 
