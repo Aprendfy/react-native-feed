@@ -8,7 +8,7 @@ import { Router } from '../../../router/routes';
 import * as actions from '../actions/index';
 import * as styles from '../../../assets/styles/styles';
 
-class Navigator extends Component {
+export class Navigator extends Component {
 
   constructor(props) {
     super(props);

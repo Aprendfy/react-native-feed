@@ -1,0 +1,181 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedList /> Should have a snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <View>
+    <FlatList
+        ItemSeparatorComponent={[Function]}
+        data={undefined}
+        disableVirtualization={false}
+        getItem={undefined}
+        getItemCount={undefined}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        numColumns={1}
+        onEndReached={[Function]}
+        onEndReachedThreshold={2}
+        onEndThreshold={10}
+        removeClippedSubviews={true}
+        renderItem={[Function]}
+        renderScrollComponent={[Function]}
+        updateCellsBatchingPeriod={50}
+        windowSize={21}
+    />
+</View>,
+  "nodes": Array [
+    <View>
+      <FlatList
+            ItemSeparatorComponent={[Function]}
+            data={undefined}
+            disableVirtualization={false}
+            getItem={undefined}
+            getItemCount={undefined}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            numColumns={1}
+            onEndReached={[Function]}
+            onEndReachedThreshold={2}
+            onEndThreshold={10}
+            removeClippedSubviews={true}
+            renderItem={[Function]}
+            renderScrollComponent={[Function]}
+            updateCellsBatchingPeriod={50}
+            windowSize={21}
+      />
+</View>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <FeedList
+        feedActions={Object {}}
+        feedState={Object {}}
+        route={
+                Object {
+                        "params": Object {
+                          "tab": "tab",
+                          "title": "title",
+                        },
+                      }
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": FeedList {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "feedActions": Object {},
+          "feedState": Object {},
+          "route": Object {
+            "params": Object {
+              "tab": "tab",
+              "title": "title",
+            },
+          },
+        },
+        "refs": Object {},
+        "renderSeparator": [Function],
+        "state": null,
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <View>
+          <FlatList
+                    ItemSeparatorComponent={[Function]}
+                    data={undefined}
+                    disableVirtualization={false}
+                    getItem={undefined}
+                    getItemCount={undefined}
+                    horizontal={false}
+                    initialNumToRender={10}
+                    keyExtractor={[Function]}
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onEndReached={[Function]}
+                    onEndReachedThreshold={2}
+                    onEndThreshold={10}
+                    removeClippedSubviews={true}
+                    renderItem={[Function]}
+                    renderScrollComponent={[Function]}
+                    updateCellsBatchingPeriod={50}
+                    windowSize={21}
+          />
+</View>,
+        "_debugID": 2,
+        "_renderedOutput": <View>
+          <FlatList
+                    ItemSeparatorComponent={[Function]}
+                    data={undefined}
+                    disableVirtualization={false}
+                    getItem={undefined}
+                    getItemCount={undefined}
+                    horizontal={false}
+                    initialNumToRender={10}
+                    keyExtractor={[Function]}
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onEndReached={[Function]}
+                    onEndReachedThreshold={2}
+                    onEndThreshold={10}
+                    removeClippedSubviews={true}
+                    renderItem={[Function]}
+                    renderScrollComponent={[Function]}
+                    updateCellsBatchingPeriod={50}
+                    windowSize={21}
+          />
+</View>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <FeedList
+    feedActions={Object {}}
+    feedState={Object {}}
+    route={
+        Object {
+            "params": Object {
+              "tab": "tab",
+              "title": "title",
+            },
+          }
+    }
+/>,
+}
+`;

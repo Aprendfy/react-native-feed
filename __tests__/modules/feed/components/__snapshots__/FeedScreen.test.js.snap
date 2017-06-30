@@ -1,0 +1,350 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<FeedScreen /> Should have a snapshot 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <ScrollableTabView
+    contentProps={Object {}}
+    initialPage="tab"
+    locked={false}
+    onChangeTab={[Function]}
+    onScroll={[Function]}
+    page={-1}
+    prerenderingSiblingsNumber={0}
+    renderTabBar={[Function]}
+    scrollWithoutAnimation={false}
+    tabBarBackgroundColor="red"
+    tabBarPosition="top"
+    tabBarTextStyle={
+        Object {
+            "fontWeight": "600",
+          }
+    }
+>
+    <View
+        style={
+            Object {
+                "flex": 1,
+              }
+        }
+        tabLabel="Facebook"
+    >
+        <Connect(FeedList)
+            color="#3B5999"
+            index={0}
+            name="Primeira"
+        />
+    </View>
+    <View
+        style={
+            Object {
+                "flex": 1,
+              }
+        }
+        tabLabel="Google+"
+    >
+        <Connect(FeedList)
+            color="#DF494A"
+            index={1}
+            name="Segunda"
+        />
+    </View>
+    <View
+        style={
+            Object {
+                "flex": 1,
+              }
+        }
+        tabLabel="Twitter"
+    >
+        <Connect(FeedList)
+            color="#3598DB"
+            index={2}
+            name="Terceira"
+        />
+    </View>
+</ScrollableTabView>,
+  "nodes": Array [
+    <ScrollableTabView
+      contentProps={Object {}}
+      initialPage="tab"
+      locked={false}
+      onChangeTab={[Function]}
+      onScroll={[Function]}
+      page={-1}
+      prerenderingSiblingsNumber={0}
+      renderTabBar={[Function]}
+      scrollWithoutAnimation={false}
+      tabBarBackgroundColor="red"
+      tabBarPosition="top"
+      tabBarTextStyle={
+            Object {
+                  "fontWeight": "600",
+                }
+      }
+>
+      <View
+            style={
+                  Object {
+                        "flex": 1,
+                      }
+            }
+            tabLabel="Facebook"
+      >
+            <Connect(FeedList)
+                  color="#3B5999"
+                  index={0}
+                  name="Primeira"
+            />
+      </View>
+      <View
+            style={
+                  Object {
+                        "flex": 1,
+                      }
+            }
+            tabLabel="Google+"
+      >
+            <Connect(FeedList)
+                  color="#DF494A"
+                  index={1}
+                  name="Segunda"
+            />
+      </View>
+      <View
+            style={
+                  Object {
+                        "flex": 1,
+                      }
+            }
+            tabLabel="Twitter"
+      >
+            <Connect(FeedList)
+                  color="#3598DB"
+                  index={2}
+                  name="Terceira"
+            />
+      </View>
+</ScrollableTabView>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <FeedScreen
+        feedActions={
+                Object {
+                        "fetchFeed": [Function],
+                      }
+        }
+        navigator={Object {}}
+        route={
+                Object {
+                        "params": Object {
+                          "tab": "tab",
+                          "title": "title",
+                        },
+                      }
+        }
+/>,
+      "_debugID": 1,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": FeedScreen {
+        "_reactInternalInstance": [Circular],
+        "context": Object {},
+        "props": Object {
+          "feedActions": Object {
+            "fetchFeed": [Function],
+          },
+          "navigator": Object {},
+          "route": Object {
+            "params": Object {
+              "tab": "tab",
+              "title": "title",
+            },
+          },
+        },
+        "refs": Object {},
+        "state": Object {
+          "tab": "tab",
+          "title": "title",
+        },
+        "updateTitle": [Function],
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 1,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <ScrollableTabView
+          contentProps={Object {}}
+          initialPage="tab"
+          locked={false}
+          onChangeTab={[Function]}
+          onScroll={[Function]}
+          page={-1}
+          prerenderingSiblingsNumber={0}
+          renderTabBar={[Function]}
+          scrollWithoutAnimation={false}
+          tabBarBackgroundColor="red"
+          tabBarPosition="top"
+          tabBarTextStyle={
+                    Object {
+                              "fontWeight": "600",
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "flex": 1,
+                                      }
+                    }
+                    tabLabel="Facebook"
+          >
+                    <Connect(FeedList)
+                              color="#3B5999"
+                              index={0}
+                              name="Primeira"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "flex": 1,
+                                      }
+                    }
+                    tabLabel="Google+"
+          >
+                    <Connect(FeedList)
+                              color="#DF494A"
+                              index={1}
+                              name="Segunda"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "flex": 1,
+                                      }
+                    }
+                    tabLabel="Twitter"
+          >
+                    <Connect(FeedList)
+                              color="#3598DB"
+                              index={2}
+                              name="Terceira"
+                    />
+          </View>
+</ScrollableTabView>,
+        "_debugID": 2,
+        "_renderedOutput": <ScrollableTabView
+          contentProps={Object {}}
+          initialPage="tab"
+          locked={false}
+          onChangeTab={[Function]}
+          onScroll={[Function]}
+          page={-1}
+          prerenderingSiblingsNumber={0}
+          renderTabBar={[Function]}
+          scrollWithoutAnimation={false}
+          tabBarBackgroundColor="red"
+          tabBarPosition="top"
+          tabBarTextStyle={
+                    Object {
+                              "fontWeight": "600",
+                            }
+          }
+>
+          <View
+                    style={
+                              Object {
+                                        "flex": 1,
+                                      }
+                    }
+                    tabLabel="Facebook"
+          >
+                    <Connect(FeedList)
+                              color="#3B5999"
+                              index={0}
+                              name="Primeira"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "flex": 1,
+                                      }
+                    }
+                    tabLabel="Google+"
+          >
+                    <Connect(FeedList)
+                              color="#DF494A"
+                              index={1}
+                              name="Segunda"
+                    />
+          </View>
+          <View
+                    style={
+                              Object {
+                                        "flex": 1,
+                                      }
+                    }
+                    tabLabel="Twitter"
+          >
+                    <Connect(FeedList)
+                              color="#3598DB"
+                              index={2}
+                              name="Terceira"
+                    />
+          </View>
+</ScrollableTabView>,
+      },
+      "_renderedNodeType": 1,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <FeedScreen
+    feedActions={
+        Object {
+            "fetchFeed": [Function],
+          }
+    }
+    navigator={Object {}}
+    route={
+        Object {
+            "params": Object {
+              "tab": "tab",
+              "title": "title",
+            },
+          }
+    }
+/>,
+}
+`;

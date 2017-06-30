@@ -1,23 +1,17 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, FlatList } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-import FeedCard from '../../../components/feed/FeedCard';
+import Card from '../../../components/feed/FeedCard';
 
 import * as actions from './../actions/index';
 
-class FeedList extends Component {
-
-  constructor(props) {
-    super(props);
-    this.renderItem = this.renderItem.bind(this);
-    this.renderSeparator = this.renderSeparator.bind(this);
-  }
-
+export class FeedList extends Component {
   renderItem({ item }) {
     return (
-      <FeedCard
+      <Card
         title={item.title}
         category={item.category}
         readingTime={item.readingTime}

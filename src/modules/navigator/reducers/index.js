@@ -1,7 +1,6 @@
 import * as types from '../actions/types';
-import * as navigator from './reducers';
 
-const initialState = {
+export const initialState = {
   showAlert: false,
   showMenuModal: false,
   alertBody: {
@@ -9,20 +8,19 @@ const initialState = {
     type: 'info',
     message: '',
     duration: 6000
-  },
-  alertData: {}
+  }
 };
 
-export default function reducer(state = initialState, action = {}) {
+export default function (state = initialState, action = {}) {
   switch (action.type) {
     case types.TOGGLE_ALERT:
-      return navigator.toggleAlert(state, action);
+      return { ...state, showAlert: !state.showAlert };
     case types.TOGGLE_MENU_MODAL:
-      return navigator.toggleModal(state, action);
+      return { ...state, showMenuModal: !state.showMenuModal };
     case types.UPDATE_ALERT:
-      return navigator.updateAlert(state, action);
+      return { ...state, alertBody: action.payload };
     case types.SET_ALERT:
-      return navigator.setAlert(state, action);
+      return { ...state, showAlert: !state.showAlert, alertBody: action.payload };
     default:
       return state;
   }
