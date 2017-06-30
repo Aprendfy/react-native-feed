@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
-import { NavigationReducer } from '@expo/ex-navigation';
+import { NavigationReducer as navigation } from '@expo/ex-navigation';
 
 import feed from '../modules/feed/reducers/index';
 import navigator from '../modules/navigator/reducers/index';
-import categories from '../modules/categories/reducers/index';
+import categories from '../modules/category/reducers/index';
 
 export default combineReducers({
   feed,
   navigator,
   categories,
-  navigation: NavigationReducer
+  navigation
 });
