@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
-import { CardHeader } from './CardHeader';
-import { CardBody } from './CardBody';
-import { CardFooter } from './CardFooter';
+import { CardHeader, CardBody, CardFooter } from './';
 
 import { feedCardStyle as styles } from '../../theme/feed/styles';
 

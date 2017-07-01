@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { View, FlatList } from 'react-native';
-import { FeedCard } from './FeedCard';
-import { CardSeparator } from './CardSeparator';
+import { CardSeparator, FeedCard } from './';
 
 const renderItem = (color) => {
   return ({ item }) =>
@@ -19,9 +18,9 @@ const renderItem = (color) => {
 
 export class FeedList extends Component {
   render() {
-    const { list, onEndReached, color } = this.props;
+    const { list, onEndReached, color, containerStyle, tabLabel } = this.props;
     return (
-      <View>
+      <View style={containerStyle} tabLabel={tabLabel}>
         <FlatList
           renderItem={renderItem(color)}
           data={list}
