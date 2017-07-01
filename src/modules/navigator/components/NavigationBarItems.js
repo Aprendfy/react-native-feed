@@ -19,7 +19,7 @@ export const backButtonAndTitle = ({ params }) => {
       <Text style={{ fontSize: 18, color: '#FFF' }}>{state.title}</Text>
     </View>
   );
-}
+};
 
 export const rightSideIcon = () => {
   return (
@@ -29,4 +29,4 @@ export const rightSideIcon = () => {
       </View>
     </View>
   );
-}
+};

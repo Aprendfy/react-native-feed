@@ -2,12 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Text, View } from 'react-native';
-import { cardBodyStyle as styles } from '../../theme/feed/styles';
+import Styles from './styles/CardBodyStyle';
 
 export const CardBody = ({ text }) => {
   return (
-    <View style={styles.textWrapper}>
-      <Text style={styles.text}>
+    <View style={Styles.textWrapper}>
+      <Text style={Styles.text}>
         {text}
       </Text>
     </View>
