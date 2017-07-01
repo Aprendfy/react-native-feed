@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import { FeedList } from '../components/FeedList';
 
+import { FeedList } from '../components/FeedList';
 import { colors } from '../../theme/styles';
 import * as actions from '../actions/index';
+import { backButtonAndTitle } from '../../navigator/components/NavigationBarItems';
 
 class FeedScreen extends Component {
   constructor(props) {
@@ -22,21 +23,7 @@ class FeedScreen extends Component {
   static route = {
     navigationBar: {
       visible: true,
-      renderTitle: ({ params }) => {
-        const { context = {} } = params;
-        const { state = {} } = context;
-        return (
-          <View
-            style={{
-              width: '100%',
-              height: 48,
-              justifyContent: 'center'
-            }}
-          >
-            <Text style={{ fontSize: 18, color: '#FFF' }}>{state.title}</Text>
-          </View>
-        );
-      }
+      renderTitle: backButtonAndTitle
     }
   }
 
@@ -73,24 +60,21 @@ class FeedScreen extends Component {
         onChangeTab={item => this.updateTitle(item)}
         initialPage={this.state.tab}
       >
-        <View style={{ flex: 1 }} tabLabel="Facebook">
-          <FeedList
-            index={0} name="Primeira" color={colors.categorieFacebook}
-            list={feedList} onEndReached={fetchMoreFeed}
-          />
-        </View>
-        <View style={{ flex: 1 }} tabLabel="Google+">
-          <FeedList
-            index={1} name="Segunda" color={colors.categorieGooglePlus}
-            list={feedList} onEndReached={fetchMoreFeed}
-          />
-        </View>
-        <View style={{ flex: 1 }} tabLabel="Twitter">
-          <FeedList
-            index={2} name="Terceira" color={colors.categorieTwitter}
-            list={feedList} onEndReached={fetchMoreFeed}
-          />
-        </View>
+        <FeedList
+          containerStyle={{ flex: 1 }} tabLabel="Facebook"
+          index={0} name="Primeira" color={colors.categorieFacebook}
+          list={feedList} onEndReached={fetchMoreFeed}
+        />
+        <FeedList
+          containerStyle={{ flex: 1 }} tabLabel="Google+"
+          index={1} name="Segunda" color={colors.categorieGooglePlus}
+          list={feedList} onEndReached={fetchMoreFeed}
+        />
+        <FeedList
+          containerStyle={{ flex: 1 }} tabLabel="Twitter"
+          index={2} name="Terceira" color={colors.categorieTwitter}
+          list={feedList} onEndReached={fetchMoreFeed}
+        />
       </ScrollableTabView>
     );
   }
