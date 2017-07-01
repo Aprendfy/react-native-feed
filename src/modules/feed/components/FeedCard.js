@@ -3,30 +3,28 @@ import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import { CardHeader, CardBody, CardFooter } from './';
-
-import { feedCardStyle as styles } from '../../theme/feed/styles';
+import Styles from './styles/FeedCardStyle';
 
 export class FeedCard extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isCollapsed: true };
+  }
+
+  toggleIsCollapsed() {
+    this.state.isCollapsed = !this.state.isCollapsed;
+  }
+
   render() {
+    const { isCollapsed } = this.state;
     const { title, category, readingTime, level, color, image, body } = this.props;
+    const headerProps = { title, readingTime, level, color, image, category };
+
     return (
-      <View style={styles.mainContainer}>
-        <View style={styles.headerContainer}>
-          <CardHeader
-            title={title}
-            tag={category}
-            readingTime={readingTime}
-            level={level}
-            color={color}
-            image={{ uri: image }}
-          />
-        </View>
-        <View style={styles.bodyContainer}>
-          <CardBody text={body} />
-        </View>
-        <View style={styles.footerContainer}>
-          <CardFooter />
-        </View>
+      <View style={isCollapsed ? Styles.collapsedContainer : Styles.fullContainer}>
+        <CardHeader {...headerProps} />
+        <CardBody text={body} />
+        <CardFooter />
       </View>
     );
   }

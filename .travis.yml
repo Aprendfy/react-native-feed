@@ -1,5 +1,4 @@
 language: javascript
-cache: yarn
 branches:
   only:
     - master
