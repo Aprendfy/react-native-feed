@@ -9,7 +9,7 @@ const props = {
   readingTime: 'readingtime',
   level: 'level',
   color: 'red',
-  image: {}
+  image: 'url'
 };
 
 describe('<CardHeader />', () => {

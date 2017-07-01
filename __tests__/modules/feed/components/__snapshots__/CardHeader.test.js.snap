@@ -20,7 +20,7 @@ ShallowWrapper {
         resizeMode="cover"
         source={
             Object {
-                "uri": Object {},
+                "uri": "url",
               }
         }
         style={
@@ -183,7 +183,7 @@ ShallowWrapper {
             resizeMode="cover"
             source={
                   Object {
-                        "uri": Object {},
+                        "uri": "url",
                       }
             }
             style={
@@ -343,7 +343,7 @@ ShallowWrapper {
       "_currentElement": <CardHeader
         category=""
         color="red"
-        image={Object {}}
+        image="url"
         level="level"
         readingTime="readingtime"
         tag="tag"
@@ -358,7 +358,7 @@ ShallowWrapper {
         "props": Object {
           "category": "",
           "color": "red",
-          "image": Object {},
+          "image": "url",
           "level": "level",
           "readingTime": "readingtime",
           "tag": "tag",
@@ -396,7 +396,7 @@ ShallowWrapper {
                     resizeMode="cover"
                     source={
                               Object {
-                                        "uri": Object {},
+                                        "uri": "url",
                                       }
                     }
                     style={
@@ -559,7 +559,7 @@ ShallowWrapper {
                     resizeMode="cover"
                     source={
                               Object {
-                                        "uri": Object {},
+                                        "uri": "url",
                                       }
                     }
                     style={
@@ -723,7 +723,7 @@ ShallowWrapper {
   "unrendered": <CardHeader
     category=""
     color="red"
-    image={Object {}}
+    image="url"
     level="level"
     readingTime="readingtime"
     tag="tag"
