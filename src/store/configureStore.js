@@ -3,7 +3,7 @@ import Thunk from 'redux-thunk';
 import Logger from 'redux-logger';
 import Reducers from './reducers';
 
-function configureStore(initialState) {
+export default function (initialState) {
   const enhancer = compose(
     applyMiddleware(
       Thunk,
@@ -13,5 +13,3 @@ function configureStore(initialState) {
 
   return createStore(Reducers, initialState, enhancer);
 }
-
-export default configureStore;

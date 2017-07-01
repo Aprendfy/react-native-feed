@@ -1,6 +1,6 @@
 import { createRouter } from '@expo/ex-navigation';
-import Feed from '../modules/feed/components/FeedScreen';
-import Categories from '../modules/categories/components/CategoriesScreen';
+import Feed from '../modules/feed/containers/FeedScreen';
+import Categories from '../modules/category/containers/CategoriesScreen';
 
 export const Router = createRouter(() => ({
   feed: () => Feed,
