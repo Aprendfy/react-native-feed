@@ -5,14 +5,17 @@ import { FeedScreen } from '../../../../src/modules/feed/containers/FeedScreen';
 
 const props = {
   feedActions: {
-    fetchFeed: jest.fn()
+    fetchFeed: jest.fn(),
+    fetchMoreFeed: jest.fn()
   },
   route: {
     params: {
       tab: 2,
       title: 'title'
     }
-  }
+  },
+  navigator: {},
+  feedList: []
 };
 
 describe('<FeedScreen />', () => {
