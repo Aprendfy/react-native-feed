@@ -10,7 +10,7 @@ import { colors } from '../../theme/styles';
 import * as actions from '../actions/index';
 import { backButtonAndTitle } from '../../navigator/components/NavigationBarItems';
 
-class FeedScreen extends Component {
+export class FeedScreen extends Component {
   constructor(props) {
     super(props);
     this.updateTitle = this.updateTitle.bind(this);

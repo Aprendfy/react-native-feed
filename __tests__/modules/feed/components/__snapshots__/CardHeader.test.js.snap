@@ -18,7 +18,11 @@ ShallowWrapper {
     <Image
         resizeMethod="scale"
         resizeMode="cover"
-        source={Object {}}
+        source={
+            Object {
+                "uri": Object {},
+              }
+        }
         style={
             Object {
                 "flex": 1,
@@ -103,9 +107,7 @@ ShallowWrapper {
                             "marginHorizontal": 5,
                           }
                     }
-                >
-                    tag
-                </Text>
+                />
             </View>
             <View
                 style={
@@ -179,7 +181,11 @@ ShallowWrapper {
       <Image
             resizeMethod="scale"
             resizeMode="cover"
-            source={Object {}}
+            source={
+                  Object {
+                        "uri": Object {},
+                      }
+            }
             style={
                   Object {
                         "flex": 1,
@@ -264,9 +270,7 @@ ShallowWrapper {
                                           "marginHorizontal": 5,
                                         }
                               }
-                        >
-                              tag
-                        </Text>
+                        />
                   </View>
                   <View
                         style={
@@ -337,6 +341,7 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <CardHeader
+        category=""
         color="red"
         image={Object {}}
         level="level"
@@ -351,6 +356,7 @@ ShallowWrapper {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
+          "category": "",
           "color": "red",
           "image": Object {},
           "level": "level",
@@ -388,7 +394,11 @@ ShallowWrapper {
           <Image
                     resizeMethod="scale"
                     resizeMode="cover"
-                    source={Object {}}
+                    source={
+                              Object {
+                                        "uri": Object {},
+                                      }
+                    }
                     style={
                               Object {
                                         "flex": 1,
@@ -473,9 +483,7 @@ ShallowWrapper {
                                                                       "marginHorizontal": 5,
                                                                     }
                                                   }
-                                        >
-                                                  tag
-                                        </Text>
+                                        />
                               </View>
                               <View
                                         style={
@@ -549,7 +557,11 @@ ShallowWrapper {
           <Image
                     resizeMethod="scale"
                     resizeMode="cover"
-                    source={Object {}}
+                    source={
+                              Object {
+                                        "uri": Object {},
+                                      }
+                    }
                     style={
                               Object {
                                         "flex": 1,
@@ -634,9 +646,7 @@ ShallowWrapper {
                                                                       "marginHorizontal": 5,
                                                                     }
                                                   }
-                                        >
-                                                  tag
-                                        </Text>
+                                        />
                               </View>
                               <View
                                         style={
@@ -711,6 +721,7 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <CardHeader
+    category=""
     color="red"
     image={Object {}}
     level="level"

@@ -8,69 +8,65 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <View>
-    <FlatList
-        data={
-            Array [
-                Object {
-                  "color": "Azul",
-                  "title": "Facebook",
-                },
-                Object {
-                  "color": "Vermeio",
-                  "title": "Google+",
-                },
-              ]
-        }
-        disableVirtualization={false}
-        getItem={undefined}
-        getItemCount={undefined}
-        horizontal={false}
-        initialNumToRender={10}
-        keyExtractor={[Function]}
-        maxToRenderPerBatch={10}
-        numColumns={1}
-        onEndReached={[Function]}
-        onEndReachedThreshold={2}
-        removeClippedSubviews={true}
-        renderItem={[Function]}
-        renderScrollComponent={[Function]}
-        updateCellsBatchingPeriod={50}
-        windowSize={21}
-    />
-</View>,
+  "node": <FlatList
+    data={
+        Array [
+            Object {
+              "color": "Azul",
+              "title": "Facebook",
+            },
+            Object {
+              "color": "Vermeio",
+              "title": "Google+",
+            },
+          ]
+    }
+    disableVirtualization={false}
+    getItem={undefined}
+    getItemCount={undefined}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onEndReached={[Function]}
+    onEndReachedThreshold={2}
+    removeClippedSubviews={true}
+    renderItem={[Function]}
+    renderScrollComponent={[Function]}
+    updateCellsBatchingPeriod={50}
+    windowSize={21}
+/>,
   "nodes": Array [
-    <View>
-      <FlatList
-            data={
-                  Array [
-                        Object {
-                          "color": "Azul",
-                          "title": "Facebook",
-                        },
-                        Object {
-                          "color": "Vermeio",
-                          "title": "Google+",
-                        },
-                      ]
-            }
-            disableVirtualization={false}
-            getItem={undefined}
-            getItemCount={undefined}
-            horizontal={false}
-            initialNumToRender={10}
-            keyExtractor={[Function]}
-            maxToRenderPerBatch={10}
-            numColumns={1}
-            onEndReached={[Function]}
-            onEndReachedThreshold={2}
-            removeClippedSubviews={true}
-            renderItem={[Function]}
-            renderScrollComponent={[Function]}
-            updateCellsBatchingPeriod={50}
-            windowSize={21}
-      />
-</View>,
+    <FlatList
+      data={
+            Array [
+                  Object {
+                    "color": "Azul",
+                    "title": "Facebook",
+                  },
+                  Object {
+                    "color": "Vermeio",
+                    "title": "Google+",
+                  },
+                ]
+      }
+      disableVirtualization={false}
+      getItem={undefined}
+      getItemCount={undefined}
+      horizontal={false}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      numColumns={1}
+      onEndReached={[Function]}
+      onEndReachedThreshold={2}
+      removeClippedSubviews={true}
+      renderItem={[Function]}
+      renderScrollComponent={[Function]}
+      updateCellsBatchingPeriod={50}
+      windowSize={21}
+/>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -99,7 +95,7 @@ ShallowWrapper {
       "_instance": CategoriesScreen {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "onPressCategorie": [Function],
+        "onPressCategory": [Function],
         "props": Object {
           "categories": Array [
             Object {
@@ -134,69 +130,65 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <View>
-          <FlatList
-                    data={
-                              Array [
-                                        Object {
-                                          "color": "Azul",
-                                          "title": "Facebook",
-                                        },
-                                        Object {
-                                          "color": "Vermeio",
-                                          "title": "Google+",
-                                        },
-                                      ]
-                    }
-                    disableVirtualization={false}
-                    getItem={undefined}
-                    getItemCount={undefined}
-                    horizontal={false}
-                    initialNumToRender={10}
-                    keyExtractor={[Function]}
-                    maxToRenderPerBatch={10}
-                    numColumns={1}
-                    onEndReached={[Function]}
-                    onEndReachedThreshold={2}
-                    removeClippedSubviews={true}
-                    renderItem={[Function]}
-                    renderScrollComponent={[Function]}
-                    updateCellsBatchingPeriod={50}
-                    windowSize={21}
-          />
-</View>,
+        "_currentElement": <FlatList
+          data={
+                    Array [
+                              Object {
+                                "color": "Azul",
+                                "title": "Facebook",
+                              },
+                              Object {
+                                "color": "Vermeio",
+                                "title": "Google+",
+                              },
+                            ]
+          }
+          disableVirtualization={false}
+          getItem={undefined}
+          getItemCount={undefined}
+          horizontal={false}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          numColumns={1}
+          onEndReached={[Function]}
+          onEndReachedThreshold={2}
+          removeClippedSubviews={true}
+          renderItem={[Function]}
+          renderScrollComponent={[Function]}
+          updateCellsBatchingPeriod={50}
+          windowSize={21}
+/>,
         "_debugID": 2,
-        "_renderedOutput": <View>
-          <FlatList
-                    data={
-                              Array [
-                                        Object {
-                                          "color": "Azul",
-                                          "title": "Facebook",
-                                        },
-                                        Object {
-                                          "color": "Vermeio",
-                                          "title": "Google+",
-                                        },
-                                      ]
-                    }
-                    disableVirtualization={false}
-                    getItem={undefined}
-                    getItemCount={undefined}
-                    horizontal={false}
-                    initialNumToRender={10}
-                    keyExtractor={[Function]}
-                    maxToRenderPerBatch={10}
-                    numColumns={1}
-                    onEndReached={[Function]}
-                    onEndReachedThreshold={2}
-                    removeClippedSubviews={true}
-                    renderItem={[Function]}
-                    renderScrollComponent={[Function]}
-                    updateCellsBatchingPeriod={50}
-                    windowSize={21}
-          />
-</View>,
+        "_renderedOutput": <FlatList
+          data={
+                    Array [
+                              Object {
+                                "color": "Azul",
+                                "title": "Facebook",
+                              },
+                              Object {
+                                "color": "Vermeio",
+                                "title": "Google+",
+                              },
+                            ]
+          }
+          disableVirtualization={false}
+          getItem={undefined}
+          getItemCount={undefined}
+          horizontal={false}
+          initialNumToRender={10}
+          keyExtractor={[Function]}
+          maxToRenderPerBatch={10}
+          numColumns={1}
+          onEndReached={[Function]}
+          onEndReachedThreshold={2}
+          removeClippedSubviews={true}
+          renderItem={[Function]}
+          renderScrollComponent={[Function]}
+          updateCellsBatchingPeriod={50}
+          windowSize={21}
+/>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,

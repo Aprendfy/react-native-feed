@@ -8,7 +8,10 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <View>
+  "node": <View
+    style={undefined}
+    tabLabel={undefined}
+>
     <FlatList
         ItemSeparatorComponent={[Function]}
         data={undefined}
@@ -31,7 +34,10 @@ ShallowWrapper {
     />
 </View>,
   "nodes": Array [
-    <View>
+    <View
+      style={undefined}
+      tabLabel={undefined}
+>
       <FlatList
             ItemSeparatorComponent={[Function]}
             data={undefined}
@@ -62,8 +68,6 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <FeedList
         color="red"
-        feedActions={Object {}}
-        feedState={Object {}}
         route={
                 Object {
                         "params": Object {
@@ -81,8 +85,6 @@ ShallowWrapper {
         "context": Object {},
         "props": Object {
           "color": "red",
-          "feedActions": Object {},
-          "feedState": Object {},
           "route": Object {
             "params": Object {
               "tab": "tab",
@@ -91,7 +93,6 @@ ShallowWrapper {
           },
         },
         "refs": Object {},
-        "renderSeparator": [Function],
         "state": null,
         "updater": Object {
           "enqueueCallback": [Function],
@@ -111,7 +112,10 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <View>
+        "_currentElement": <View
+          style={undefined}
+          tabLabel={undefined}
+>
           <FlatList
                     ItemSeparatorComponent={[Function]}
                     data={undefined}
@@ -134,7 +138,10 @@ ShallowWrapper {
           />
 </View>,
         "_debugID": 2,
-        "_renderedOutput": <View>
+        "_renderedOutput": <View
+          style={undefined}
+          tabLabel={undefined}
+>
           <FlatList
                     ItemSeparatorComponent={[Function]}
                     data={undefined}
@@ -169,8 +176,6 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <FeedList
     color="red"
-    feedActions={Object {}}
-    feedState={Object {}}
     route={
         Object {
             "params": Object {

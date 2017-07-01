@@ -12,102 +12,46 @@ ShallowWrapper {
     style={
         Object {
             "flex": 1,
+            "height": 850,
+            "justifyContent": "flex-start",
           }
     }
 >
-    <View
-        style={
-            Object {
-                "flex": 2,
-              }
-        }
-    >
-        <CardHeader
-            color="red"
-            image={
-                Object {
-                    "uri": "image",
-                  }
-            }
-            level="level"
-            readingTime="readingtime"
-            tag="category"
-            title="title"
-        />
-    </View>
-    <View
-        style={
-            Object {
-                "flex": 3,
-              }
-        }
-    >
-        <CardBody
-            text="BODY"
-        />
-    </View>
-    <View
-        style={
-            Object {
-                "backgroundColor": "#f5f5f5",
-                "flex": 1,
-                "justifyContent": "flex-end",
-              }
-        }
-    >
-        <CardFooter />
-    </View>
+    <CardHeader
+        category="category"
+        color="red"
+        image="image"
+        level="level"
+        readingTime="readingtime"
+        title="title"
+    />
+    <CardBody
+        text="BODY"
+    />
+    <CardFooter />
 </View>,
   "nodes": Array [
     <View
       style={
             Object {
                   "flex": 1,
+                  "height": 850,
+                  "justifyContent": "flex-start",
                 }
       }
 >
-      <View
-            style={
-                  Object {
-                        "flex": 2,
-                      }
-            }
-      >
-            <CardHeader
-                  color="red"
-                  image={
-                        Object {
-                              "uri": "image",
-                            }
-                  }
-                  level="level"
-                  readingTime="readingtime"
-                  tag="category"
-                  title="title"
-            />
-      </View>
-      <View
-            style={
-                  Object {
-                        "flex": 3,
-                      }
-            }
-      >
-            <CardBody
-                  text="BODY"
-            />
-      </View>
-      <View
-            style={
-                  Object {
-                        "backgroundColor": "#f5f5f5",
-                        "flex": 1,
-                        "justifyContent": "flex-end",
-                      }
-            }
-      >
-            <CardFooter />
-      </View>
+      <CardHeader
+            category="category"
+            color="red"
+            image="image"
+            level="level"
+            readingTime="readingtime"
+            title="title"
+      />
+      <CardBody
+            text="BODY"
+      />
+      <CardFooter />
 </View>,
   ],
   "options": Object {},
@@ -143,7 +87,9 @@ ShallowWrapper {
           "title": "title",
         },
         "refs": Object {},
-        "state": null,
+        "state": Object {
+          "isCollapsed": true,
+        },
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],
@@ -166,102 +112,46 @@ ShallowWrapper {
           style={
                     Object {
                               "flex": 1,
+                              "height": 850,
+                              "justifyContent": "flex-start",
                             }
           }
 >
-          <View
-                    style={
-                              Object {
-                                        "flex": 2,
-                                      }
-                    }
-          >
-                    <CardHeader
-                              color="red"
-                              image={
-                                        Object {
-                                                  "uri": "image",
-                                                }
-                              }
-                              level="level"
-                              readingTime="readingtime"
-                              tag="category"
-                              title="title"
-                    />
-          </View>
-          <View
-                    style={
-                              Object {
-                                        "flex": 3,
-                                      }
-                    }
-          >
-                    <CardBody
-                              text="BODY"
-                    />
-          </View>
-          <View
-                    style={
-                              Object {
-                                        "backgroundColor": "#f5f5f5",
-                                        "flex": 1,
-                                        "justifyContent": "flex-end",
-                                      }
-                    }
-          >
-                    <CardFooter />
-          </View>
+          <CardHeader
+                    category="category"
+                    color="red"
+                    image="image"
+                    level="level"
+                    readingTime="readingtime"
+                    title="title"
+          />
+          <CardBody
+                    text="BODY"
+          />
+          <CardFooter />
 </View>,
         "_debugID": 2,
         "_renderedOutput": <View
           style={
                     Object {
                               "flex": 1,
+                              "height": 850,
+                              "justifyContent": "flex-start",
                             }
           }
 >
-          <View
-                    style={
-                              Object {
-                                        "flex": 2,
-                                      }
-                    }
-          >
-                    <CardHeader
-                              color="red"
-                              image={
-                                        Object {
-                                                  "uri": "image",
-                                                }
-                              }
-                              level="level"
-                              readingTime="readingtime"
-                              tag="category"
-                              title="title"
-                    />
-          </View>
-          <View
-                    style={
-                              Object {
-                                        "flex": 3,
-                                      }
-                    }
-          >
-                    <CardBody
-                              text="BODY"
-                    />
-          </View>
-          <View
-                    style={
-                              Object {
-                                        "backgroundColor": "#f5f5f5",
-                                        "flex": 1,
-                                        "justifyContent": "flex-end",
-                                      }
-                    }
-          >
-                    <CardFooter />
-          </View>
+          <CardHeader
+                    category="category"
+                    color="red"
+                    image="image"
+                    level="level"
+                    readingTime="readingtime"
+                    title="title"
+          />
+          <CardBody
+                    text="BODY"
+          />
+          <CardFooter />
 </View>,
       },
       "_renderedNodeType": 1,
