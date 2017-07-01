@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
-import ListFeedCard from './FeedList';
 
+import { FeedList } from '../components/FeedList';
 import { colors } from '../../theme/styles';
-
-import * as actions from './../actions/index';
-import * as navActions from '../../navigator/actions/index';
+import * as actions from '../actions/index';
+import { backButtonAndTitle } from '../../navigator/components/NavigationBarItems';
 
 export class FeedScreen extends Component {
   constructor(props) {
@@ -24,29 +23,14 @@ export class FeedScreen extends Component {
   static route = {
     navigationBar: {
       visible: true,
-      renderTitle: ({ params }) => {
-        const { context = {} } = params;
-        const { state = {} } = context;
-        return (
-          <View
-            style={{
-              width: '100%',
-              height: 48,
-              justifyContent: 'center'
-            }}
-          >
-            <Text style={{ fontSize: 18, color: '#FFF' }}>{state.title}</Text>
-          </View>
-        );
-      }
+      renderTitle: backButtonAndTitle
     }
   }
 
   componentWillMount() {
-    const { feedActions } = this.props;
-    feedActions.fetchFeed();
-    // navActions.setAlert({ title: 'Do I have a title?', message: 'Oh yes, I do! =)', type: 'info', duration: 6000 });
+    this.props.feedActions.fetchFeed();
   }
+
   componentDidMount() {
     const { navigator } = this.props;
     setTimeout(() => {
@@ -55,21 +39,19 @@ export class FeedScreen extends Component {
       });
     }, 600);
   }
-  async updateTitle(item) {
+
+  updateTitle(item) {
     const { tabLabel } = item.ref.props;
     const { navigator } = this.props;
-    await this.setState({ title: tabLabel });
+    this.setState({ title: tabLabel });
     navigator.updateCurrentRouteParams({
       context: this
     });
-    // setTimeout(() => {
-    //   navigator.updateCurrentRouteParams({
-    //     context: this
-    //   });
-    // }, 600);
   }
 
   render() {
+    const { feedActions, feedList } = this.props;
+    const { fetchMoreFeed } = feedActions;
     return (
       <ScrollableTabView
         renderTabBar={() => <View />}
@@ -77,35 +59,46 @@ export class FeedScreen extends Component {
         tabBarTextStyle={{ fontWeight: '600' }}
         onChangeTab={item => this.updateTitle(item)}
         initialPage={this.state.tab}
-
       >
-        <View style={{ flex: 1 }} tabLabel="Facebook">
-          <ListFeedCard index={0} name="Primeira" color={colors.categorieFacebook} />
-        </View>
-        <View style={{ flex: 1 }} tabLabel="Google+">
-          <ListFeedCard index={1} name="Segunda" color={colors.categorieGooglePlus} />
-        </View>
-        <View style={{ flex: 1 }} tabLabel="Twitter">
-          <ListFeedCard index={2} name="Terceira" color={colors.categorieTwitter} />
-        </View>
+        <FeedList
+          containerStyle={{ flex: 1 }} tabLabel="Facebook"
+          index={0} name="Primeira" color={colors.categorieFacebook}
+          list={feedList} onEndReached={fetchMoreFeed}
+        />
+        <FeedList
+          containerStyle={{ flex: 1 }} tabLabel="Google+"
+          index={1} name="Segunda" color={colors.categorieGooglePlus}
+          list={feedList} onEndReached={fetchMoreFeed}
+        />
+        <FeedList
+          containerStyle={{ flex: 1 }} tabLabel="Twitter"
+          index={2} name="Terceira" color={colors.categorieTwitter}
+          list={feedList} onEndReached={fetchMoreFeed}
+        />
       </ScrollableTabView>
     );
   }
 }
 
 FeedScreen.PropTypes = {
-  navigator: PropTypes.object
+  feedList: PropTypes.array,
+  feedActions: PropTypes.any
 };
+
 FeedScreen.defaultProps = {
   navigator: {}
 };
 
-export default connect(
-  state => ({
-    feedState: state.feed
-  }),
-  dispatch => ({
-    feedActions: bindActionCreators(actions, dispatch),
-    navActions: bindActionCreators(navActions, dispatch)
-  })
-)(FeedScreen);
+const mapStateToProps = (state) => {
+  return {
+    feedList: state.feed.feedList
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    feedActions: bindActionCreators(actions, dispatch)
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FeedScreen);

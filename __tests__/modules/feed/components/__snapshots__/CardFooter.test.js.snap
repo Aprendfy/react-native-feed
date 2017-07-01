@@ -8,19 +8,35 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <AdMobBanner
-    adUnitID="ca-app-pub-5511910440808215/9505833480"
-    bannerSize="smartBannerPortrait"
-    didFailToReceiveAdWithError={[Function]}
-    testDeviceID="EMULATOR"
-/>,
-  "nodes": Array [
+  "node": <View
+    style={
+        Object {
+            "backgroundColor": "#f5f5f5",
+          }
+    }
+>
     <AdMobBanner
-      adUnitID="ca-app-pub-5511910440808215/9505833480"
-      bannerSize="smartBannerPortrait"
-      didFailToReceiveAdWithError={[Function]}
-      testDeviceID="EMULATOR"
-/>,
+        adUnitID="ca-app-pub-5511910440808215/9505833480"
+        bannerSize="smartBannerPortrait"
+        didFailToReceiveAdWithError={[Function]}
+        testDeviceID="EMULATOR"
+    />
+</View>,
+  "nodes": Array [
+    <View
+      style={
+            Object {
+                  "backgroundColor": "#f5f5f5",
+                }
+      }
+>
+      <AdMobBanner
+            adUnitID="ca-app-pub-5511910440808215/9505833480"
+            bannerSize="smartBannerPortrait"
+            didFailToReceiveAdWithError={[Function]}
+            testDeviceID="EMULATOR"
+      />
+</View>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -56,19 +72,35 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <AdMobBanner
-          adUnitID="ca-app-pub-5511910440808215/9505833480"
-          bannerSize="smartBannerPortrait"
-          didFailToReceiveAdWithError={[Function]}
-          testDeviceID="EMULATOR"
-/>,
+        "_currentElement": <View
+          style={
+                    Object {
+                              "backgroundColor": "#f5f5f5",
+                            }
+          }
+>
+          <AdMobBanner
+                    adUnitID="ca-app-pub-5511910440808215/9505833480"
+                    bannerSize="smartBannerPortrait"
+                    didFailToReceiveAdWithError={[Function]}
+                    testDeviceID="EMULATOR"
+          />
+</View>,
         "_debugID": 2,
-        "_renderedOutput": <AdMobBanner
-          adUnitID="ca-app-pub-5511910440808215/9505833480"
-          bannerSize="smartBannerPortrait"
-          didFailToReceiveAdWithError={[Function]}
-          testDeviceID="EMULATOR"
-/>,
+        "_renderedOutput": <View
+          style={
+                    Object {
+                              "backgroundColor": "#f5f5f5",
+                            }
+          }
+>
+          <AdMobBanner
+                    adUnitID="ca-app-pub-5511910440808215/9505833480"
+                    bannerSize="smartBannerPortrait"
+                    didFailToReceiveAdWithError={[Function]}
+                    testDeviceID="EMULATOR"
+          />
+</View>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,

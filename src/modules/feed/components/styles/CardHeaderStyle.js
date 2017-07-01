@@ -1,13 +1,13 @@
 import { StyleSheet } from 'react-native';
-import { colors, hm } from '../styles';
+import { colors, metrics } from '../../../theme';
 
-export const cardHeaderStyles = StyleSheet.create({
+export default StyleSheet.create({
   mainContainer: {
     flex: 1
   },
   imageCover: {
     flex: 1,
-    height: 25 * hm
+    height: 25 * metrics.horizontalModule
   },
   firstContainer: {
     flex: 1,
@@ -35,33 +35,5 @@ export const cardHeaderStyles = StyleSheet.create({
     marginHorizontal: 5,
     color: colors.whitePrimary,
     fontSize: 12
-  }
-});
-
-export const feedCardStyle = StyleSheet.create({
-  mainContainer: {
-    flex: 1
-  },
-  headerContainer: {
-    flex: 2
-  },
-  bodyContainer: {
-    flex: 3
-  },
-  footerContainer: {
-    flex: 1,
-    backgroundColor: colors.lightBackground,
-    justifyContent: 'flex-end'
-  }
-});
-
-export const cardBodyStyle = StyleSheet.create({
-  text: {
-    color: colors.blackPrimary,
-    fontSize: 14,
-  },
-  textWrapper: {
-    padding: 10,
-    backgroundColor: colors.lightBackground
   }
 });

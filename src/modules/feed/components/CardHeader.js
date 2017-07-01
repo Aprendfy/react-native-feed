@@ -4,36 +4,36 @@ import { Text, View, Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 import LinearGradient from 'react-native-linear-gradient';
 import { colors } from '../../theme/styles';
-import { cardHeaderStyles as styles } from '../../theme/feed/styles';
+import Styles from './styles/CardHeaderStyle';
 
 export class CardHeader extends Component {
   render() {
-    const { title, tag, readingTime, level, color, image } = this.props;
+    const { title, category, readingTime, level, color, image } = this.props;
     return (
-      <View style={styles.mainContainer}>
+      <View style={Styles.mainContainer}>
         <Image
-          style={styles.imageCover}
+          style={Styles.imageCover}
           resizeMethod="scale"
           resizeMode="cover"
-          source={image}
+          source={{ uri: image }}
         >
-          <LinearGradient colors={['transparent', color]} style={styles.firstContainer}>
-            <View style={styles.titleWrapper}>
-              <Text style={styles.title}>{title}</Text>
+          <LinearGradient colors={['transparent', color]} style={Styles.firstContainer}>
+            <View style={Styles.titleWrapper}>
+              <Text style={Styles.title}>{title}</Text>
             </View>
           </LinearGradient>
-          <View style={[styles.secondContainer, { backgroundColor: color }]}>
-            <View style={styles.itemDetailWrapper}>
+          <View style={[Styles.secondContainer, { backgroundColor: color }]}>
+            <View style={Styles.itemDetailWrapper}>
               <IonIcons name="ios-pricetag-outline" size={14} color={colors.whitePrimary} />
-              <Text style={styles.detailText}>{tag}</Text>
+              <Text style={Styles.detailText}>{category}</Text>
             </View>
-            <View style={styles.itemDetailWrapper}>
+            <View style={Styles.itemDetailWrapper}>
               <IonIcons name="ios-time-outline" size={14} color={colors.whitePrimary} />
-              <Text style={styles.detailText}>{readingTime}</Text>
+              <Text style={Styles.detailText}>{readingTime}</Text>
             </View>
-            <View style={styles.itemDetailWrapper}>
+            <View style={Styles.itemDetailWrapper}>
               <IonIcons name="ios-school" size={14} color={colors.whitePrimary} />
-              <Text style={styles.detailText}>{level}</Text>
+              <Text style={Styles.detailText}>{level}</Text>
             </View>
           </View>
         </Image>
@@ -45,16 +45,16 @@ export class CardHeader extends Component {
 
 CardHeader.propTypes = {
   title: PropTypes.string,
-  tag: PropTypes.string,
+  category: PropTypes.string,
   readingTime: PropTypes.string,
   level: PropTypes.string,
   color: PropTypes.string,
-  image: PropTypes.objectOf(PropTypes.any)
+  image: PropTypes.string
 };
 
 CardHeader.defaultProps = {
   title: '',
-  tag: '',
+  category: '',
   readingTime: '',
   level: '',
   color: '',

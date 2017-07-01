@@ -26,48 +26,45 @@ ShallowWrapper {
           }
     }
 >
-    <View
-        style={
+    <FeedList
+        color="#3B5999"
+        containerStyle={
             Object {
                 "flex": 1,
               }
         }
+        index={0}
+        list={Array []}
+        name="Primeira"
+        onEndReached={[Function]}
         tabLabel="Facebook"
-    >
-        <Connect(FeedList)
-            color="#3B5999"
-            index={0}
-            name="Primeira"
-        />
-    </View>
-    <View
-        style={
+    />
+    <FeedList
+        color="#DF494A"
+        containerStyle={
             Object {
                 "flex": 1,
               }
         }
+        index={1}
+        list={Array []}
+        name="Segunda"
+        onEndReached={[Function]}
         tabLabel="Google+"
-    >
-        <Connect(FeedList)
-            color="#DF494A"
-            index={1}
-            name="Segunda"
-        />
-    </View>
-    <View
-        style={
+    />
+    <FeedList
+        color="#3598DB"
+        containerStyle={
             Object {
                 "flex": 1,
               }
         }
+        index={2}
+        list={Array []}
+        name="Terceira"
+        onEndReached={[Function]}
         tabLabel="Twitter"
-    >
-        <Connect(FeedList)
-            color="#3598DB"
-            index={2}
-            name="Terceira"
-        />
-    </View>
+    />
 </ScrollableTabView>,
   "nodes": Array [
     <ScrollableTabView
@@ -88,48 +85,45 @@ ShallowWrapper {
                 }
       }
 >
-      <View
-            style={
+      <FeedList
+            color="#3B5999"
+            containerStyle={
                   Object {
                         "flex": 1,
                       }
             }
+            index={0}
+            list={Array []}
+            name="Primeira"
+            onEndReached={[Function]}
             tabLabel="Facebook"
-      >
-            <Connect(FeedList)
-                  color="#3B5999"
-                  index={0}
-                  name="Primeira"
-            />
-      </View>
-      <View
-            style={
+      />
+      <FeedList
+            color="#DF494A"
+            containerStyle={
                   Object {
                         "flex": 1,
                       }
             }
+            index={1}
+            list={Array []}
+            name="Segunda"
+            onEndReached={[Function]}
             tabLabel="Google+"
-      >
-            <Connect(FeedList)
-                  color="#DF494A"
-                  index={1}
-                  name="Segunda"
-            />
-      </View>
-      <View
-            style={
+      />
+      <FeedList
+            color="#3598DB"
+            containerStyle={
                   Object {
                         "flex": 1,
                       }
             }
+            index={2}
+            list={Array []}
+            name="Terceira"
+            onEndReached={[Function]}
             tabLabel="Twitter"
-      >
-            <Connect(FeedList)
-                  color="#3598DB"
-                  index={2}
-                  name="Terceira"
-            />
-      </View>
+      />
 </ScrollableTabView>,
   ],
   "options": Object {},
@@ -142,8 +136,10 @@ ShallowWrapper {
         feedActions={
                 Object {
                         "fetchFeed": [Function],
+                        "fetchMoreFeed": [Function],
                       }
         }
+        feedList={Array []}
         navigator={Object {}}
         route={
                 Object {
@@ -163,7 +159,9 @@ ShallowWrapper {
         "props": Object {
           "feedActions": Object {
             "fetchFeed": [Function],
+            "fetchMoreFeed": [Function],
           },
+          "feedList": Array [],
           "navigator": Object {},
           "route": Object {
             "params": Object {
@@ -214,48 +212,45 @@ ShallowWrapper {
                             }
           }
 >
-          <View
-                    style={
+          <FeedList
+                    color="#3B5999"
+                    containerStyle={
                               Object {
                                         "flex": 1,
                                       }
                     }
+                    index={0}
+                    list={Array []}
+                    name="Primeira"
+                    onEndReached={[Function]}
                     tabLabel="Facebook"
-          >
-                    <Connect(FeedList)
-                              color="#3B5999"
-                              index={0}
-                              name="Primeira"
-                    />
-          </View>
-          <View
-                    style={
+          />
+          <FeedList
+                    color="#DF494A"
+                    containerStyle={
                               Object {
                                         "flex": 1,
                                       }
                     }
+                    index={1}
+                    list={Array []}
+                    name="Segunda"
+                    onEndReached={[Function]}
                     tabLabel="Google+"
-          >
-                    <Connect(FeedList)
-                              color="#DF494A"
-                              index={1}
-                              name="Segunda"
-                    />
-          </View>
-          <View
-                    style={
+          />
+          <FeedList
+                    color="#3598DB"
+                    containerStyle={
                               Object {
                                         "flex": 1,
                                       }
                     }
+                    index={2}
+                    list={Array []}
+                    name="Terceira"
+                    onEndReached={[Function]}
                     tabLabel="Twitter"
-          >
-                    <Connect(FeedList)
-                              color="#3598DB"
-                              index={2}
-                              name="Terceira"
-                    />
-          </View>
+          />
 </ScrollableTabView>,
         "_debugID": 2,
         "_renderedOutput": <ScrollableTabView
@@ -276,48 +271,45 @@ ShallowWrapper {
                             }
           }
 >
-          <View
-                    style={
+          <FeedList
+                    color="#3B5999"
+                    containerStyle={
                               Object {
                                         "flex": 1,
                                       }
                     }
+                    index={0}
+                    list={Array []}
+                    name="Primeira"
+                    onEndReached={[Function]}
                     tabLabel="Facebook"
-          >
-                    <Connect(FeedList)
-                              color="#3B5999"
-                              index={0}
-                              name="Primeira"
-                    />
-          </View>
-          <View
-                    style={
+          />
+          <FeedList
+                    color="#DF494A"
+                    containerStyle={
                               Object {
                                         "flex": 1,
                                       }
                     }
+                    index={1}
+                    list={Array []}
+                    name="Segunda"
+                    onEndReached={[Function]}
                     tabLabel="Google+"
-          >
-                    <Connect(FeedList)
-                              color="#DF494A"
-                              index={1}
-                              name="Segunda"
-                    />
-          </View>
-          <View
-                    style={
+          />
+          <FeedList
+                    color="#3598DB"
+                    containerStyle={
                               Object {
                                         "flex": 1,
                                       }
                     }
+                    index={2}
+                    list={Array []}
+                    name="Terceira"
+                    onEndReached={[Function]}
                     tabLabel="Twitter"
-          >
-                    <Connect(FeedList)
-                              color="#3598DB"
-                              index={2}
-                              name="Terceira"
-                    />
-          </View>
+          />
 </ScrollableTabView>,
       },
       "_renderedNodeType": 1,
@@ -334,8 +326,10 @@ ShallowWrapper {
     feedActions={
         Object {
             "fetchFeed": [Function],
+            "fetchMoreFeed": [Function],
           }
     }
+    feedList={Array []}
     navigator={Object {}}
     route={
         Object {
