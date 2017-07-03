@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CardFooter /> Should have a snapshot 1`] = `
+exports[`<CardAdsBanner /> Should have a snapshot 1`] = `
 ShallowWrapper {
   "complexSelector": ComplexSelector {
     "buildPredicate": [Function],
@@ -44,7 +44,7 @@ ShallowWrapper {
       "_calledComponentWillUnmount": false,
       "_compositeType": 2,
       "_context": Object {},
-      "_currentElement": <CardFooter />,
+      "_currentElement": <CardAdsBanner />,
       "_debugID": 1,
       "_hostContainerInfo": null,
       "_hostParent": null,
@@ -112,6 +112,6 @@ ShallowWrapper {
     "render": [Function],
   },
   "root": [Circular],
-  "unrendered": <CardFooter />,
+  "unrendered": <CardAdsBanner />,
 }
 `;

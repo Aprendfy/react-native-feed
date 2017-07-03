@@ -1,11 +1,11 @@
 import 'react-native';
 import React from 'react';
 import { shallow } from 'enzyme';
-import { CardFooter } from '../../../../src/modules/feed/components/CardFooter';
+import { CardAdsBanner } from '../../../../src/modules/feed/components/CardAdsBanner';
 
-describe('<CardFooter />', () => {
+describe('<CardAdsBanner />', () => {
   it('Should have a snapshot', () => {
-    const wrapper = shallow(<CardFooter />);
+    const wrapper = shallow(<CardAdsBanner />);
     expect(wrapper).toMatchSnapshot();
   });
 });
