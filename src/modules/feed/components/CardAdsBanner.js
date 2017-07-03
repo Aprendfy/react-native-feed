@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 import { AdMobBanner } from 'react-native-admob';
-import Styles from './styles/CardFooterStyle';
+import Styles from './styles/CardAdsBannerStyle';
 
-export const CardFooter = () => {
+export const CardAdsBanner = () => {
   return (
     <View style={Styles.container} >
       <AdMobBanner

@@ -12,8 +12,6 @@ ShallowWrapper {
     style={
         Object {
             "flex": 1,
-            "height": 850,
-            "justifyContent": "flex-start",
           }
     }
 >
@@ -28,15 +26,12 @@ ShallowWrapper {
     <CardBody
         text="BODY"
     />
-    <CardFooter />
 </View>,
   "nodes": Array [
     <View
       style={
             Object {
                   "flex": 1,
-                  "height": 850,
-                  "justifyContent": "flex-start",
                 }
       }
 >
@@ -51,7 +46,6 @@ ShallowWrapper {
       <CardBody
             text="BODY"
       />
-      <CardFooter />
 </View>,
   ],
   "options": Object {},
@@ -87,9 +81,7 @@ ShallowWrapper {
           "title": "title",
         },
         "refs": Object {},
-        "state": Object {
-          "isCollapsed": true,
-        },
+        "state": null,
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],
@@ -112,8 +104,6 @@ ShallowWrapper {
           style={
                     Object {
                               "flex": 1,
-                              "height": 850,
-                              "justifyContent": "flex-start",
                             }
           }
 >
@@ -128,15 +118,12 @@ ShallowWrapper {
           <CardBody
                     text="BODY"
           />
-          <CardFooter />
 </View>,
         "_debugID": 2,
         "_renderedOutput": <View
           style={
                     Object {
                               "flex": 1,
-                              "height": 850,
-                              "justifyContent": "flex-start",
                             }
           }
 >
@@ -151,7 +138,6 @@ ShallowWrapper {
           <CardBody
                     text="BODY"
           />
-          <CardFooter />
 </View>,
       },
       "_renderedNodeType": 1,
