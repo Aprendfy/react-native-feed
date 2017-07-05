@@ -6,6 +6,7 @@ import { ItemList } from '../components/';
 import { Router } from '../../../router/routes';
 import { fetchCategories } from '../actions';
 import { rightSideIcon } from '../../navigator/components/NavigationBarItems';
+import { fetchFeed } from '../../feed/actions';
 
 export class CategoriesScreen extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ export class CategoriesScreen extends Component {
   }
 
   onPressCategory(title, tab) {
+    this.props.fetchFeeds(title);
     this.props.navigator.push(Router.getRoute('feed', { title, tab }));
   }
 
@@ -59,7 +61,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    refreshCategories: () => dispatch(fetchCategories())
+    refreshCategories: () => dispatch(fetchCategories()),
+    fetchFeeds: category => dispatch(fetchFeed(category))
   };
 };
 

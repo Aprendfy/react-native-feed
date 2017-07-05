@@ -5,9 +5,7 @@ import IonIcons from 'react-native-vector-icons/Ionicons';
 import { categoriesScreenStyles as styles } from '../../theme/categories/styles';
 import { colors } from '../../theme/styles';
 
-export const backButtonAndTitle = ({ params }) => {
-  const { context = {} } = params;
-  const { state = {} } = context;
+export const backButtonAndTitle = (title) => {
   return (
     <View
       style={{
@@ -16,7 +14,7 @@ export const backButtonAndTitle = ({ params }) => {
         justifyContent: 'center'
       }}
     >
-      <Text style={{ fontSize: 18, color: '#FFF' }}>{state.title}</Text>
+      <Text style={{ fontSize: 18, color: '#FFF' }}>{title}</Text>
     </View>
   );
 };

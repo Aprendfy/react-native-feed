@@ -1,20 +1,10 @@
 import { SAVE_FEED } from './types';
 import { fakeData } from '../../../config/mockData';
 
-export function fetchFeed() {
+export function fetchFeed(category) {
   return async (dispatch) => {
-    const items = await fakeData();
+    const items = await fakeData(category);
     dispatch(saveFeed(items));
-  };
-}
-
-export function fetchMoreFeed(feed) {
-  return async (dispatch) => {
-    const items = await fakeData();
-    await items.forEach((item) => {
-      feed.push(item);
-    });
-    dispatch(saveFeed(feed));
   };
 }
 
