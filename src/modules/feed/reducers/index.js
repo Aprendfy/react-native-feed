@@ -1,5 +1,4 @@
-import * as types from '../actions/types';
-import * as feed from './reducers';
+import { SAVE_FEED } from '../actions/types';
 
 const initialState = {
   feedList: []
@@ -7,8 +6,10 @@ const initialState = {
 
 export default function reducer(state = initialState, action = {}) {
   switch (action.type) {
-    case types.SAVE_FEED:
-      return feed.saveFeed(state, action);
+    case SAVE_FEED: {
+      const feedList = [...state.feedList, ...action.payload];
+      return { ...state, feedList };
+    }
     default:
       return state;
   }

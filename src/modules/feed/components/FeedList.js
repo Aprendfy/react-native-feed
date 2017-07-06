@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 import { View, FlatList } from 'react-native';
 import { CardSeparator, FeedCard } from './';
+import { fetchFeed } from '../actions/index';
 
 const renderItem = (color) => {
   return ({ item }) =>
@@ -18,15 +20,15 @@ const renderItem = (color) => {
 
 export class FeedList extends Component {
   render() {
-    const { list, onEndReached, color, containerStyle, tabLabel } = this.props;
+    const { color, tabLabel, getFeeds, feedList } = this.props;
     return (
-      <View style={containerStyle} tabLabel={tabLabel}>
+      <View style={{ flex: 1 }} tabLabel={tabLabel}>
         <FlatList
-          renderItem={renderItem(color)}
-          data={list}
-          keyExtractor={(item, index) => item + index}
-          onEndReached={() => onEndReached(list)}
+          data={feedList}
           onEndThreshold={10}
+          renderItem={renderItem(color)}
+          onEndReached={() => getFeeds('Facebook')}
+          keyExtractor={(item, index) => item.title + index}
           ItemSeparatorComponent={() => <CardSeparator />}
         />
       </View>
@@ -35,7 +37,23 @@ export class FeedList extends Component {
 }
 
 FeedList.PropTypes = {
+  feedList: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getFeeds: PropTypes.func.isRequired,
   color: PropTypes.string.isRequired,
   onEndReached: PropTypes.func.isRequired,
   list: PropTypes.array.isRequired
 };
+
+const mapStateToProps = (state) => {
+  return {
+    feedList: state.feed.feedList
+  };
+};
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getFeeds: category => dispatch(fetchFeed(category))
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(FeedList);
