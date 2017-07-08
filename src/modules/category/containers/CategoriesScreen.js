@@ -30,8 +30,8 @@ export class CategoriesScreen extends Component {
     return <ItemList title={item.title} color={item.color} id={index} onPress={this.onPressCategory} />;
   }
 
-  onPressCategory(title, tab) {
-    this.props.navigator.push(Router.getRoute('feed', { title, tab }));
+  onPressCategory(title, tab, color) {
+    this.props.navigator.push(Router.getRoute('feed', { title, tab, color }));
   }
 
   render() {

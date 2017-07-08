@@ -52,7 +52,7 @@ ShallowWrapper {
   "renderer": ReactShallowRenderer {
     "_instance": ShallowComponentWrapper {
       "_calledComponentWillUnmount": false,
-      "_compositeType": 0,
+      "_compositeType": 1,
       "_context": Object {},
       "_currentElement": <FeedCard
         body="BODY"

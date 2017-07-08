@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { View } from 'react-native';
 
 import { CardHeader, CardBody } from './';
 import Styles from './styles/FeedCardStyle';
 
-export class FeedCard extends Component {
+export class FeedCard extends React.PureComponent {
   render() {
     const { title, category, readingTime, level, color, image, body } = this.props;
     const headerProps = { title, readingTime, level, color, image, category };

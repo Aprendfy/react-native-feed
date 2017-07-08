@@ -4,7 +4,7 @@ import { itemListStyles } from '../../theme/categories/styles';
 
 export const ItemList = ({ color, title, id, onPress }) => {
   return (
-    <TouchableOpacity style={[itemListStyles.itemStyle, { backgroundColor: color }]} onPress={() => onPress(title, id)}>
+    <TouchableOpacity style={[itemListStyles.itemStyle, { backgroundColor: color }]} onPress={() => onPress(title, id, color)}>
       <Text style={itemListStyles.textStyle}>{title}</Text>
     </TouchableOpacity>
   );

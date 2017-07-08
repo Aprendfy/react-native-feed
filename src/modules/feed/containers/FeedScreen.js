@@ -1,29 +1,37 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View } from 'react-native';
+import {
+  View,
+  InteractionManager,
+  Platform,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import ScrollableTabView from 'react-native-scrollable-tab-view';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { FeedList } from '../components/FeedList';
-import { colors } from '../../theme/styles';
+import { LoadingSpinner } from '../components/LoadingSpinner';
+import { stdStyle, colors } from '../../theme/styles';
 import * as actions from '../actions/index';
-import { backButtonAndTitle } from '../../navigator/components/NavigationBarItems';
 
 export class FeedScreen extends Component {
   constructor(props) {
     super(props);
-    this.updateTitle = this.updateTitle.bind(this);
     this.state = {
       title: props.route.params.title,
-      tab: props.route.params.tab
+      tab: props.route.params.tab,
+      backgroundColor: props.route.params.color,
+      interactionsComplete: false,
+      opSys: (Platform.OS === 'ios') ? 'ios' : 'md',
     };
+    this.renderNavBar = this.renderNavBar.bind(this);
   }
 
   static route = {
     navigationBar: {
-      visible: true,
-      renderTitle: backButtonAndTitle
+      visible: false,
     }
   }
 
@@ -32,61 +40,64 @@ export class FeedScreen extends Component {
   }
 
   componentDidMount() {
-    const { navigator } = this.props;
-    setTimeout(() => {
-      navigator.updateCurrentRouteParams({
-        context: this
-      });
-    }, 600);
-  }
-
-  updateTitle(item) {
-    const { tabLabel } = item.ref.props;
-    const { navigator } = this.props;
-    this.setState({ title: tabLabel });
-    navigator.updateCurrentRouteParams({
-      context: this
+    InteractionManager.runAfterInteractions(() => {
+      this.setState({ interactionsComplete: true });
     });
   }
 
-  render() {
-    const { feedActions, feedList } = this.props;
-    const { fetchMoreFeed } = feedActions;
+  renderNavBar() {
+    const { opSys, title } = this.state;
+    const { navigator } = this.props;
     return (
-      <ScrollableTabView
-        renderTabBar={() => <View />}
-        tabBarBackgroundColor="red"
-        tabBarTextStyle={{ fontWeight: '600' }}
-        onChangeTab={item => this.updateTitle(item)}
-        initialPage={this.state.tab}
-      >
+      <View style={stdStyle.navBar}>
+        <TouchableOpacity onPress={() => navigator.pop()} style={stdStyle.navIconTouch}>
+          <Icon name={`${opSys}-arrow-back`} size={24} color="white" />
+        </TouchableOpacity>
+        <View style={{ flex: 1 }}>
+          <Text numberOfLines={1} style={{ color: colors.whitePrimary, fontSize: 20 }}>{title}</Text>
+        </View>
+      </View>
+    );
+  }
+
+  render() {
+    const { backgroundColor } = this.state;
+    const { feedActions, feedList } = this.props;
+    const { container } = stdStyle;
+    const { fetchMoreFeed } = feedActions;
+    if (!this.state.interactionsComplete) {
+      return (
+        <View style={container}>
+          {this.renderNavBar()}
+          <View style={[container, { backgroundColor, justifyContent: 'center' }]}>
+            <LoadingSpinner />
+          </View>
+        </View>
+      );
+    }
+    return (
+      <View style={container}>
+        {this.renderNavBar()}
         <FeedList
-          containerStyle={{ flex: 1 }} tabLabel="Facebook"
-          index={0} name="Primeira" color={colors.categorieFacebook}
+          containerStyle={container} tabLabel="Facebook"
+          color={backgroundColor}
           list={feedList} onEndReached={fetchMoreFeed}
         />
-        <FeedList
-          containerStyle={{ flex: 1 }} tabLabel="Google+"
-          index={1} name="Segunda" color={colors.categorieGooglePlus}
-          list={feedList} onEndReached={fetchMoreFeed}
-        />
-        <FeedList
-          containerStyle={{ flex: 1 }} tabLabel="Twitter"
-          index={2} name="Terceira" color={colors.categorieTwitter}
-          list={feedList} onEndReached={fetchMoreFeed}
-        />
-      </ScrollableTabView>
+      </View>
     );
   }
 }
 
-FeedScreen.PropTypes = {
+FeedScreen.propTypes = {
+  navigator: PropTypes.object,
   feedList: PropTypes.array,
-  feedActions: PropTypes.any
+  feedActions: PropTypes.object,
 };
 
 FeedScreen.defaultProps = {
-  navigator: {}
+  navigator: {},
+  feedActions: {},
+  feedList: [],
 };
 
 const mapStateToProps = (state) => {
