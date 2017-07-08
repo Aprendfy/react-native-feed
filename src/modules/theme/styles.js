@@ -29,6 +29,9 @@ export const colors = {
 };
 
 export const stdStyle = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
   navBar: {
     backgroundColor: colors.primaryColor,
     flexDirection: 'row',

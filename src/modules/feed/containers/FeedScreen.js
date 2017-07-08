@@ -1,31 +1,37 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, InteractionManager } from 'react-native';
+import {
+  View,
+  InteractionManager,
+  Platform,
+  TouchableOpacity,
+  Text,
+} from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import ScrollableTabView from 'react-native-scrollable-tab-view';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { FeedList } from '../components/FeedList';
 import { LoadingSpinner } from '../components/LoadingSpinner';
-import { colors } from '../../theme/styles';
+import { stdStyle, colors } from '../../theme/styles';
 import * as actions from '../actions/index';
-import { backButtonAndTitle } from '../../navigator/components/NavigationBarItems';
 
 export class FeedScreen extends Component {
   constructor(props) {
     super(props);
-    this.updateTitle = this.updateTitle.bind(this);
     this.state = {
       title: props.route.params.title,
       tab: props.route.params.tab,
       backgroundColor: props.route.params.color,
       interactionsComplete: false,
+      opSys: (Platform.OS === 'ios') ? 'ios' : 'md',
     };
+    this.renderNavBar = this.renderNavBar.bind(this);
   }
 
   static route = {
     navigationBar: {
-      visible: true,
+      visible: false,
     }
   }
 
@@ -39,55 +45,45 @@ export class FeedScreen extends Component {
     });
   }
 
-  updateTitle(item) {
-    const { tabLabel } = item.ref.props;
+  renderNavBar() {
+    const { opSys, title } = this.state;
     const { navigator } = this.props;
-    this.setState({ title: tabLabel });
-    navigator.updateCurrentRouteParams({
-      context: this
-    });
+    return (
+      <View style={stdStyle.navBar}>
+        <TouchableOpacity onPress={() => navigator.pop()} style={stdStyle.navIconTouch}>
+          <Icon name={`${opSys}-arrow-back`} size={24} color="white" />
+        </TouchableOpacity>
+        <View style={{ flex: 1 }}>
+          <Text numberOfLines={1} style={{ color: colors.whitePrimary, fontSize: 20 }}>{title}</Text>
+        </View>
+      </View>
+    );
   }
 
   render() {
-    const { feedActions, feedList } = this.props;
     const { backgroundColor } = this.state;
+    const { feedActions, feedList } = this.props;
+    const { container } = stdStyle;
     const { fetchMoreFeed } = feedActions;
     if (!this.state.interactionsComplete) {
       return (
-        <View style={{ backgroundColor, flex: 1, justifyContent: 'center' }}>
-          <LoadingSpinner />
+        <View style={container}>
+          {this.renderNavBar()}
+          <View style={[container, { backgroundColor, justifyContent: 'center' }]}>
+            <LoadingSpinner />
+          </View>
         </View>
       );
     }
     return (
-      <FeedList
-        containerStyle={{ flex: 1 }} tabLabel="Facebook"
-        index={0} color={backgroundColor}
-        list={feedList} onEndReached={fetchMoreFeed}
-      />
-      // <ScrollableTabView
-      //   renderTabBar={() => <View />}
-      //   tabBarBackgroundColor="red"
-      //   tabBarTextStyle={{ fontWeight: '600' }}
-      //   onChangeTab={item => this.updateTitle(item)}
-      //   initialPage={this.state.tab}
-      // >
-      //   <FeedList
-      //     containerStyle={{ flex: 1 }} tabLabel="Facebook"
-      //     index={0} name="Primeira" color={colors.categorieFacebook}
-      //     list={feedList} onEndReached={fetchMoreFeed}
-      //   />
-      //   <FeedList
-      //     containerStyle={{ flex: 1 }} tabLabel="Google+"
-      //     index={1} name="Segunda" color={colors.categorieGooglePlus}
-      //     list={feedList} onEndReached={fetchMoreFeed}
-      //   />
-      //   <FeedList
-      //     containerStyle={{ flex: 1 }} tabLabel="Twitter"
-      //     index={2} name="Terceira" color={colors.categorieTwitter}
-      //     list={feedList} onEndReached={fetchMoreFeed}
-      //   />
-      // </ScrollableTabView>
+      <View style={container}>
+        {this.renderNavBar()}
+        <FeedList
+          containerStyle={container} tabLabel="Facebook"
+          color={backgroundColor}
+          list={feedList} onEndReached={fetchMoreFeed}
+        />
+      </View>
     );
   }
 }
