@@ -35,7 +35,17 @@ export class FeedList extends Component {
 }
 
 FeedList.propTypes = {
-  color: PropTypes.string.isRequired,
-  onEndReached: PropTypes.func.isRequired,
-  list: PropTypes.array.isRequired
+  color: PropTypes.string,
+  onEndReached: PropTypes.func,
+  list: PropTypes.array,
+  containerStyle: PropTypes.object,
+  tabLabel: PropTypes.string,
+};
+
+FeedList.defaultProps = {
+  color: '#FFFFFF',
+  onEndReached: () => { },
+  list: [],
+  containerStyle: {},
+  tabLabel: '',
 };

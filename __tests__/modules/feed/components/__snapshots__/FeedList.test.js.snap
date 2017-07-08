@@ -9,12 +9,12 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <View
-    style={undefined}
-    tabLabel={undefined}
+    style={Object {}}
+    tabLabel=""
 >
     <FlatList
         ItemSeparatorComponent={[Function]}
-        data={undefined}
+        data={Array []}
         disableVirtualization={false}
         getItem={undefined}
         getItemCount={undefined}
@@ -35,12 +35,12 @@ ShallowWrapper {
 </View>,
   "nodes": Array [
     <View
-      style={undefined}
-      tabLabel={undefined}
+      style={Object {}}
+      tabLabel=""
 >
       <FlatList
             ItemSeparatorComponent={[Function]}
-            data={undefined}
+            data={Array []}
             disableVirtualization={false}
             getItem={undefined}
             getItemCount={undefined}
@@ -68,6 +68,9 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <FeedList
         color="red"
+        containerStyle={Object {}}
+        list={Array []}
+        onEndReached={[Function]}
         route={
                 Object {
                         "params": Object {
@@ -76,6 +79,7 @@ ShallowWrapper {
                         },
                       }
         }
+        tabLabel=""
 />,
       "_debugID": 1,
       "_hostContainerInfo": null,
@@ -85,12 +89,16 @@ ShallowWrapper {
         "context": Object {},
         "props": Object {
           "color": "red",
+          "containerStyle": Object {},
+          "list": Array [],
+          "onEndReached": [Function],
           "route": Object {
             "params": Object {
               "tab": "tab",
               "title": "title",
             },
           },
+          "tabLabel": "",
         },
         "refs": Object {},
         "state": null,
@@ -113,12 +121,12 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <View
-          style={undefined}
-          tabLabel={undefined}
+          style={Object {}}
+          tabLabel=""
 >
           <FlatList
                     ItemSeparatorComponent={[Function]}
-                    data={undefined}
+                    data={Array []}
                     disableVirtualization={false}
                     getItem={undefined}
                     getItemCount={undefined}
@@ -139,12 +147,12 @@ ShallowWrapper {
 </View>,
         "_debugID": 2,
         "_renderedOutput": <View
-          style={undefined}
-          tabLabel={undefined}
+          style={Object {}}
+          tabLabel=""
 >
           <FlatList
                     ItemSeparatorComponent={[Function]}
-                    data={undefined}
+                    data={Array []}
                     disableVirtualization={false}
                     getItem={undefined}
                     getItemCount={undefined}
@@ -176,6 +184,9 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <FeedList
     color="red"
+    containerStyle={Object {}}
+    list={Array []}
+    onEndReached={[Function]}
     route={
         Object {
             "params": Object {
@@ -184,6 +195,7 @@ ShallowWrapper {
             },
           }
     }
+    tabLabel=""
 />,
 }
 `;
