@@ -8,123 +8,171 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <ScrollableTabView
-    contentProps={Object {}}
-    initialPage={2}
-    locked={false}
-    onChangeTab={[Function]}
-    onScroll={[Function]}
-    page={-1}
-    prerenderingSiblingsNumber={0}
-    renderTabBar={[Function]}
-    scrollWithoutAnimation={false}
-    tabBarBackgroundColor="red"
-    tabBarPosition="top"
-    tabBarTextStyle={
+  "node": <View
+    style={
         Object {
-            "fontWeight": "600",
+            "flex": 1,
           }
     }
 >
-    <FeedList
-        color="#3B5999"
-        containerStyle={
+    <View
+        style={
             Object {
-                "flex": 1,
+                "alignItems": "center",
+                "backgroundColor": "#29384D",
+                "elevation": 4,
+                "flexDirection": "row",
+                "height": 64,
+                "paddingHorizontal": 0,
+                "paddingTop": 20,
               }
         }
-        index={0}
-        list={Array []}
-        name="Primeira"
-        onEndReached={[Function]}
-        tabLabel="Facebook"
-    />
-    <FeedList
-        color="#DF494A"
-        containerStyle={
-            Object {
-                "flex": 1,
-              }
+    >
+        <TouchableOpacity
+            activeOpacity={0.2}
+            focusedOpacity={0.7}
+            onPress={[Function]}
+            style={
+                Object {
+                    "alignItems": "center",
+                    "height": 44,
+                    "justifyContent": "center",
+                    "width": 44,
+                  }
+            }
+        >
+            <Icon
+                allowFontScaling={false}
+                color="white"
+                name="ios-arrow-back"
+                size={24}
+            />
+        </TouchableOpacity>
+        <View
+            style={
+                Object {
+                    "flex": 1,
+                  }
+            }
+        >
+            <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                numberOfLines={1}
+                style={
+                    Object {
+                        "color": "#ffffff",
+                        "fontSize": 20,
+                      }
+                }
+            >
+                title
+            </Text>
+        </View>
+    </View>
+    <View
+        style={
+            Array [
+                Object {
+                  "flex": 1,
+                },
+                Object {
+                  "backgroundColor": undefined,
+                  "justifyContent": "center",
+                },
+              ]
         }
-        index={1}
-        list={Array []}
-        name="Segunda"
-        onEndReached={[Function]}
-        tabLabel="Google+"
-    />
-    <FeedList
-        color="#3598DB"
-        containerStyle={
-            Object {
-                "flex": 1,
-              }
-        }
-        index={2}
-        list={Array []}
-        name="Terceira"
-        onEndReached={[Function]}
-        tabLabel="Twitter"
-    />
-</ScrollableTabView>,
+    >
+        <LoadingSpinner
+            spinnerColor="#ffffff"
+            spinnerSize="large"
+        />
+    </View>
+</View>,
   "nodes": Array [
-    <ScrollableTabView
-      contentProps={Object {}}
-      initialPage={2}
-      locked={false}
-      onChangeTab={[Function]}
-      onScroll={[Function]}
-      page={-1}
-      prerenderingSiblingsNumber={0}
-      renderTabBar={[Function]}
-      scrollWithoutAnimation={false}
-      tabBarBackgroundColor="red"
-      tabBarPosition="top"
-      tabBarTextStyle={
+    <View
+      style={
             Object {
-                  "fontWeight": "600",
+                  "flex": 1,
                 }
       }
 >
-      <FeedList
-            color="#3B5999"
-            containerStyle={
+      <View
+            style={
                   Object {
-                        "flex": 1,
+                        "alignItems": "center",
+                        "backgroundColor": "#29384D",
+                        "elevation": 4,
+                        "flexDirection": "row",
+                        "height": 64,
+                        "paddingHorizontal": 0,
+                        "paddingTop": 20,
                       }
             }
-            index={0}
-            list={Array []}
-            name="Primeira"
-            onEndReached={[Function]}
-            tabLabel="Facebook"
-      />
-      <FeedList
-            color="#DF494A"
-            containerStyle={
-                  Object {
-                        "flex": 1,
-                      }
+      >
+            <TouchableOpacity
+                  activeOpacity={0.2}
+                  focusedOpacity={0.7}
+                  onPress={[Function]}
+                  style={
+                        Object {
+                              "alignItems": "center",
+                              "height": 44,
+                              "justifyContent": "center",
+                              "width": 44,
+                            }
+                  }
+            >
+                  <Icon
+                        allowFontScaling={false}
+                        color="white"
+                        name="ios-arrow-back"
+                        size={24}
+                  />
+            </TouchableOpacity>
+            <View
+                  style={
+                        Object {
+                              "flex": 1,
+                            }
+                  }
+            >
+                  <Text
+                        accessible={true}
+                        allowFontScaling={true}
+                        ellipsizeMode="tail"
+                        numberOfLines={1}
+                        style={
+                              Object {
+                                    "color": "#ffffff",
+                                    "fontSize": 20,
+                                  }
+                        }
+                  >
+                        title
+                  </Text>
+            </View>
+      </View>
+      <View
+            style={
+                  Array [
+                        Object {
+                          "flex": 1,
+                        },
+                        Object {
+                          "backgroundColor": undefined,
+                          "justifyContent": "center",
+                        },
+                      ]
             }
-            index={1}
-            list={Array []}
-            name="Segunda"
-            onEndReached={[Function]}
-            tabLabel="Google+"
-      />
-      <FeedList
-            color="#3598DB"
-            containerStyle={
-                  Object {
-                        "flex": 1,
-                      }
-            }
-            index={2}
-            list={Array []}
-            name="Terceira"
-            onEndReached={[Function]}
-            tabLabel="Twitter"
-      />
-</ScrollableTabView>,
+      >
+            <LoadingSpinner
+                  spinnerColor="#ffffff"
+                  spinnerSize="large"
+            />
+      </View>
+</View>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -171,11 +219,14 @@ ShallowWrapper {
           },
         },
         "refs": Object {},
+        "renderNavBar": [Function],
         "state": Object {
+          "backgroundColor": undefined,
+          "interactionsComplete": false,
+          "opSys": "ios",
           "tab": 2,
           "title": "title",
         },
-        "updateTitle": [Function],
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],
@@ -194,123 +245,171 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <ScrollableTabView
-          contentProps={Object {}}
-          initialPage={2}
-          locked={false}
-          onChangeTab={[Function]}
-          onScroll={[Function]}
-          page={-1}
-          prerenderingSiblingsNumber={0}
-          renderTabBar={[Function]}
-          scrollWithoutAnimation={false}
-          tabBarBackgroundColor="red"
-          tabBarPosition="top"
-          tabBarTextStyle={
+        "_currentElement": <View
+          style={
                     Object {
-                              "fontWeight": "600",
+                              "flex": 1,
                             }
           }
 >
-          <FeedList
-                    color="#3B5999"
-                    containerStyle={
+          <View
+                    style={
                               Object {
-                                        "flex": 1,
+                                        "alignItems": "center",
+                                        "backgroundColor": "#29384D",
+                                        "elevation": 4,
+                                        "flexDirection": "row",
+                                        "height": 64,
+                                        "paddingHorizontal": 0,
+                                        "paddingTop": 20,
                                       }
                     }
-                    index={0}
-                    list={Array []}
-                    name="Primeira"
-                    onEndReached={[Function]}
-                    tabLabel="Facebook"
-          />
-          <FeedList
-                    color="#DF494A"
-                    containerStyle={
-                              Object {
-                                        "flex": 1,
-                                      }
+          >
+                    <TouchableOpacity
+                              activeOpacity={0.2}
+                              focusedOpacity={0.7}
+                              onPress={[Function]}
+                              style={
+                                        Object {
+                                                  "alignItems": "center",
+                                                  "height": 44,
+                                                  "justifyContent": "center",
+                                                  "width": 44,
+                                                }
+                              }
+                    >
+                              <Icon
+                                        allowFontScaling={false}
+                                        color="white"
+                                        name="ios-arrow-back"
+                                        size={24}
+                              />
+                    </TouchableOpacity>
+                    <View
+                              style={
+                                        Object {
+                                                  "flex": 1,
+                                                }
+                              }
+                    >
+                              <Text
+                                        accessible={true}
+                                        allowFontScaling={true}
+                                        ellipsizeMode="tail"
+                                        numberOfLines={1}
+                                        style={
+                                                  Object {
+                                                            "color": "#ffffff",
+                                                            "fontSize": 20,
+                                                          }
+                                        }
+                              >
+                                        title
+                              </Text>
+                    </View>
+          </View>
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "backgroundColor": undefined,
+                                          "justifyContent": "center",
+                                        },
+                                      ]
                     }
-                    index={1}
-                    list={Array []}
-                    name="Segunda"
-                    onEndReached={[Function]}
-                    tabLabel="Google+"
-          />
-          <FeedList
-                    color="#3598DB"
-                    containerStyle={
-                              Object {
-                                        "flex": 1,
-                                      }
-                    }
-                    index={2}
-                    list={Array []}
-                    name="Terceira"
-                    onEndReached={[Function]}
-                    tabLabel="Twitter"
-          />
-</ScrollableTabView>,
+          >
+                    <LoadingSpinner
+                              spinnerColor="#ffffff"
+                              spinnerSize="large"
+                    />
+          </View>
+</View>,
         "_debugID": 2,
-        "_renderedOutput": <ScrollableTabView
-          contentProps={Object {}}
-          initialPage={2}
-          locked={false}
-          onChangeTab={[Function]}
-          onScroll={[Function]}
-          page={-1}
-          prerenderingSiblingsNumber={0}
-          renderTabBar={[Function]}
-          scrollWithoutAnimation={false}
-          tabBarBackgroundColor="red"
-          tabBarPosition="top"
-          tabBarTextStyle={
+        "_renderedOutput": <View
+          style={
                     Object {
-                              "fontWeight": "600",
+                              "flex": 1,
                             }
           }
 >
-          <FeedList
-                    color="#3B5999"
-                    containerStyle={
+          <View
+                    style={
                               Object {
-                                        "flex": 1,
+                                        "alignItems": "center",
+                                        "backgroundColor": "#29384D",
+                                        "elevation": 4,
+                                        "flexDirection": "row",
+                                        "height": 64,
+                                        "paddingHorizontal": 0,
+                                        "paddingTop": 20,
                                       }
                     }
-                    index={0}
-                    list={Array []}
-                    name="Primeira"
-                    onEndReached={[Function]}
-                    tabLabel="Facebook"
-          />
-          <FeedList
-                    color="#DF494A"
-                    containerStyle={
-                              Object {
-                                        "flex": 1,
-                                      }
+          >
+                    <TouchableOpacity
+                              activeOpacity={0.2}
+                              focusedOpacity={0.7}
+                              onPress={[Function]}
+                              style={
+                                        Object {
+                                                  "alignItems": "center",
+                                                  "height": 44,
+                                                  "justifyContent": "center",
+                                                  "width": 44,
+                                                }
+                              }
+                    >
+                              <Icon
+                                        allowFontScaling={false}
+                                        color="white"
+                                        name="ios-arrow-back"
+                                        size={24}
+                              />
+                    </TouchableOpacity>
+                    <View
+                              style={
+                                        Object {
+                                                  "flex": 1,
+                                                }
+                              }
+                    >
+                              <Text
+                                        accessible={true}
+                                        allowFontScaling={true}
+                                        ellipsizeMode="tail"
+                                        numberOfLines={1}
+                                        style={
+                                                  Object {
+                                                            "color": "#ffffff",
+                                                            "fontSize": 20,
+                                                          }
+                                        }
+                              >
+                                        title
+                              </Text>
+                    </View>
+          </View>
+          <View
+                    style={
+                              Array [
+                                        Object {
+                                          "flex": 1,
+                                        },
+                                        Object {
+                                          "backgroundColor": undefined,
+                                          "justifyContent": "center",
+                                        },
+                                      ]
                     }
-                    index={1}
-                    list={Array []}
-                    name="Segunda"
-                    onEndReached={[Function]}
-                    tabLabel="Google+"
-          />
-          <FeedList
-                    color="#3598DB"
-                    containerStyle={
-                              Object {
-                                        "flex": 1,
-                                      }
-                    }
-                    index={2}
-                    list={Array []}
-                    name="Terceira"
-                    onEndReached={[Function]}
-                    tabLabel="Twitter"
-          />
-</ScrollableTabView>,
+          >
+                    <LoadingSpinner
+                              spinnerColor="#ffffff"
+                              spinnerSize="large"
+                    />
+          </View>
+</View>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,
