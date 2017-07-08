@@ -7,7 +7,7 @@ export default function (initialState) {
   const enhancer = compose(
     applyMiddleware(
       Thunk,
-      Logger
+      //Logger
     )
   );
 

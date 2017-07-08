@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Text, View, Image } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
@@ -6,7 +6,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import { colors } from '../../theme/styles';
 import Styles from './styles/CardHeaderStyle';
 
-export class CardHeader extends Component {
+export class CardHeader extends React.PureComponent {
   render() {
     const { title, category, readingTime, level, color, image } = this.props;
     return (

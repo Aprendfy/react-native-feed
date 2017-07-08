@@ -34,7 +34,7 @@ export class FeedList extends Component {
   }
 }
 
-FeedList.PropTypes = {
+FeedList.propTypes = {
   color: PropTypes.string.isRequired,
   onEndReached: PropTypes.func.isRequired,
   list: PropTypes.array.isRequired
