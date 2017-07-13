@@ -10,6 +10,9 @@
   "plugins": [
     "react"
   ],
+  "globals": {
+    "fetch": true
+  },
   "rules": {
     "strict": 0,
     "arrow-body-style": 0,

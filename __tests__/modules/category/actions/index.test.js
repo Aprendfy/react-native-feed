@@ -1,16 +1,19 @@
 import { SAVE_CATEGORIES } from '../../../../src/modules/category/actions/types';
 import { saveCategories, fetchCategories } from '../../../../src/modules/category/actions';
-
 import { colors } from '../../../../src/modules/theme/styles';
+import * as Aprendfy from '../../../../src/services/aprendfy';
+
+jest.mock('../../../../src/services/aprendfy');
 
 describe('Categories actions', () => {
-  const categoriesArray = [
-    { title: 'Facebook', color: colors.categorieFacebook },
-    { title: 'Google+', color: colors.categorieGooglePlus },
-    { title: 'Instagram', color: colors.categorieInstagram },
-    { title: 'LinkedIn', color: colors.categorieLinkedin },
-    { title: 'Pinterest', color: colors.categoriePinterest },
-    { title: 'Twitter', color: colors.categorieTwitter }
+
+  const serviceResponse = [
+    { title: 'Facebook' },
+    { title: 'Google+' },
+    { title: 'Instagram' },
+    { title: 'LinkedIn' },
+    { title: 'Pinterest' },
+    { title: 'Twitter' }
   ];
 
   it('Should save a category', () => {
@@ -23,12 +26,18 @@ describe('Categories actions', () => {
     expect(saveCategories(newCategory)).toEqual(expectedAction);
   });
 
-  it('Should fetch all categories', () => {
+  it('Should fetch all categories from aprendfy service', async () => {
+    Aprendfy.getAllCategories = jest.fn(() => serviceResponse);
+
     const expectedAction = {
       type: SAVE_CATEGORIES,
-      payload: categoriesArray
+      payload: serviceResponse
     };
 
-    expect(fetchCategories()).toEqual(expectedAction);
+    const mockDispatch = jest.fn();
+    const thunk = fetchCategories();
+    await thunk(mockDispatch);
+
+    expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
   });
 });
