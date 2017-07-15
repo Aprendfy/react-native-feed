@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  InteractionManager,
-} from 'react-native';
+import { View, InteractionManager } from 'react-native';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import { FeedList } from '../components/FeedList';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { stdStyle } from '../../theme/styles';
 import { navigationBar } from '../../navigator/components/NavigationBarItems';
-import * as actions from '../actions/index';
+import { fetchFeedByCategory } from '../actions/index';
 
 export class FeedScreen extends Component {
   constructor(props) {
@@ -20,11 +16,11 @@ export class FeedScreen extends Component {
       title: props.route.params.title,
       tab: props.route.params.tab,
       backgroundColor: props.route.params.color,
-      interactionsComplete: false
+      isLoading: true
     };
   }
 
-  //TODO: Estamos tendo duas NavBar, só que uma está escondida. Porque não usar esta?
+  // TODO: Estamos tendo duas NavBar, só que uma está escondida. Porque não usar esta?
   static route = {
     navigationBar: {
       visible: false,
@@ -32,71 +28,48 @@ export class FeedScreen extends Component {
   }
 
   componentWillMount() {
-    this.props.feedActions.fetchFeedByCategory('Facebook');
+    this.props.getPosts('Facebook');
   }
 
   componentDidMount() {
-    InteractionManager.runAfterInteractions(() => {
-      this.setState({ interactionsComplete: true });
-    });
+    InteractionManager.runAfterInteractions(() => this.setState({ isLoading: false }));
   }
 
   render() {
     const { backgroundColor } = this.state;
-    const { container } = stdStyle;
+    const { feedList, getPosts } = this.props;
 
-    if (!this.state.interactionsComplete) {
-      return (
-        <View style={container}>
-          {navigationBar(this.props.navigator, this.state.title)}
-          <LoadingSpinner style={[container, { backgroundColor, justifyContent: 'center' }]} />
-        </View>
-      );
-    }
-
-    const { feedActions, feedList } = this.props;
-    const { fetchFeedByCategory } = feedActions;
-    const feedMoreCallBack = () => fetchFeedByCategory('Facebook');
-
-    console.log('PROPERTIES: ', feedList);
     return (
-      <View style={container}>
+      <View style={stdStyle.container}>
         {navigationBar(this.props.navigator, this.state.title)}
+        {this.state.isLoading ? <LoadingSpinner style={{ backgroundColor }} /> :
         <FeedList
-          containerStyle={container}
           tabLabel="Facebook"
           color={backgroundColor}
           list={feedList}
-          onEndReached={feedMoreCallBack}
+          onEndReached={() => getPosts('Facebook')}
         />
+        }
       </View>
     );
   }
 }
 
 FeedScreen.propTypes = {
-  navigator: PropTypes.object,
-  feedList: PropTypes.array,
-  feedActions: PropTypes.object,
-};
-
-FeedScreen.defaultProps = {
-  navigator: {},
-  feedActions: {},
-  feedList: [],
+  navigator: PropTypes.object.isRequired,
+  feedList: PropTypes.array.isRequired,
+  getPosts: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
-  console.log('STATE POST CHECK', state.feed.posts['Facebook']);
   return {
-    feedList: state.feed.posts['Facebook']
+    feedList: state.feed.posts['Facebook'] || []
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    feedActions: bindActionCreators(actions, dispatch),
-    getPosts: dispatch(actions.fetchFeedByCategory('Facebook'))
+    getPosts: category => dispatch(fetchFeedByCategory(category))
   };
 };
 

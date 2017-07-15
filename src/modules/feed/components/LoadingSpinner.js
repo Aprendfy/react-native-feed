@@ -7,7 +7,7 @@ export class LoadingSpinner extends Component {
   render() {
     const { spinnerColor, spinnerSize, style } = this.props;
     return (
-      <View style={style}>
+      <View style={[style, { flex: 1, justifyContent: 'center' }]}>
         <ActivityIndicator color={spinnerColor} size={spinnerSize} />
       </View>
     );

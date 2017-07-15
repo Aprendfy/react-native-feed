@@ -5,6 +5,7 @@ export const getFacebookPostsStub = {
     readingTime: '4 minutos',
     level: 'Iniciante',
     image: 'http://i.huffpost.com/gen/3971736/images/o-HAPPY-PEOPLE-facebook.jpg',
+    category: 'facebook',
     author: 'Usuário Padrão'
   },
   {
@@ -13,6 +14,7 @@ export const getFacebookPostsStub = {
     readingTime: '10 minutos',
     level: 'Avançado',
     image: 'http://i.huffpost.com/gen/3971736/images/o-HAPPY-PEOPLE-facebook.jpg',
+    category: 'facebook',
     author: 'Usuário Padrão'
   }]
 };

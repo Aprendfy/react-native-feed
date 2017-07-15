@@ -20,6 +20,15 @@ describe('Feed reducers', () => {
     expect(state).toEqual(expectedState);
   });
 
+  it('On update posts action multiple call should append posts', () => {
+    const expectedState = { posts: { facebook: [...getFacebookPostsStub.facebook, ...getFacebookPostsStub.facebook] } };
+
+    const firstCallState = Reducer(initialState, saveFacebookCategoryAction);
+    const secondCallState = Reducer(firstCallState, saveFacebookCategoryAction);
+
+    expect(secondCallState).toEqual(expectedState);
+  });
+
   it('Should update posts from a category, without breaking others categories', () => {
     const saveOrkutCategoryAction = {
       type: UPDATE_CATEGORY_POSTS,

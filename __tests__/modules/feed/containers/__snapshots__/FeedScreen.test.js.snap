@@ -75,15 +75,9 @@ ShallowWrapper {
         spinnerColor="#ffffff"
         spinnerSize="large"
         style={
-            Array [
-                Object {
-                  "flex": 1,
-                },
-                Object {
-                  "backgroundColor": undefined,
-                  "justifyContent": "center",
-                },
-              ]
+            Object {
+                "backgroundColor": undefined,
+              }
         }
     />
 </View>,
@@ -155,15 +149,9 @@ ShallowWrapper {
             spinnerColor="#ffffff"
             spinnerSize="large"
             style={
-                  Array [
-                        Object {
-                          "flex": 1,
-                        },
-                        Object {
-                          "backgroundColor": undefined,
-                          "justifyContent": "center",
-                        },
-                      ]
+                  Object {
+                        "backgroundColor": undefined,
+                      }
             }
       />
 </View>,
@@ -175,14 +163,8 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <FeedScreen
-        feedActions={
-                Object {
-                        "fetchFeed": [Function],
-                        "fetchFeedByCategory": [Function],
-                        "fetchMoreFeed": [Function],
-                      }
-        }
         feedList={Array []}
+        getPosts={[Function]}
         navigator={Object {}}
         route={
                 Object {
@@ -200,12 +182,8 @@ ShallowWrapper {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
-          "feedActions": Object {
-            "fetchFeed": [Function],
-            "fetchFeedByCategory": [Function],
-            "fetchMoreFeed": [Function],
-          },
           "feedList": Array [],
+          "getPosts": [Function],
           "navigator": Object {},
           "route": Object {
             "params": Object {
@@ -217,7 +195,7 @@ ShallowWrapper {
         "refs": Object {},
         "state": Object {
           "backgroundColor": undefined,
-          "interactionsComplete": false,
+          "isLoading": true,
           "tab": 2,
           "title": "title",
         },
@@ -306,15 +284,9 @@ ShallowWrapper {
                     spinnerColor="#ffffff"
                     spinnerSize="large"
                     style={
-                              Array [
-                                        Object {
-                                          "flex": 1,
-                                        },
-                                        Object {
-                                          "backgroundColor": undefined,
-                                          "justifyContent": "center",
-                                        },
-                                      ]
+                              Object {
+                                        "backgroundColor": undefined,
+                                      }
                     }
           />
 </View>,
@@ -386,15 +358,9 @@ ShallowWrapper {
                     spinnerColor="#ffffff"
                     spinnerSize="large"
                     style={
-                              Array [
-                                        Object {
-                                          "flex": 1,
-                                        },
-                                        Object {
-                                          "backgroundColor": undefined,
-                                          "justifyContent": "center",
-                                        },
-                                      ]
+                              Object {
+                                        "backgroundColor": undefined,
+                                      }
                     }
           />
 </View>,
@@ -410,14 +376,8 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <FeedScreen
-    feedActions={
-        Object {
-            "fetchFeed": [Function],
-            "fetchFeedByCategory": [Function],
-            "fetchMoreFeed": [Function],
-          }
-    }
     feedList={Array []}
+    getPosts={[Function]}
     navigator={Object {}}
     route={
         Object {
