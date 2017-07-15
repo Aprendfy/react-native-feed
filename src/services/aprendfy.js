@@ -1,5 +1,5 @@
 const BASE_URL = 'https://aprendfy.herokuapp.com/v1/app/';
-const CATEGORIES = 'categories/';
+const CATEGORIES = 'categories';
 const POSTS = 'posts/';
 
 type categoriesResponsePayloadType = {
@@ -73,7 +73,13 @@ const mapCategoriesResponsePayloadIntoArray = (payloadResponse: categoriesRespon
 };
 
 const mapPostsResponsePayloadIntoArray = (payloadReponse: postsPayloadResponseType, category) => {
-  return {[category]: payloadReponse};
+  const posts = payloadReponse.map(post => toPostRepresentation(post));
+  return {[category]: posts};
+}
+
+const toPostRepresentation = (post) => {
+  const { author, body, title, readingTime, level, image } = post;
+  return { body, title, readingTime, level, image, author: author.name };
 }
 
 const toCategoryRepresentation = (obj) => {

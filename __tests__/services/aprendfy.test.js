@@ -13,20 +13,14 @@ describe('Aprendfy backend service', () => {
     categories.forEach(category => expect(Object.keys(category)).toEqual(['title', 'color']));
   });
 
-  it.only('Should retrieve all posts by category', async () => {
+  it('Should retrieve all posts by category', async () => {
     const desiredCategory = 'facebook';
     FetchMock.get(`https://aprendfy.herokuapp.com/v1/app/posts/?category=${desiredCategory}`, POST_FIXTURE);
 
     const posts = await getFeedsByCategory(desiredCategory);
 
-    // const expectedResponseShape = {
-    //   facebook: [ {title: '', category: '', readingTime: '', level: '', body: '', image: '', author: {name: ''}} ];
-    // }
-
-    console.log(posts);
-
-
     expect(posts).toHaveProperty(desiredCategory);
     expect(posts[desiredCategory]).toHaveLength(2);
+    expect(posts[desiredCategory][0]).toMatchSnapshot();
   });
 });
