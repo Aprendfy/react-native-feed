@@ -1,4 +1,4 @@
-import { saveFeed } from '../../../../src/modules/feed/actions';
+import { UPDATE_CATEGORY_POSTS } from '../../../../src/modules/feed/actions/types';
 import Reducer, { initialState } from '../../../../src/modules/feed/reducers';
 
 describe('Feed reducers', () => {
@@ -10,7 +10,12 @@ describe('Feed reducers', () => {
 
   it('Should save a feed', () => {
     const feed = { feed: 'I_HAVE_NO_IDEA' };
-    const saveFeedAction = saveFeed(feed);
+
+    const saveFeedAction = {
+      type: UPDATE_CATEGORY_POSTS,
+      payload: feed
+    };
+
     const expectedState = { ...initialState, feedList: feed };
 
     expect(Reducer(initialState, saveFeedAction)).toEqual(expectedState);

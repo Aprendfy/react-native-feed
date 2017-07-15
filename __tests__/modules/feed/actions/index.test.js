@@ -1,22 +1,23 @@
-import { SAVE_FEED } from '../../../../src/modules/feed/actions/types';
-import { fetchFeed, fetchMoreFeed, saveFeed } from '../../../../src/modules/feed/actions';
+import { UPDATE_CATEGORY_POSTS } from '../../../../src/modules/feed/actions/types';
+import { fetchFeedByCategory, updateFeeds } from '../../../../src/modules/feed/actions';
+import * as Aprendfy from '../../../../src/services/aprendfy';
+jest.mock('../../../../src/services/aprendfy');
 
 describe('Feed actions', () => {
-  it('Should save a feed', () => {
-    const feed = { payload: 'Nao faco ideia de como é esse objeto' };
+  const mockDispatch = jest.fn();
+
+  it('Should fetch feed from Aprendfy API', async () => {
+    const feedMock = { idk: 'I_HAVE_NO_IDEA' };
+    Aprendfy.getFeedsByCategory = jest.fn(() => feedMock);
     const expectedAction = {
-      type: SAVE_FEED,
-      payload: feed
+      type: UPDATE_CATEGORY_POSTS,
+      payload: feedMock
     };
 
-    expect(saveFeed(feed)).toEqual(expectedAction);
+    const thunk = fetchFeedByCategory('SOMETHING');
+    await thunk(mockDispatch);
+
+    expect(mockDispatch).toHaveBeenCalledWith(expectedAction);
   });
 
-  it.skip('Should fetch feed', () => {
-    expect(fetchFeed('SOMETHING')).toEqual({});
-  });
-
-  it.skip('Should fetch more feeds', () => {
-    expect(fetchMoreFeed('SOMETHING')).toEqual({});
-  });
 });

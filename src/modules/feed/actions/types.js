@@ -1,1 +1,1 @@
-export const SAVE_FEED = 'SAVE_FEED';
+export const UPDATE_CATEGORY_POSTS = 'UPDATE_FEED_STATE';

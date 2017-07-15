@@ -1,26 +1,15 @@
-import { SAVE_FEED } from './types';
-import { fakeData } from '../../../config/mockData';
+import { UPDATE_CATEGORY_POSTS } from './types';
+import { getFeedsByCategory } from '../../../services/aprendfy';
 
-export function fetchFeed() {
+export function fetchFeedByCategory(category) {
   return async (dispatch) => {
-    const items = await fakeData();
-    dispatch(saveFeed(items));
-  };
-}
+    const feeds = await getFeedsByCategory(category);
 
-export function fetchMoreFeed(feed) {
-  return async (dispatch) => {
-    const items = await fakeData();
-    await items.forEach((item) => {
-      feed.push(item);
-    });
-    dispatch(saveFeed(feed));
-  };
-}
+    const action = {
+      type: UPDATE_CATEGORY_POSTS,
+      payload: feeds
+    };
 
-export function saveFeed(payload) {
-  return {
-    type: SAVE_FEED,
-    payload
+    dispatch(action);
   };
 }
