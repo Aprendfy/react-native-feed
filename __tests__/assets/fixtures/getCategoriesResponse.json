@@ -1,0 +1,52 @@
+{
+	"payload": [
+		{
+			"_id": "59634bcf6cd42600116ce458",
+			"updated_at": "2017-07-10T09:41:35.574Z",
+			"created_at": "2017-07-10T09:41:35.574Z",
+			"name": "Facebook",
+      "color": "blue",
+			"__v": 0
+		},
+		{
+			"_id": "59634c216cd42600116ce459",
+			"updated_at": "2017-07-10T09:42:57.453Z",
+			"created_at": "2017-07-10T09:42:57.453Z",
+			"name": "Google+",
+      "color": "red",
+			"__v": 0
+		},
+		{
+			"_id": "59634c296cd42600116ce45a",
+			"updated_at": "2017-07-10T09:43:05.205Z",
+			"created_at": "2017-07-10T09:43:05.205Z",
+			"name": "Instagram",
+      "color": "orange",
+			"__v": 0
+		},
+		{
+			"_id": "59634c306cd42600116ce45b",
+			"updated_at": "2017-07-10T09:43:12.965Z",
+			"created_at": "2017-07-10T09:43:12.965Z",
+			"name": "LinkedIn",
+      "color": "purple",
+			"__v": 0
+		},
+		{
+			"_id": "59634c366cd42600116ce45c",
+			"updated_at": "2017-07-10T09:43:18.411Z",
+			"created_at": "2017-07-10T09:43:18.411Z",
+			"name": "Pinterest",
+      "color": "yellow",
+			"__v": 0
+		},
+		{
+			"_id": "59634c3b6cd42600116ce45d",
+			"updated_at": "2017-07-10T09:43:23.822Z",
+			"created_at": "2017-07-10T09:43:23.822Z",
+			"name": "Twitter",
+      "color": "cyan",
+			"__v": 0
+		}
+	]
+}

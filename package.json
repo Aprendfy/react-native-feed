@@ -41,6 +41,7 @@
     "eslint-plugin-import": "2.2.0",
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.9.0",
+    "fetch-mock": "^5.12.1",
     "jest": "^20.0.4",
     "jest-enzyme": "^3.4.0",
     "jest-expo": "^18.0.0",
@@ -50,9 +51,6 @@
   },
   "jest": {
     "preset": "jest-expo",
-    "setupFiles": [
-      "./__tests__/setup.js"
-    ],
     "testMatch": [
       "**/__tests__/**/**/**/*.test.js?(x)"
     ]
