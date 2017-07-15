@@ -18,9 +18,9 @@ const renderItem = (color) => {
 
 export class FeedList extends Component {
   render() {
-    const { list, onEndReached, color, containerStyle, tabLabel } = this.props;
+    const { list, onEndReached, color, tabLabel } = this.props;
     return (
-      <View style={containerStyle} tabLabel={tabLabel}>
+      <View style={{ flex: 1 }} tabLabel={tabLabel}>
         <FlatList
           renderItem={renderItem(color)}
           data={list}
@@ -38,7 +38,6 @@ FeedList.propTypes = {
   color: PropTypes.string,
   onEndReached: PropTypes.func,
   list: PropTypes.array,
-  containerStyle: PropTypes.object,
   tabLabel: PropTypes.string,
 };
 
@@ -46,6 +45,5 @@ FeedList.defaultProps = {
   color: '#FFFFFF',
   onEndReached: () => { },
   list: [],
-  containerStyle: {},
   tabLabel: '',
 };

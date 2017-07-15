@@ -44,7 +44,7 @@ ShallowWrapper {
             <Icon
                 allowFontScaling={false}
                 color="white"
-                name="ios-arrow-back"
+                name="md-arrow-back"
                 size={24}
             />
         </TouchableOpacity>
@@ -71,24 +71,15 @@ ShallowWrapper {
             </Text>
         </View>
     </View>
-    <View
+    <LoadingSpinner
+        spinnerColor="#ffffff"
+        spinnerSize="large"
         style={
-            Array [
-                Object {
-                  "flex": 1,
-                },
-                Object {
-                  "backgroundColor": undefined,
-                  "justifyContent": "center",
-                },
-              ]
+            Object {
+                "backgroundColor": undefined,
+              }
         }
-    >
-        <LoadingSpinner
-            spinnerColor="#ffffff"
-            spinnerSize="large"
-        />
-    </View>
+    />
 </View>,
   "nodes": Array [
     <View
@@ -127,7 +118,7 @@ ShallowWrapper {
                   <Icon
                         allowFontScaling={false}
                         color="white"
-                        name="ios-arrow-back"
+                        name="md-arrow-back"
                         size={24}
                   />
             </TouchableOpacity>
@@ -154,24 +145,15 @@ ShallowWrapper {
                   </Text>
             </View>
       </View>
-      <View
+      <LoadingSpinner
+            spinnerColor="#ffffff"
+            spinnerSize="large"
             style={
-                  Array [
-                        Object {
-                          "flex": 1,
-                        },
-                        Object {
-                          "backgroundColor": undefined,
-                          "justifyContent": "center",
-                        },
-                      ]
+                  Object {
+                        "backgroundColor": undefined,
+                      }
             }
-      >
-            <LoadingSpinner
-                  spinnerColor="#ffffff"
-                  spinnerSize="large"
-            />
-      </View>
+      />
 </View>,
   ],
   "options": Object {},
@@ -181,13 +163,8 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <FeedScreen
-        feedActions={
-                Object {
-                        "fetchFeed": [Function],
-                        "fetchMoreFeed": [Function],
-                      }
-        }
         feedList={Array []}
+        getPosts={[Function]}
         navigator={Object {}}
         route={
                 Object {
@@ -205,11 +182,8 @@ ShallowWrapper {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
-          "feedActions": Object {
-            "fetchFeed": [Function],
-            "fetchMoreFeed": [Function],
-          },
           "feedList": Array [],
+          "getPosts": [Function],
           "navigator": Object {},
           "route": Object {
             "params": Object {
@@ -219,11 +193,9 @@ ShallowWrapper {
           },
         },
         "refs": Object {},
-        "renderNavBar": [Function],
         "state": Object {
           "backgroundColor": undefined,
-          "interactionsComplete": false,
-          "opSys": "ios",
+          "isLoading": true,
           "tab": 2,
           "title": "title",
         },
@@ -281,7 +253,7 @@ ShallowWrapper {
                               <Icon
                                         allowFontScaling={false}
                                         color="white"
-                                        name="ios-arrow-back"
+                                        name="md-arrow-back"
                                         size={24}
                               />
                     </TouchableOpacity>
@@ -308,24 +280,15 @@ ShallowWrapper {
                               </Text>
                     </View>
           </View>
-          <View
+          <LoadingSpinner
+                    spinnerColor="#ffffff"
+                    spinnerSize="large"
                     style={
-                              Array [
-                                        Object {
-                                          "flex": 1,
-                                        },
-                                        Object {
-                                          "backgroundColor": undefined,
-                                          "justifyContent": "center",
-                                        },
-                                      ]
+                              Object {
+                                        "backgroundColor": undefined,
+                                      }
                     }
-          >
-                    <LoadingSpinner
-                              spinnerColor="#ffffff"
-                              spinnerSize="large"
-                    />
-          </View>
+          />
 </View>,
         "_debugID": 2,
         "_renderedOutput": <View
@@ -364,7 +327,7 @@ ShallowWrapper {
                               <Icon
                                         allowFontScaling={false}
                                         color="white"
-                                        name="ios-arrow-back"
+                                        name="md-arrow-back"
                                         size={24}
                               />
                     </TouchableOpacity>
@@ -391,24 +354,15 @@ ShallowWrapper {
                               </Text>
                     </View>
           </View>
-          <View
+          <LoadingSpinner
+                    spinnerColor="#ffffff"
+                    spinnerSize="large"
                     style={
-                              Array [
-                                        Object {
-                                          "flex": 1,
-                                        },
-                                        Object {
-                                          "backgroundColor": undefined,
-                                          "justifyContent": "center",
-                                        },
-                                      ]
+                              Object {
+                                        "backgroundColor": undefined,
+                                      }
                     }
-          >
-                    <LoadingSpinner
-                              spinnerColor="#ffffff"
-                              spinnerSize="large"
-                    />
-          </View>
+          />
 </View>,
       },
       "_renderedNodeType": 1,
@@ -422,13 +376,8 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <FeedScreen
-    feedActions={
-        Object {
-            "fetchFeed": [Function],
-            "fetchMoreFeed": [Function],
-          }
-    }
     feedList={Array []}
+    getPosts={[Function]}
     navigator={Object {}}
     route={
         Object {

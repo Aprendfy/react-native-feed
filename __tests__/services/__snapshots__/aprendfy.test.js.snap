@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Aprendfy backend service Should retrieve all posts by category 1`] = `
+Object {
+  "author": "Usuário Padrão",
+  "body": "Ainda assim, existem dúvidas a respeito de como a",
+  "category": "Facebook",
+  "image": "http://i.huffpost.com/gen/3971736/images/o-HAPPY-PEOPLE-facebook.jpg",
+  "level": "Iniciante",
+  "readingTime": "4 minutos",
+  "title": "Criar uma Página no Facebook",
+}
+`;

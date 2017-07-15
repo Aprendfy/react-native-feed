@@ -4,10 +4,7 @@ import { shallow } from 'enzyme';
 import { FeedScreen } from '../../../../src/modules/feed/containers/FeedScreen';
 
 const props = {
-  feedActions: {
-    fetchFeed: jest.fn(),
-    fetchMoreFeed: jest.fn()
-  },
+  getPosts: jest.fn(),
   route: {
     params: {
       tab: 2,

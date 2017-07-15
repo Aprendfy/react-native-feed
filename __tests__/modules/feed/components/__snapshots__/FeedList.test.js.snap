@@ -9,7 +9,11 @@ ShallowWrapper {
   },
   "length": 1,
   "node": <View
-    style={Object {}}
+    style={
+        Object {
+            "flex": 1,
+          }
+    }
     tabLabel=""
 >
     <FlatList
@@ -35,7 +39,11 @@ ShallowWrapper {
 </View>,
   "nodes": Array [
     <View
-      style={Object {}}
+      style={
+            Object {
+                  "flex": 1,
+                }
+      }
       tabLabel=""
 >
       <FlatList
@@ -68,7 +76,6 @@ ShallowWrapper {
       "_context": Object {},
       "_currentElement": <FeedList
         color="red"
-        containerStyle={Object {}}
         list={Array []}
         onEndReached={[Function]}
         route={
@@ -89,7 +96,6 @@ ShallowWrapper {
         "context": Object {},
         "props": Object {
           "color": "red",
-          "containerStyle": Object {},
           "list": Array [],
           "onEndReached": [Function],
           "route": Object {
@@ -121,7 +127,11 @@ ShallowWrapper {
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
         "_currentElement": <View
-          style={Object {}}
+          style={
+                    Object {
+                              "flex": 1,
+                            }
+          }
           tabLabel=""
 >
           <FlatList
@@ -147,7 +157,11 @@ ShallowWrapper {
 </View>,
         "_debugID": 2,
         "_renderedOutput": <View
-          style={Object {}}
+          style={
+                    Object {
+                              "flex": 1,
+                            }
+          }
           tabLabel=""
 >
           <FlatList
@@ -184,7 +198,6 @@ ShallowWrapper {
   "root": [Circular],
   "unrendered": <FeedList
     color="red"
-    containerStyle={Object {}}
     list={Array []}
     onEndReached={[Function]}
     route={

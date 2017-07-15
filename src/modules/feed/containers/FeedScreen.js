@@ -1,20 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-  View,
-  InteractionManager,
-  Platform,
-  TouchableOpacity,
-  Text,
-} from 'react-native';
+import { View, InteractionManager } from 'react-native';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import Icon from 'react-native-vector-icons/Ionicons';
 
 import { FeedList } from '../components/FeedList';
 import { LoadingSpinner } from '../components/LoadingSpinner';
-import { stdStyle, colors } from '../../theme/styles';
-import * as actions from '../actions/index';
+import { stdStyle } from '../../theme/styles';
+import { navigationBar } from '../../navigator/components/NavigationBarItems';
+import { fetchFeedByCategory } from '../actions/index';
 
 export class FeedScreen extends Component {
   constructor(props) {
@@ -23,12 +16,11 @@ export class FeedScreen extends Component {
       title: props.route.params.title,
       tab: props.route.params.tab,
       backgroundColor: props.route.params.color,
-      interactionsComplete: false,
-      opSys: (Platform.OS === 'ios') ? 'ios' : 'md',
+      isLoading: true
     };
-    this.renderNavBar = this.renderNavBar.bind(this);
   }
 
+  // TODO: Estamos tendo duas NavBar, só que uma está escondida. Porque não usar esta?
   static route = {
     navigationBar: {
       visible: false,
@@ -36,79 +28,48 @@ export class FeedScreen extends Component {
   }
 
   componentWillMount() {
-    this.props.feedActions.fetchFeed();
+    this.props.getPosts('Facebook');
   }
 
   componentDidMount() {
-    InteractionManager.runAfterInteractions(() => {
-      this.setState({ interactionsComplete: true });
-    });
-  }
-
-  renderNavBar() {
-    const { opSys, title } = this.state;
-    const { navigator } = this.props;
-    return (
-      <View style={stdStyle.navBar}>
-        <TouchableOpacity onPress={() => navigator.pop()} style={stdStyle.navIconTouch}>
-          <Icon name={`${opSys}-arrow-back`} size={24} color="white" />
-        </TouchableOpacity>
-        <View style={{ flex: 1 }}>
-          <Text numberOfLines={1} style={{ color: colors.whitePrimary, fontSize: 20 }}>{title}</Text>
-        </View>
-      </View>
-    );
+    InteractionManager.runAfterInteractions(() => this.setState({ isLoading: false }));
   }
 
   render() {
     const { backgroundColor } = this.state;
-    const { feedActions, feedList } = this.props;
-    const { container } = stdStyle;
-    const { fetchMoreFeed } = feedActions;
-    if (!this.state.interactionsComplete) {
-      return (
-        <View style={container}>
-          {this.renderNavBar()}
-          <View style={[container, { backgroundColor, justifyContent: 'center' }]}>
-            <LoadingSpinner />
-          </View>
-        </View>
-      );
-    }
+    const { feedList, getPosts } = this.props;
+
     return (
-      <View style={container}>
-        {this.renderNavBar()}
+      <View style={stdStyle.container}>
+        {navigationBar(this.props.navigator, this.state.title)}
+        {this.state.isLoading ? <LoadingSpinner style={{ backgroundColor }} /> :
         <FeedList
-          containerStyle={container} tabLabel="Facebook"
+          tabLabel="Facebook"
           color={backgroundColor}
-          list={feedList} onEndReached={fetchMoreFeed}
+          list={feedList}
+          onEndReached={() => getPosts('Facebook')}
         />
+        }
       </View>
     );
   }
 }
 
 FeedScreen.propTypes = {
-  navigator: PropTypes.object,
-  feedList: PropTypes.array,
-  feedActions: PropTypes.object,
-};
-
-FeedScreen.defaultProps = {
-  navigator: {},
-  feedActions: {},
-  feedList: [],
+  navigator: PropTypes.object.isRequired,
+  feedList: PropTypes.array.isRequired,
+  getPosts: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
   return {
-    feedList: state.feed.feedList
+    feedList: state.feed.posts['Facebook'] || []
   };
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    feedActions: bindActionCreators(actions, dispatch)
+    getPosts: category => dispatch(fetchFeedByCategory(category))
   };
 };
 
