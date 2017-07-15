@@ -34,7 +34,7 @@ const fetchGetParams = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OTYzNDljNDZjZDQyNjAwMTE2Y2U0NTciLCJ1cGRhdGVkX2F0IjoiMjAxNy0wNy0xMFQwOTozMjo1Mi4yNTFaIiwiY3JlYXRlZF9hdCI6IjIwMTctMDctMTBUMDk6MzI6NTIuMjUxWiIsIm5hbWUiOiJVc3XDoXJpbyBQYWRyw6NvIiwiZW1haWwiOiJ1c3VhcmlvQHBhZHJhby5jb20iLCJfX3YiOjAsInVzZXJTdGF0dXMiOiJQRU5ESU5HIiwidHlwZSI6IlBVQkxJU0hFUiIsImlhdCI6MTQ5OTk0Njk4OX0.aQKSVDOSDni0OqIrCDugmbSKNSs_V5zsnxkqlaQoMWo',
     'Content-Type': 'application/json'
   }
-}
+};
 
 export async function getFeedsByCategory(category) {
   try {
@@ -74,13 +74,13 @@ const mapCategoriesResponsePayloadIntoArray = (payloadResponse: categoriesRespon
 
 const mapPostsResponsePayloadIntoArray = (payloadReponse: postsPayloadResponseType, category) => {
   const posts = payloadReponse.map(post => toPostRepresentation(post));
-  return {[category]: posts};
-}
+  return { [category]: posts };
+};
 
 const toPostRepresentation = (post) => {
-  const { author, body, title, readingTime, level, image } = post;
-  return { body, title, readingTime, level, image, author: author.name };
-}
+  const { author, body, title, readingTime, level, image, category } = post;
+  return { category, body, title, readingTime, level, image, author: author.name };
+};
 
 const toCategoryRepresentation = (obj) => {
   return { title: obj.name, color: obj.color };

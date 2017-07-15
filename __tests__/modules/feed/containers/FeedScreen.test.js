@@ -6,6 +6,7 @@ import { FeedScreen } from '../../../../src/modules/feed/containers/FeedScreen';
 const props = {
   feedActions: {
     fetchFeed: jest.fn(),
+    fetchFeedByCategory: jest.fn(),
     fetchMoreFeed: jest.fn()
   },
   route: {

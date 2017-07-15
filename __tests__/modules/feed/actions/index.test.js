@@ -1,7 +1,8 @@
 import { UPDATE_CATEGORY_POSTS } from '../../../../src/modules/feed/actions/types';
-import { fetchFeedByCategory, updateFeeds } from '../../../../src/modules/feed/actions';
+import { fetchFeedByCategory } from '../../../../src/modules/feed/actions';
 import { getFacebookPostsStub } from '../../../assets/stubs/aprendfyStub';
 import * as Aprendfy from '../../../../src/services/aprendfy';
+
 jest.mock('../../../../src/services/aprendfy');
 
 describe('Feed actions', () => {

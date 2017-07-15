@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator } from 'react-native';
 import { colors } from '../../theme/styles';
 
 export class LoadingSpinner extends Component {
   render() {
-    const { spinnerColor, spinnerSize } = this.props;
+    const { spinnerColor, spinnerSize, style } = this.props;
     return (
-      <ActivityIndicator color={spinnerColor} size={spinnerSize} />
+      <View style={style}>
+        <ActivityIndicator color={spinnerColor} size={spinnerSize} />
+      </View>
     );
   }
 }

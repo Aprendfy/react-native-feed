@@ -1,9 +1,9 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import IonIcons from 'react-native-vector-icons/Ionicons';
 
 import { categoriesScreenStyles as styles } from '../../theme/categories/styles';
-import { colors } from '../../theme/styles';
+import { stdStyle, colors } from '../../theme/styles';
 
 export const backButtonAndTitle = ({ params }) => {
   const { context = {} } = params;
@@ -26,6 +26,19 @@ export const rightSideIcon = () => {
     <View style={styles.navButtonsContainer}>
       <View style={styles.navButton}>
         <IonIcons name="ios-pricetag-outline" size={24} color={colors.whitePrimary} />
+      </View>
+    </View>
+  );
+};
+
+export const navigationBar = (navigator, title) => {
+  return (
+    <View style={stdStyle.navBar}>
+      <TouchableOpacity onPress={() => navigator.pop()} style={stdStyle.navIconTouch}>
+        <IonIcons name={'md-arrow-back'} size={24} color="white" />
+      </TouchableOpacity>
+      <View style={{ flex: 1 }}>
+        <Text numberOfLines={1} style={{ color: colors.whitePrimary, fontSize: 20 }}>{title}</Text>
       </View>
     </View>
   );

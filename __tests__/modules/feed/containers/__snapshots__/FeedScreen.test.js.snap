@@ -44,7 +44,7 @@ ShallowWrapper {
             <Icon
                 allowFontScaling={false}
                 color="white"
-                name="ios-arrow-back"
+                name="md-arrow-back"
                 size={24}
             />
         </TouchableOpacity>
@@ -71,7 +71,9 @@ ShallowWrapper {
             </Text>
         </View>
     </View>
-    <View
+    <LoadingSpinner
+        spinnerColor="#ffffff"
+        spinnerSize="large"
         style={
             Array [
                 Object {
@@ -83,12 +85,7 @@ ShallowWrapper {
                 },
               ]
         }
-    >
-        <LoadingSpinner
-            spinnerColor="#ffffff"
-            spinnerSize="large"
-        />
-    </View>
+    />
 </View>,
   "nodes": Array [
     <View
@@ -127,7 +124,7 @@ ShallowWrapper {
                   <Icon
                         allowFontScaling={false}
                         color="white"
-                        name="ios-arrow-back"
+                        name="md-arrow-back"
                         size={24}
                   />
             </TouchableOpacity>
@@ -154,7 +151,9 @@ ShallowWrapper {
                   </Text>
             </View>
       </View>
-      <View
+      <LoadingSpinner
+            spinnerColor="#ffffff"
+            spinnerSize="large"
             style={
                   Array [
                         Object {
@@ -166,12 +165,7 @@ ShallowWrapper {
                         },
                       ]
             }
-      >
-            <LoadingSpinner
-                  spinnerColor="#ffffff"
-                  spinnerSize="large"
-            />
-      </View>
+      />
 </View>,
   ],
   "options": Object {},
@@ -184,6 +178,7 @@ ShallowWrapper {
         feedActions={
                 Object {
                         "fetchFeed": [Function],
+                        "fetchFeedByCategory": [Function],
                         "fetchMoreFeed": [Function],
                       }
         }
@@ -207,6 +202,7 @@ ShallowWrapper {
         "props": Object {
           "feedActions": Object {
             "fetchFeed": [Function],
+            "fetchFeedByCategory": [Function],
             "fetchMoreFeed": [Function],
           },
           "feedList": Array [],
@@ -219,11 +215,9 @@ ShallowWrapper {
           },
         },
         "refs": Object {},
-        "renderNavBar": [Function],
         "state": Object {
           "backgroundColor": undefined,
           "interactionsComplete": false,
-          "opSys": "ios",
           "tab": 2,
           "title": "title",
         },
@@ -281,7 +275,7 @@ ShallowWrapper {
                               <Icon
                                         allowFontScaling={false}
                                         color="white"
-                                        name="ios-arrow-back"
+                                        name="md-arrow-back"
                                         size={24}
                               />
                     </TouchableOpacity>
@@ -308,7 +302,9 @@ ShallowWrapper {
                               </Text>
                     </View>
           </View>
-          <View
+          <LoadingSpinner
+                    spinnerColor="#ffffff"
+                    spinnerSize="large"
                     style={
                               Array [
                                         Object {
@@ -320,12 +316,7 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-          >
-                    <LoadingSpinner
-                              spinnerColor="#ffffff"
-                              spinnerSize="large"
-                    />
-          </View>
+          />
 </View>,
         "_debugID": 2,
         "_renderedOutput": <View
@@ -364,7 +355,7 @@ ShallowWrapper {
                               <Icon
                                         allowFontScaling={false}
                                         color="white"
-                                        name="ios-arrow-back"
+                                        name="md-arrow-back"
                                         size={24}
                               />
                     </TouchableOpacity>
@@ -391,7 +382,9 @@ ShallowWrapper {
                               </Text>
                     </View>
           </View>
-          <View
+          <LoadingSpinner
+                    spinnerColor="#ffffff"
+                    spinnerSize="large"
                     style={
                               Array [
                                         Object {
@@ -403,12 +396,7 @@ ShallowWrapper {
                                         },
                                       ]
                     }
-          >
-                    <LoadingSpinner
-                              spinnerColor="#ffffff"
-                              spinnerSize="large"
-                    />
-          </View>
+          />
 </View>,
       },
       "_renderedNodeType": 1,
@@ -425,6 +413,7 @@ ShallowWrapper {
     feedActions={
         Object {
             "fetchFeed": [Function],
+            "fetchFeedByCategory": [Function],
             "fetchMoreFeed": [Function],
           }
     }

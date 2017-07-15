@@ -3,7 +3,6 @@ import { UPDATE_CATEGORY_POSTS } from '../../../../src/modules/feed/actions/type
 import Reducer, { initialState } from '../../../../src/modules/feed/reducers';
 
 describe('Feed reducers', () => {
-
   const saveFacebookCategoryAction = {
     type: UPDATE_CATEGORY_POSTS,
     payload: getFacebookPostsStub
