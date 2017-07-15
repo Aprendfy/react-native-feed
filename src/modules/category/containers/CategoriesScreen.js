@@ -8,16 +8,10 @@ import { fetchCategories } from '../actions';
 import { rightSideIcon } from '../../navigator/components/NavigationBarItems';
 
 export class CategoriesScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.onPressCategory = this.onPressCategory.bind(this);
-    this.renderItem = this.renderItem.bind(this);
-  }
-
   static route = {
     navigationBar: {
       visible: true,
-      title: 'Etiquetas',
+      title: 'Categorias',
       renderRight: rightSideIcon
     }
   }
@@ -26,18 +20,18 @@ export class CategoriesScreen extends Component {
     this.props.refreshCategories();
   }
 
-  renderItem({ item, index }) {
-    return <ItemList title={item.title} color={item.color} id={index} onPress={this.onPressCategory} />;
+  renderItem({ item: { title, color } }) {
+    return <ItemList title={title} color={color} id={title} onPress={(title, index, color) => this.onPressCategory(title, index, color)} />;
   }
 
-  onPressCategory(title, tab, color) {
-    this.props.navigator.push(Router.getRoute('feed', { title, tab, color }));
+  onPressCategory(title, index, color) {
+    this.props.navigator.push(Router.getRoute('feed', { category: title, color }));
   }
 
   render() {
     return (
       <FlatList
-        renderItem={this.renderItem}
+        renderItem={item => this.renderItem(item)}
         data={this.props.categories}
         keyExtractor={(item, index) => index}
       />
@@ -51,9 +45,8 @@ CategoriesScreen.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  const { categories } = state.categories;
   return {
-    categories
+    categories: state.categories.categories
   };
 };
 

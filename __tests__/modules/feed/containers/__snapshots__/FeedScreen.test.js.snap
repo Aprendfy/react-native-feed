@@ -15,62 +15,6 @@ ShallowWrapper {
           }
     }
 >
-    <View
-        style={
-            Object {
-                "alignItems": "center",
-                "backgroundColor": "#29384D",
-                "elevation": 4,
-                "flexDirection": "row",
-                "height": 64,
-                "paddingHorizontal": 0,
-                "paddingTop": 20,
-              }
-        }
-    >
-        <TouchableOpacity
-            activeOpacity={0.2}
-            focusedOpacity={0.7}
-            onPress={[Function]}
-            style={
-                Object {
-                    "alignItems": "center",
-                    "height": 44,
-                    "justifyContent": "center",
-                    "width": 44,
-                  }
-            }
-        >
-            <Icon
-                allowFontScaling={false}
-                color="white"
-                name="md-arrow-back"
-                size={24}
-            />
-        </TouchableOpacity>
-        <View
-            style={
-                Object {
-                    "flex": 1,
-                  }
-            }
-        >
-            <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                numberOfLines={1}
-                style={
-                    Object {
-                        "color": "#ffffff",
-                        "fontSize": 20,
-                      }
-                }
-            >
-                title
-            </Text>
-        </View>
-    </View>
     <LoadingSpinner
         spinnerColor="#ffffff"
         spinnerSize="large"
@@ -89,62 +33,6 @@ ShallowWrapper {
                 }
       }
 >
-      <View
-            style={
-                  Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#29384D",
-                        "elevation": 4,
-                        "flexDirection": "row",
-                        "height": 64,
-                        "paddingHorizontal": 0,
-                        "paddingTop": 20,
-                      }
-            }
-      >
-            <TouchableOpacity
-                  activeOpacity={0.2}
-                  focusedOpacity={0.7}
-                  onPress={[Function]}
-                  style={
-                        Object {
-                              "alignItems": "center",
-                              "height": 44,
-                              "justifyContent": "center",
-                              "width": 44,
-                            }
-                  }
-            >
-                  <Icon
-                        allowFontScaling={false}
-                        color="white"
-                        name="md-arrow-back"
-                        size={24}
-                  />
-            </TouchableOpacity>
-            <View
-                  style={
-                        Object {
-                              "flex": 1,
-                            }
-                  }
-            >
-                  <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        numberOfLines={1}
-                        style={
-                              Object {
-                                    "color": "#ffffff",
-                                    "fontSize": 20,
-                                  }
-                        }
-                  >
-                        title
-                  </Text>
-            </View>
-      </View>
       <LoadingSpinner
             spinnerColor="#ffffff"
             spinnerSize="large"
@@ -195,9 +83,8 @@ ShallowWrapper {
         "refs": Object {},
         "state": Object {
           "backgroundColor": undefined,
+          "category": undefined,
           "isLoading": true,
-          "tab": 2,
-          "title": "title",
         },
         "updater": Object {
           "enqueueCallback": [Function],
@@ -224,62 +111,6 @@ ShallowWrapper {
                             }
           }
 >
-          <View
-                    style={
-                              Object {
-                                        "alignItems": "center",
-                                        "backgroundColor": "#29384D",
-                                        "elevation": 4,
-                                        "flexDirection": "row",
-                                        "height": 64,
-                                        "paddingHorizontal": 0,
-                                        "paddingTop": 20,
-                                      }
-                    }
-          >
-                    <TouchableOpacity
-                              activeOpacity={0.2}
-                              focusedOpacity={0.7}
-                              onPress={[Function]}
-                              style={
-                                        Object {
-                                                  "alignItems": "center",
-                                                  "height": 44,
-                                                  "justifyContent": "center",
-                                                  "width": 44,
-                                                }
-                              }
-                    >
-                              <Icon
-                                        allowFontScaling={false}
-                                        color="white"
-                                        name="md-arrow-back"
-                                        size={24}
-                              />
-                    </TouchableOpacity>
-                    <View
-                              style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
-                              }
-                    >
-                              <Text
-                                        accessible={true}
-                                        allowFontScaling={true}
-                                        ellipsizeMode="tail"
-                                        numberOfLines={1}
-                                        style={
-                                                  Object {
-                                                            "color": "#ffffff",
-                                                            "fontSize": 20,
-                                                          }
-                                        }
-                              >
-                                        title
-                              </Text>
-                    </View>
-          </View>
           <LoadingSpinner
                     spinnerColor="#ffffff"
                     spinnerSize="large"
@@ -298,62 +129,6 @@ ShallowWrapper {
                             }
           }
 >
-          <View
-                    style={
-                              Object {
-                                        "alignItems": "center",
-                                        "backgroundColor": "#29384D",
-                                        "elevation": 4,
-                                        "flexDirection": "row",
-                                        "height": 64,
-                                        "paddingHorizontal": 0,
-                                        "paddingTop": 20,
-                                      }
-                    }
-          >
-                    <TouchableOpacity
-                              activeOpacity={0.2}
-                              focusedOpacity={0.7}
-                              onPress={[Function]}
-                              style={
-                                        Object {
-                                                  "alignItems": "center",
-                                                  "height": 44,
-                                                  "justifyContent": "center",
-                                                  "width": 44,
-                                                }
-                              }
-                    >
-                              <Icon
-                                        allowFontScaling={false}
-                                        color="white"
-                                        name="md-arrow-back"
-                                        size={24}
-                              />
-                    </TouchableOpacity>
-                    <View
-                              style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
-                              }
-                    >
-                              <Text
-                                        accessible={true}
-                                        allowFontScaling={true}
-                                        ellipsizeMode="tail"
-                                        numberOfLines={1}
-                                        style={
-                                                  Object {
-                                                            "color": "#ffffff",
-                                                            "fontSize": 20,
-                                                          }
-                                        }
-                              >
-                                        title
-                              </Text>
-                    </View>
-          </View>
           <LoadingSpinner
                     spinnerColor="#ffffff"
                     spinnerSize="large"

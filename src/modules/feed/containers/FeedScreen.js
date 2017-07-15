@@ -6,29 +6,27 @@ import { connect } from 'react-redux';
 import { FeedList } from '../components/FeedList';
 import { LoadingSpinner } from '../components/LoadingSpinner';
 import { stdStyle } from '../../theme/styles';
-import { navigationBar } from '../../navigator/components/NavigationBarItems';
 import { fetchFeedByCategory } from '../actions/index';
 
 export class FeedScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: props.route.params.title,
-      tab: props.route.params.tab,
+      category: props.route.params.category,
       backgroundColor: props.route.params.color,
       isLoading: true
     };
   }
 
-  // TODO: Estamos tendo duas NavBar, só que uma está escondida. Porque não usar esta?
   static route = {
     navigationBar: {
-      visible: false,
+      title: params => params.category,
+      visible: true
     }
   }
 
   componentWillMount() {
-    this.props.getPosts('Facebook');
+    this.props.getPosts(this.state.category);
   }
 
   componentDidMount() {
@@ -36,18 +34,17 @@ export class FeedScreen extends Component {
   }
 
   render() {
-    const { backgroundColor } = this.state;
+    const { backgroundColor, category } = this.state;
     const { feedList, getPosts } = this.props;
 
     return (
       <View style={stdStyle.container}>
-        {navigationBar(this.props.navigator, this.state.title)}
         {this.state.isLoading ? <LoadingSpinner style={{ backgroundColor }} /> :
         <FeedList
-          tabLabel="Facebook"
+          tabLabel={category}
           color={backgroundColor}
-          list={feedList}
-          onEndReached={() => getPosts('Facebook')}
+          list={feedList[category]}
+          onEndReached={() => getPosts(category)}
         />
         }
       </View>
@@ -56,14 +53,13 @@ export class FeedScreen extends Component {
 }
 
 FeedScreen.propTypes = {
-  navigator: PropTypes.object.isRequired,
-  feedList: PropTypes.array.isRequired,
+  feedList: PropTypes.object.isRequired,
   getPosts: PropTypes.func.isRequired
 };
 
 const mapStateToProps = (state) => {
   return {
-    feedList: state.feed.posts['Facebook'] || []
+    feedList: state.feed.posts
   };
 };
 

@@ -95,7 +95,6 @@ ShallowWrapper {
       "_instance": CategoriesScreen {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "onPressCategory": [Function],
         "props": Object {
           "categories": Array [
             Object {
@@ -110,7 +109,6 @@ ShallowWrapper {
           "refreshCategories": [Function],
         },
         "refs": Object {},
-        "renderItem": [Function],
         "state": null,
         "updater": Object {
           "enqueueCallback": [Function],
