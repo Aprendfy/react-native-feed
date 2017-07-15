@@ -1,4 +1,4 @@
-export const getFeedsByCategoryStub = {
+export const getFacebookPostsStub = {
   facebook: [{
     body: 'Ainda assim, existem dúvidas a respeito de como a',
     title: 'Criar uma Página no Facebook',
@@ -15,4 +15,8 @@ export const getFeedsByCategoryStub = {
       image: 'http://i.huffpost.com/gen/3971736/images/o-HAPPY-PEOPLE-facebook.jpg',
       author: 'Usuário Padrão'
     }]
+};
+
+export const getOrkutPostsStub = {
+  orkut: [] // Who cares about orkut? ¯\_(ツ)_/¯
 };

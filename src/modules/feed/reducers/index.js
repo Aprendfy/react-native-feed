@@ -1,13 +1,13 @@
 import { UPDATE_CATEGORY_POSTS } from '../actions/types';
-import * as feed from './reducers';
+import { saveFeed } from './reducers';
 
-const initialState = {
-  feedList: []
+export const initialState = {
+  posts: {}
 };
 
 export default function reducer(feedState = initialState, action) {
   switch (action.type) {
-    case UPDATE_CATEGORY_POSTS: return feed.saveFeed(feedState, action);
+    case UPDATE_CATEGORY_POSTS: return saveFeed(feedState, action);
     default: return feedState;
   }
 }

@@ -1,23 +1,42 @@
+import { getFacebookPostsStub, getOrkutPostsStub } from '../../../assets/stubs/aprendfyStub';
 import { UPDATE_CATEGORY_POSTS } from '../../../../src/modules/feed/actions/types';
 import Reducer, { initialState } from '../../../../src/modules/feed/reducers';
 
 describe('Feed reducers', () => {
 
-  it('Should have an empty feed array as initial state', () => {
-    const expectedInitialState = { feedList: [] };
+  const saveFacebookCategoryAction = {
+    type: UPDATE_CATEGORY_POSTS,
+    payload: getFacebookPostsStub
+  };
+
+  it('Should have an empty object as initial state', () => {
+    const expectedInitialState = { posts: {} };
     expect(Reducer(initialState, {})).toEqual(expectedInitialState);
   });
 
-  it('Should save a feed', () => {
-    const feed = { feed: 'I_HAVE_NO_IDEA' };
+  it('Should update posts from a category', () => {
+    const expectedState = { posts: saveFacebookCategoryAction.payload };
+    const state = Reducer(initialState, saveFacebookCategoryAction);
 
-    const saveFeedAction = {
+    expect(state).toEqual(expectedState);
+  });
+
+  it('Should update posts from a category, without breaking others categories', () => {
+    const saveOrkutCategoryAction = {
       type: UPDATE_CATEGORY_POSTS,
-      payload: feed
+      payload: getOrkutPostsStub
     };
 
-    const expectedState = { ...initialState, feedList: feed };
+    const expectedState = {
+      posts: {
+        facebook: getFacebookPostsStub.facebook,
+        orkut: getOrkutPostsStub.orkut
+      }
+    };
 
-    expect(Reducer(initialState, saveFeedAction)).toEqual(expectedState);
+    const stateAfterFacebookUpdate = Reducer(initialState, saveFacebookCategoryAction);
+    const stateAfterOrkutUpdate = Reducer(stateAfterFacebookUpdate, saveOrkutCategoryAction);
+
+    expect(stateAfterOrkutUpdate).toEqual(expectedState);
   });
 });
