@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FlatList } from 'react-native';
+import { FlatList, InteractionManager } from 'react-native';
 import { connect } from 'react-redux';
 import { ItemList } from '../components/';
 import { Router } from '../../../router/routes';
 import { fetchCategories } from '../actions';
 import { rightSideIcon } from '../../navigator/components/NavigationBarItems';
+import { LoadingSpinnerView } from '../../shared/components/LoadingSpinnerView';
 
 export class CategoriesScreen extends Component {
   static route = {
@@ -17,7 +18,12 @@ export class CategoriesScreen extends Component {
   }
 
   componentWillMount() {
+    this.setState({ isLoading: true });
     this.props.refreshCategories();
+  }
+
+  componentDidMount() {
+    InteractionManager.runAfterInteractions(() => this.setState({ isLoading: false }));
   }
 
   renderItem({ item: { title, color } }) {
@@ -29,12 +35,16 @@ export class CategoriesScreen extends Component {
   }
 
   render() {
+    const { isLoading } = this.state;
+
     return (
-      <FlatList
-        renderItem={item => this.renderItem(item)}
-        data={this.props.categories}
-        keyExtractor={(item, index) => index}
-      />
+      <LoadingSpinnerView isLoading={isLoading} spinnerStyle={{ backgroundColor: 'blue' }} >
+        <FlatList
+          renderItem={item => this.renderItem(item)}
+          data={this.props.categories}
+          keyExtractor={(item, index) => index}
+        />
+      </LoadingSpinnerView>
     );
   }
 }

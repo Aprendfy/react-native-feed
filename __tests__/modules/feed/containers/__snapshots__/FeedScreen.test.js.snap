@@ -8,41 +8,35 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <View
-    style={
+  "node": <LoadingSpinnerView
+    isLoading={true}
+    spinnerStyle={
         Object {
-            "flex": 1,
+            "backgroundColor": undefined,
           }
     }
 >
-    <LoadingSpinner
-        spinnerColor="#ffffff"
-        spinnerSize="large"
-        style={
-            Object {
-                "backgroundColor": undefined,
-              }
-        }
+    <FeedList
+        color="#FFFFFF"
+        list={Array []}
+        onEndReached={[Function]}
     />
-</View>,
+</LoadingSpinnerView>,
   "nodes": Array [
-    <View
-      style={
+    <LoadingSpinnerView
+      isLoading={true}
+      spinnerStyle={
             Object {
-                  "flex": 1,
+                  "backgroundColor": undefined,
                 }
       }
 >
-      <LoadingSpinner
-            spinnerColor="#ffffff"
-            spinnerSize="large"
-            style={
-                  Object {
-                        "backgroundColor": undefined,
-                      }
-            }
+      <FeedList
+            color="#FFFFFF"
+            list={Array []}
+            onEndReached={[Function]}
       />
-</View>,
+</LoadingSpinnerView>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -51,7 +45,7 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <FeedScreen
-        feedList={Array []}
+        categoryFeeds={Array []}
         getPosts={[Function]}
         navigator={Object {}}
         route={
@@ -70,7 +64,7 @@ ShallowWrapper {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
-          "feedList": Array [],
+          "categoryFeeds": Array [],
           "getPosts": [Function],
           "navigator": Object {},
           "route": Object {
@@ -83,7 +77,6 @@ ShallowWrapper {
         "refs": Object {},
         "state": Object {
           "backgroundColor": undefined,
-          "category": undefined,
           "isLoading": true,
         },
         "updater": Object {
@@ -104,41 +97,35 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <View
-          style={
+        "_currentElement": <LoadingSpinnerView
+          isLoading={true}
+          spinnerStyle={
                     Object {
-                              "flex": 1,
+                              "backgroundColor": undefined,
                             }
           }
 >
-          <LoadingSpinner
-                    spinnerColor="#ffffff"
-                    spinnerSize="large"
-                    style={
-                              Object {
-                                        "backgroundColor": undefined,
-                                      }
-                    }
+          <FeedList
+                    color="#FFFFFF"
+                    list={Array []}
+                    onEndReached={[Function]}
           />
-</View>,
+</LoadingSpinnerView>,
         "_debugID": 2,
-        "_renderedOutput": <View
-          style={
+        "_renderedOutput": <LoadingSpinnerView
+          isLoading={true}
+          spinnerStyle={
                     Object {
-                              "flex": 1,
+                              "backgroundColor": undefined,
                             }
           }
 >
-          <LoadingSpinner
-                    spinnerColor="#ffffff"
-                    spinnerSize="large"
-                    style={
-                              Object {
-                                        "backgroundColor": undefined,
-                                      }
-                    }
+          <FeedList
+                    color="#FFFFFF"
+                    list={Array []}
+                    onEndReached={[Function]}
           />
-</View>,
+</LoadingSpinnerView>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,
@@ -151,7 +138,7 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <FeedScreen
-    feedList={Array []}
+    categoryFeeds={Array []}
     getPosts={[Function]}
     navigator={Object {}}
     route={

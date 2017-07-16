@@ -1,32 +1,35 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { View, InteractionManager } from 'react-native';
+import { InteractionManager } from 'react-native';
 import { connect } from 'react-redux';
 
 import { FeedList } from '../components/FeedList';
-import { LoadingSpinner } from '../components/LoadingSpinner';
-import { stdStyle } from '../../theme/styles';
+import { LoadingSpinnerView } from '../../shared/components/LoadingSpinnerView';
 import { fetchFeedByCategory } from '../actions/index';
 
 export class FeedScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      category: props.route.params.category,
-      backgroundColor: props.route.params.color,
-      isLoading: true
-    };
+  state = {
+    backgroundColor: this.props.route.params.color,
+    isLoading: true
+  }
+
+  static propTypes = {
+    categoryFeeds: PropTypes.array.isRequired,
+    getPosts: PropTypes.func.isRequired
+  }
+
+  static defaultProps = {
+    categoryFeeds: []
   }
 
   static route = {
     navigationBar: {
-      title: params => params.category,
-      visible: true
+      title: params => params.category
     }
   }
 
   componentWillMount() {
-    this.props.getPosts(this.state.category);
+    this.props.getPosts();
   }
 
   componentDidMount() {
@@ -34,38 +37,34 @@ export class FeedScreen extends Component {
   }
 
   render() {
-    const { backgroundColor, category } = this.state;
-    const { feedList, getPosts } = this.props;
+    const { backgroundColor, isLoading } = this.state;
+    const { categoryFeeds, getPosts } = this.props;
 
     return (
-      <View style={stdStyle.container}>
-        {this.state.isLoading ? <LoadingSpinner style={{ backgroundColor }} /> :
+      <LoadingSpinnerView isLoading={isLoading} spinnerStyle={{ backgroundColor }}>
         <FeedList
-          tabLabel={category}
           color={backgroundColor}
-          list={feedList[category]}
-          onEndReached={() => getPosts(category)}
+          list={categoryFeeds}
+          onEndReached={getPosts}
         />
-        }
-      </View>
+      </LoadingSpinnerView>
     );
   }
 }
 
-FeedScreen.propTypes = {
-  feedList: PropTypes.object.isRequired,
-  getPosts: PropTypes.func.isRequired
-};
+const mapStateToProps = (state, ownProps) => {
+  const { category } = ownProps.route.params;
 
-const mapStateToProps = (state) => {
   return {
-    feedList: state.feed.posts
+    categoryFeeds: state.feed.posts[category]
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = (dispatch, ownProps) => {
+  const { category } = ownProps.route.params;
+
   return {
-    getPosts: category => dispatch(fetchFeedByCategory(category))
+    getPosts: () => dispatch(fetchFeedByCategory(category))
   };
 };
 

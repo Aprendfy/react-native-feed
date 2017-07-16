@@ -7,7 +7,7 @@
     "lint": "eslint ./src/ ./__tests__/",
     "lint-fix": "eslint --fix ./src/ ./__tests__/",
     "generate-coverage": "jest --coverage --silent --noStackTrace || true",
-    "update-coverage": "npm run generate-coverage && codeclimate-test-reporter < ./coverage/lcov.info",
+    "update-coverage": "npm run generate-coverage && codeclimate-test-reporter < ./coverage/lcov.info || true",
     "update-snapshot": "jest -u -t snapshot",
     "test-watch": "jest --watch",
     "test-ci": "jest",
