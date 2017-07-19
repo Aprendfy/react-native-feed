@@ -8,65 +8,83 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <FlatList
-    data={
-        Array [
-            Object {
-              "color": "Azul",
-              "title": "Facebook",
-            },
-            Object {
-              "color": "Vermeio",
-              "title": "Google+",
-            },
-          ]
+  "node": <LoadingSpinnerView
+    isLoading={true}
+    spinnerStyle={
+        Object {
+            "backgroundColor": "blue",
+          }
     }
-    disableVirtualization={false}
-    getItem={undefined}
-    getItemCount={undefined}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onEndReached={[Function]}
-    onEndReachedThreshold={2}
-    removeClippedSubviews={true}
-    renderItem={[Function]}
-    renderScrollComponent={[Function]}
-    updateCellsBatchingPeriod={50}
-    windowSize={21}
-/>,
-  "nodes": Array [
+>
     <FlatList
-      data={
+        data={
             Array [
-                  Object {
-                    "color": "Azul",
-                    "title": "Facebook",
-                  },
-                  Object {
-                    "color": "Vermeio",
-                    "title": "Google+",
-                  },
-                ]
+                Object {
+                  "color": "Azul",
+                  "title": "Facebook",
+                },
+                Object {
+                  "color": "Vermeio",
+                  "title": "Google+",
+                },
+              ]
+        }
+        disableVirtualization={false}
+        getItem={undefined}
+        getItemCount={undefined}
+        horizontal={false}
+        initialNumToRender={10}
+        keyExtractor={[Function]}
+        maxToRenderPerBatch={10}
+        numColumns={1}
+        onEndReached={[Function]}
+        onEndReachedThreshold={2}
+        removeClippedSubviews={true}
+        renderItem={[Function]}
+        renderScrollComponent={[Function]}
+        updateCellsBatchingPeriod={50}
+        windowSize={21}
+    />
+</LoadingSpinnerView>,
+  "nodes": Array [
+    <LoadingSpinnerView
+      isLoading={true}
+      spinnerStyle={
+            Object {
+                  "backgroundColor": "blue",
+                }
       }
-      disableVirtualization={false}
-      getItem={undefined}
-      getItemCount={undefined}
-      horizontal={false}
-      initialNumToRender={10}
-      keyExtractor={[Function]}
-      maxToRenderPerBatch={10}
-      numColumns={1}
-      onEndReached={[Function]}
-      onEndReachedThreshold={2}
-      removeClippedSubviews={true}
-      renderItem={[Function]}
-      renderScrollComponent={[Function]}
-      updateCellsBatchingPeriod={50}
-      windowSize={21}
-/>,
+>
+      <FlatList
+            data={
+                  Array [
+                        Object {
+                          "color": "Azul",
+                          "title": "Facebook",
+                        },
+                        Object {
+                          "color": "Vermeio",
+                          "title": "Google+",
+                        },
+                      ]
+            }
+            disableVirtualization={false}
+            getItem={undefined}
+            getItemCount={undefined}
+            horizontal={false}
+            initialNumToRender={10}
+            keyExtractor={[Function]}
+            maxToRenderPerBatch={10}
+            numColumns={1}
+            onEndReached={[Function]}
+            onEndReachedThreshold={2}
+            removeClippedSubviews={true}
+            renderItem={[Function]}
+            renderScrollComponent={[Function]}
+            updateCellsBatchingPeriod={50}
+            windowSize={21}
+      />
+</LoadingSpinnerView>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -95,7 +113,6 @@ ShallowWrapper {
       "_instance": CategoriesScreen {
         "_reactInternalInstance": [Circular],
         "context": Object {},
-        "onPressCategory": [Function],
         "props": Object {
           "categories": Array [
             Object {
@@ -110,8 +127,9 @@ ShallowWrapper {
           "refreshCategories": [Function],
         },
         "refs": Object {},
-        "renderItem": [Function],
-        "state": null,
+        "state": Object {
+          "isLoading": true,
+        },
         "updater": Object {
           "enqueueCallback": [Function],
           "enqueueCallbackInternal": [Function],
@@ -130,65 +148,83 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <FlatList
-          data={
-                    Array [
-                              Object {
-                                "color": "Azul",
-                                "title": "Facebook",
-                              },
-                              Object {
-                                "color": "Vermeio",
-                                "title": "Google+",
-                              },
-                            ]
+        "_currentElement": <LoadingSpinnerView
+          isLoading={true}
+          spinnerStyle={
+                    Object {
+                              "backgroundColor": "blue",
+                            }
           }
-          disableVirtualization={false}
-          getItem={undefined}
-          getItemCount={undefined}
-          horizontal={false}
-          initialNumToRender={10}
-          keyExtractor={[Function]}
-          maxToRenderPerBatch={10}
-          numColumns={1}
-          onEndReached={[Function]}
-          onEndReachedThreshold={2}
-          removeClippedSubviews={true}
-          renderItem={[Function]}
-          renderScrollComponent={[Function]}
-          updateCellsBatchingPeriod={50}
-          windowSize={21}
-/>,
+>
+          <FlatList
+                    data={
+                              Array [
+                                        Object {
+                                          "color": "Azul",
+                                          "title": "Facebook",
+                                        },
+                                        Object {
+                                          "color": "Vermeio",
+                                          "title": "Google+",
+                                        },
+                                      ]
+                    }
+                    disableVirtualization={false}
+                    getItem={undefined}
+                    getItemCount={undefined}
+                    horizontal={false}
+                    initialNumToRender={10}
+                    keyExtractor={[Function]}
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onEndReached={[Function]}
+                    onEndReachedThreshold={2}
+                    removeClippedSubviews={true}
+                    renderItem={[Function]}
+                    renderScrollComponent={[Function]}
+                    updateCellsBatchingPeriod={50}
+                    windowSize={21}
+          />
+</LoadingSpinnerView>,
         "_debugID": 2,
-        "_renderedOutput": <FlatList
-          data={
-                    Array [
-                              Object {
-                                "color": "Azul",
-                                "title": "Facebook",
-                              },
-                              Object {
-                                "color": "Vermeio",
-                                "title": "Google+",
-                              },
-                            ]
+        "_renderedOutput": <LoadingSpinnerView
+          isLoading={true}
+          spinnerStyle={
+                    Object {
+                              "backgroundColor": "blue",
+                            }
           }
-          disableVirtualization={false}
-          getItem={undefined}
-          getItemCount={undefined}
-          horizontal={false}
-          initialNumToRender={10}
-          keyExtractor={[Function]}
-          maxToRenderPerBatch={10}
-          numColumns={1}
-          onEndReached={[Function]}
-          onEndReachedThreshold={2}
-          removeClippedSubviews={true}
-          renderItem={[Function]}
-          renderScrollComponent={[Function]}
-          updateCellsBatchingPeriod={50}
-          windowSize={21}
-/>,
+>
+          <FlatList
+                    data={
+                              Array [
+                                        Object {
+                                          "color": "Azul",
+                                          "title": "Facebook",
+                                        },
+                                        Object {
+                                          "color": "Vermeio",
+                                          "title": "Google+",
+                                        },
+                                      ]
+                    }
+                    disableVirtualization={false}
+                    getItem={undefined}
+                    getItemCount={undefined}
+                    horizontal={false}
+                    initialNumToRender={10}
+                    keyExtractor={[Function]}
+                    maxToRenderPerBatch={10}
+                    numColumns={1}
+                    onEndReached={[Function]}
+                    onEndReachedThreshold={2}
+                    removeClippedSubviews={true}
+                    renderItem={[Function]}
+                    renderScrollComponent={[Function]}
+                    updateCellsBatchingPeriod={50}
+                    windowSize={21}
+          />
+</LoadingSpinnerView>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,

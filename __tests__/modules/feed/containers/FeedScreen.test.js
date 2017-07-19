@@ -12,7 +12,7 @@ const props = {
     }
   },
   navigator: {},
-  feedList: []
+  categoryFeeds: []
 };
 
 describe('<FeedScreen />', () => {

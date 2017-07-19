@@ -14,7 +14,6 @@ ShallowWrapper {
             "flex": 1,
           }
     }
-    tabLabel=""
 >
     <FlatList
         ItemSeparatorComponent={[Function]}
@@ -44,7 +43,6 @@ ShallowWrapper {
                   "flex": 1,
                 }
       }
-      tabLabel=""
 >
       <FlatList
             ItemSeparatorComponent={[Function]}
@@ -86,7 +84,6 @@ ShallowWrapper {
                         },
                       }
         }
-        tabLabel=""
 />,
       "_debugID": 1,
       "_hostContainerInfo": null,
@@ -104,7 +101,6 @@ ShallowWrapper {
               "title": "title",
             },
           },
-          "tabLabel": "",
         },
         "refs": Object {},
         "state": null,
@@ -132,7 +128,6 @@ ShallowWrapper {
                               "flex": 1,
                             }
           }
-          tabLabel=""
 >
           <FlatList
                     ItemSeparatorComponent={[Function]}
@@ -162,7 +157,6 @@ ShallowWrapper {
                               "flex": 1,
                             }
           }
-          tabLabel=""
 >
           <FlatList
                     ItemSeparatorComponent={[Function]}
@@ -208,7 +202,6 @@ ShallowWrapper {
             },
           }
     }
-    tabLabel=""
 />,
 }
 `;

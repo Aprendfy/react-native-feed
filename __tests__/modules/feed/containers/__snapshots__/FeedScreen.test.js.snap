@@ -8,153 +8,35 @@ ShallowWrapper {
     "findWhereUnwrapped": [Function],
   },
   "length": 1,
-  "node": <View
-    style={
+  "node": <LoadingSpinnerView
+    isLoading={true}
+    spinnerStyle={
         Object {
-            "flex": 1,
+            "backgroundColor": undefined,
           }
     }
 >
-    <View
-        style={
-            Object {
-                "alignItems": "center",
-                "backgroundColor": "#29384D",
-                "elevation": 4,
-                "flexDirection": "row",
-                "height": 64,
-                "paddingHorizontal": 0,
-                "paddingTop": 20,
-              }
-        }
-    >
-        <TouchableOpacity
-            activeOpacity={0.2}
-            focusedOpacity={0.7}
-            onPress={[Function]}
-            style={
-                Object {
-                    "alignItems": "center",
-                    "height": 44,
-                    "justifyContent": "center",
-                    "width": 44,
-                  }
-            }
-        >
-            <Icon
-                allowFontScaling={false}
-                color="white"
-                name="md-arrow-back"
-                size={24}
-            />
-        </TouchableOpacity>
-        <View
-            style={
-                Object {
-                    "flex": 1,
-                  }
-            }
-        >
-            <Text
-                accessible={true}
-                allowFontScaling={true}
-                ellipsizeMode="tail"
-                numberOfLines={1}
-                style={
-                    Object {
-                        "color": "#ffffff",
-                        "fontSize": 20,
-                      }
-                }
-            >
-                title
-            </Text>
-        </View>
-    </View>
-    <LoadingSpinner
-        spinnerColor="#ffffff"
-        spinnerSize="large"
-        style={
-            Object {
-                "backgroundColor": undefined,
-              }
-        }
+    <FeedList
+        color="#FFFFFF"
+        list={Array []}
+        onEndReached={[Function]}
     />
-</View>,
+</LoadingSpinnerView>,
   "nodes": Array [
-    <View
-      style={
+    <LoadingSpinnerView
+      isLoading={true}
+      spinnerStyle={
             Object {
-                  "flex": 1,
+                  "backgroundColor": undefined,
                 }
       }
 >
-      <View
-            style={
-                  Object {
-                        "alignItems": "center",
-                        "backgroundColor": "#29384D",
-                        "elevation": 4,
-                        "flexDirection": "row",
-                        "height": 64,
-                        "paddingHorizontal": 0,
-                        "paddingTop": 20,
-                      }
-            }
-      >
-            <TouchableOpacity
-                  activeOpacity={0.2}
-                  focusedOpacity={0.7}
-                  onPress={[Function]}
-                  style={
-                        Object {
-                              "alignItems": "center",
-                              "height": 44,
-                              "justifyContent": "center",
-                              "width": 44,
-                            }
-                  }
-            >
-                  <Icon
-                        allowFontScaling={false}
-                        color="white"
-                        name="md-arrow-back"
-                        size={24}
-                  />
-            </TouchableOpacity>
-            <View
-                  style={
-                        Object {
-                              "flex": 1,
-                            }
-                  }
-            >
-                  <Text
-                        accessible={true}
-                        allowFontScaling={true}
-                        ellipsizeMode="tail"
-                        numberOfLines={1}
-                        style={
-                              Object {
-                                    "color": "#ffffff",
-                                    "fontSize": 20,
-                                  }
-                        }
-                  >
-                        title
-                  </Text>
-            </View>
-      </View>
-      <LoadingSpinner
-            spinnerColor="#ffffff"
-            spinnerSize="large"
-            style={
-                  Object {
-                        "backgroundColor": undefined,
-                      }
-            }
+      <FeedList
+            color="#FFFFFF"
+            list={Array []}
+            onEndReached={[Function]}
       />
-</View>,
+</LoadingSpinnerView>,
   ],
   "options": Object {},
   "renderer": ReactShallowRenderer {
@@ -163,7 +45,7 @@ ShallowWrapper {
       "_compositeType": 0,
       "_context": Object {},
       "_currentElement": <FeedScreen
-        feedList={Array []}
+        categoryFeeds={Array []}
         getPosts={[Function]}
         navigator={Object {}}
         route={
@@ -182,7 +64,7 @@ ShallowWrapper {
         "_reactInternalInstance": [Circular],
         "context": Object {},
         "props": Object {
-          "feedList": Array [],
+          "categoryFeeds": Array [],
           "getPosts": [Function],
           "navigator": Object {},
           "route": Object {
@@ -196,8 +78,6 @@ ShallowWrapper {
         "state": Object {
           "backgroundColor": undefined,
           "isLoading": true,
-          "tab": 2,
-          "title": "title",
         },
         "updater": Object {
           "enqueueCallback": [Function],
@@ -217,153 +97,35 @@ ShallowWrapper {
       "_pendingReplaceState": false,
       "_pendingStateQueue": null,
       "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <View
-          style={
+        "_currentElement": <LoadingSpinnerView
+          isLoading={true}
+          spinnerStyle={
                     Object {
-                              "flex": 1,
+                              "backgroundColor": undefined,
                             }
           }
 >
-          <View
-                    style={
-                              Object {
-                                        "alignItems": "center",
-                                        "backgroundColor": "#29384D",
-                                        "elevation": 4,
-                                        "flexDirection": "row",
-                                        "height": 64,
-                                        "paddingHorizontal": 0,
-                                        "paddingTop": 20,
-                                      }
-                    }
-          >
-                    <TouchableOpacity
-                              activeOpacity={0.2}
-                              focusedOpacity={0.7}
-                              onPress={[Function]}
-                              style={
-                                        Object {
-                                                  "alignItems": "center",
-                                                  "height": 44,
-                                                  "justifyContent": "center",
-                                                  "width": 44,
-                                                }
-                              }
-                    >
-                              <Icon
-                                        allowFontScaling={false}
-                                        color="white"
-                                        name="md-arrow-back"
-                                        size={24}
-                              />
-                    </TouchableOpacity>
-                    <View
-                              style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
-                              }
-                    >
-                              <Text
-                                        accessible={true}
-                                        allowFontScaling={true}
-                                        ellipsizeMode="tail"
-                                        numberOfLines={1}
-                                        style={
-                                                  Object {
-                                                            "color": "#ffffff",
-                                                            "fontSize": 20,
-                                                          }
-                                        }
-                              >
-                                        title
-                              </Text>
-                    </View>
-          </View>
-          <LoadingSpinner
-                    spinnerColor="#ffffff"
-                    spinnerSize="large"
-                    style={
-                              Object {
-                                        "backgroundColor": undefined,
-                                      }
-                    }
+          <FeedList
+                    color="#FFFFFF"
+                    list={Array []}
+                    onEndReached={[Function]}
           />
-</View>,
+</LoadingSpinnerView>,
         "_debugID": 2,
-        "_renderedOutput": <View
-          style={
+        "_renderedOutput": <LoadingSpinnerView
+          isLoading={true}
+          spinnerStyle={
                     Object {
-                              "flex": 1,
+                              "backgroundColor": undefined,
                             }
           }
 >
-          <View
-                    style={
-                              Object {
-                                        "alignItems": "center",
-                                        "backgroundColor": "#29384D",
-                                        "elevation": 4,
-                                        "flexDirection": "row",
-                                        "height": 64,
-                                        "paddingHorizontal": 0,
-                                        "paddingTop": 20,
-                                      }
-                    }
-          >
-                    <TouchableOpacity
-                              activeOpacity={0.2}
-                              focusedOpacity={0.7}
-                              onPress={[Function]}
-                              style={
-                                        Object {
-                                                  "alignItems": "center",
-                                                  "height": 44,
-                                                  "justifyContent": "center",
-                                                  "width": 44,
-                                                }
-                              }
-                    >
-                              <Icon
-                                        allowFontScaling={false}
-                                        color="white"
-                                        name="md-arrow-back"
-                                        size={24}
-                              />
-                    </TouchableOpacity>
-                    <View
-                              style={
-                                        Object {
-                                                  "flex": 1,
-                                                }
-                              }
-                    >
-                              <Text
-                                        accessible={true}
-                                        allowFontScaling={true}
-                                        ellipsizeMode="tail"
-                                        numberOfLines={1}
-                                        style={
-                                                  Object {
-                                                            "color": "#ffffff",
-                                                            "fontSize": 20,
-                                                          }
-                                        }
-                              >
-                                        title
-                              </Text>
-                    </View>
-          </View>
-          <LoadingSpinner
-                    spinnerColor="#ffffff"
-                    spinnerSize="large"
-                    style={
-                              Object {
-                                        "backgroundColor": undefined,
-                                      }
-                    }
+          <FeedList
+                    color="#FFFFFF"
+                    list={Array []}
+                    onEndReached={[Function]}
           />
-</View>,
+</LoadingSpinnerView>,
       },
       "_renderedNodeType": 1,
       "_rootNodeID": 0,
@@ -376,7 +138,7 @@ ShallowWrapper {
   },
   "root": [Circular],
   "unrendered": <FeedScreen
-    feedList={Array []}
+    categoryFeeds={Array []}
     getPosts={[Function]}
     navigator={Object {}}
     route={

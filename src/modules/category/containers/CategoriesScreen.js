@@ -1,46 +1,50 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { FlatList } from 'react-native';
+import { FlatList, InteractionManager } from 'react-native';
 import { connect } from 'react-redux';
 import { ItemList } from '../components/';
 import { Router } from '../../../router/routes';
 import { fetchCategories } from '../actions';
 import { rightSideIcon } from '../../navigator/components/NavigationBarItems';
+import { LoadingSpinnerView } from '../../shared/components/LoadingSpinnerView';
 
 export class CategoriesScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.onPressCategory = this.onPressCategory.bind(this);
-    this.renderItem = this.renderItem.bind(this);
-  }
-
   static route = {
     navigationBar: {
       visible: true,
-      title: 'Etiquetas',
+      title: 'Categorias',
       renderRight: rightSideIcon
     }
   }
 
   componentWillMount() {
+    this.setState({ isLoading: true });
     this.props.refreshCategories();
   }
 
-  renderItem({ item, index }) {
-    return <ItemList title={item.title} color={item.color} id={index} onPress={this.onPressCategory} />;
+  componentDidMount() {
+    InteractionManager.runAfterInteractions(() => this.setState({ isLoading: false }));
   }
 
-  onPressCategory(title, tab, color) {
-    this.props.navigator.push(Router.getRoute('feed', { title, tab, color }));
+  renderItem({ item: { title, color } }) {
+    return <ItemList title={title} color={color} id={title} onPress={(title, index, color) => this.onPressCategory(title, index, color)} />;
+  }
+
+  onPressCategory(title, index, color) {
+    this.props.navigator.push(Router.getRoute('feed', { category: title, color }));
   }
 
   render() {
+    const { isLoading } = this.state;
+
     return (
-      <FlatList
-        renderItem={this.renderItem}
-        data={this.props.categories}
-        keyExtractor={(item, index) => index}
-      />
+      <LoadingSpinnerView isLoading={isLoading} spinnerStyle={{ backgroundColor: 'blue' }} >
+        <FlatList
+          renderItem={item => this.renderItem(item)}
+          data={this.props.categories}
+          keyExtractor={(item, index) => index}
+        />
+      </LoadingSpinnerView>
     );
   }
 }
@@ -51,9 +55,8 @@ CategoriesScreen.propTypes = {
 };
 
 const mapStateToProps = (state) => {
-  const { categories } = state.categories;
   return {
-    categories
+    categories: state.categories.categories
   };
 };
 
